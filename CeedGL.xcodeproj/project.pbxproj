@@ -1,0 +1,1060 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		050DB7D41488FBA000812267 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05E625AB127EED5A00B4A69C /* OpenGL.framework */; };
+		050DB7DE148909E300812267 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05E625AD127EED7B00B4A69C /* Cocoa.framework */; };
+		050DB7EC14890AA900812267 /* CeedGL.h in Headers */ = {isa = PBXBuildFile; fileRef = 05E625B7127EFBF000B4A69C /* CeedGL.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		050DB7ED14890AA900812267 /* GLPlatform.h in Headers */ = {isa = PBXBuildFile; fileRef = 0592DB821286AF810030F780 /* GLPlatform.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		050DB7EE14890AA900812267 /* GLDebug.h in Headers */ = {isa = PBXBuildFile; fileRef = 05E625B3127EF48200B4A69C /* GLDebug.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		050DB7EF14890AA900812267 /* GLDebug.m in Sources */ = {isa = PBXBuildFile; fileRef = 05E625B4127EF48200B4A69C /* GLDebug.m */; };
+		050DB7F014890AA900812267 /* GLValue.h in Headers */ = {isa = PBXBuildFile; fileRef = 05F693E91285691700B5082C /* GLValue.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		050DB7F114890AA900812267 /* GLValue.m in Sources */ = {isa = PBXBuildFile; fileRef = 05F693EA1285691700B5082C /* GLValue.m */; };
+		050DB7F214890AA900812267 /* GLObject.h in Headers */ = {isa = PBXBuildFile; fileRef = 05E625B9127F20D700B4A69C /* GLObject.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		050DB7F314890AA900812267 /* GLObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 05E625BA127F20D700B4A69C /* GLObject.m */; };
+		050DB7F414890AA900812267 /* GLBufferDataSource.h in Headers */ = {isa = PBXBuildFile; fileRef = 05E625B1127EEF1A00B4A69C /* GLBufferDataSource.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		050DB7F514890AA900812267 /* GLBuffer.h in Headers */ = {isa = PBXBuildFile; fileRef = 052BD768127ECB85005A3AE9 /* GLBuffer.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		050DB7F614890AA900812267 /* GLBuffer.m in Sources */ = {isa = PBXBuildFile; fileRef = 052BD76B127ECBDB005A3AE9 /* GLBuffer.m */; };
+		050DB7F714890AA900812267 /* GLTexture.h in Headers */ = {isa = PBXBuildFile; fileRef = 052BD76D127ECC3A005A3AE9 /* GLTexture.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		050DB7F814890AA900812267 /* GLTexture.m in Sources */ = {isa = PBXBuildFile; fileRef = 052BD76F127ECC56005A3AE9 /* GLTexture.m */; };
+		050DB7F914890AA900812267 /* GLFramebuffer.h in Headers */ = {isa = PBXBuildFile; fileRef = 052BD772127ECEB1005A3AE9 /* GLFramebuffer.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		050DB7FA14890AA900812267 /* GLFramebuffer.m in Sources */ = {isa = PBXBuildFile; fileRef = 05E625AF127EEDE100B4A69C /* GLFramebuffer.m */; };
+		050DB7FB14890AA900812267 /* GLRenderbuffer.h in Headers */ = {isa = PBXBuildFile; fileRef = 05E6259A127EEC3D00B4A69C /* GLRenderbuffer.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		050DB7FC14890AA900812267 /* GLRenderbuffer.m in Sources */ = {isa = PBXBuildFile; fileRef = 05E6259B127EEC3D00B4A69C /* GLRenderbuffer.m */; };
+		050DB7FD14890AA900812267 /* GLShader.h in Headers */ = {isa = PBXBuildFile; fileRef = 05E625A7127EECA000B4A69C /* GLShader.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		050DB7FE14890AA900812267 /* GLShader.m in Sources */ = {isa = PBXBuildFile; fileRef = 05E625A8127EECA000B4A69C /* GLShader.m */; };
+		050DB7FF14890AA900812267 /* GLProgram.h in Headers */ = {isa = PBXBuildFile; fileRef = 05E625A3127EEC9100B4A69C /* GLProgram.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		050DB80014890AA900812267 /* GLProgram.m in Sources */ = {isa = PBXBuildFile; fileRef = 05E625A4127EEC9100B4A69C /* GLProgram.m */; };
+		050DB80114890AA900812267 /* GLDrawCommand.h in Headers */ = {isa = PBXBuildFile; fileRef = 05E6259F127EEC6700B4A69C /* GLDrawCommand.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		050DB80214890AA900812267 /* GLDrawCommand.m in Sources */ = {isa = PBXBuildFile; fileRef = 05E625A0127EEC6700B4A69C /* GLDrawCommand.m */; };
+		050DB80914890EE300812267 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 050DB80814890EE300812267 /* Foundation.framework */; };
+		050DB81314890F2F00812267 /* CeedGL.h in Headers */ = {isa = PBXBuildFile; fileRef = 05E625B7127EFBF000B4A69C /* CeedGL.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		050DB81414890F2F00812267 /* GLPlatform.h in Headers */ = {isa = PBXBuildFile; fileRef = 0592DB821286AF810030F780 /* GLPlatform.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		050DB81514890F2F00812267 /* GLDebug.h in Headers */ = {isa = PBXBuildFile; fileRef = 05E625B3127EF48200B4A69C /* GLDebug.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		050DB81614890F2F00812267 /* GLDebug.m in Sources */ = {isa = PBXBuildFile; fileRef = 05E625B4127EF48200B4A69C /* GLDebug.m */; };
+		050DB81714890F2F00812267 /* GLValue.h in Headers */ = {isa = PBXBuildFile; fileRef = 05F693E91285691700B5082C /* GLValue.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		050DB81814890F2F00812267 /* GLValue.m in Sources */ = {isa = PBXBuildFile; fileRef = 05F693EA1285691700B5082C /* GLValue.m */; };
+		050DB81914890F2F00812267 /* GLObject.h in Headers */ = {isa = PBXBuildFile; fileRef = 05E625B9127F20D700B4A69C /* GLObject.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		050DB81A14890F2F00812267 /* GLObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 05E625BA127F20D700B4A69C /* GLObject.m */; };
+		050DB81B14890F2F00812267 /* GLBufferDataSource.h in Headers */ = {isa = PBXBuildFile; fileRef = 05E625B1127EEF1A00B4A69C /* GLBufferDataSource.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		050DB81C14890F2F00812267 /* GLBuffer.h in Headers */ = {isa = PBXBuildFile; fileRef = 052BD768127ECB85005A3AE9 /* GLBuffer.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		050DB81D14890F2F00812267 /* GLBuffer.m in Sources */ = {isa = PBXBuildFile; fileRef = 052BD76B127ECBDB005A3AE9 /* GLBuffer.m */; };
+		050DB81E14890F2F00812267 /* GLTexture.h in Headers */ = {isa = PBXBuildFile; fileRef = 052BD76D127ECC3A005A3AE9 /* GLTexture.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		050DB81F14890F2F00812267 /* GLTexture.m in Sources */ = {isa = PBXBuildFile; fileRef = 052BD76F127ECC56005A3AE9 /* GLTexture.m */; };
+		050DB82014890F2F00812267 /* GLFramebuffer.h in Headers */ = {isa = PBXBuildFile; fileRef = 052BD772127ECEB1005A3AE9 /* GLFramebuffer.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		050DB82114890F2F00812267 /* GLFramebuffer.m in Sources */ = {isa = PBXBuildFile; fileRef = 05E625AF127EEDE100B4A69C /* GLFramebuffer.m */; };
+		050DB82214890F2F00812267 /* GLRenderbuffer.h in Headers */ = {isa = PBXBuildFile; fileRef = 05E6259A127EEC3D00B4A69C /* GLRenderbuffer.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		050DB82314890F2F00812267 /* GLRenderbuffer.m in Sources */ = {isa = PBXBuildFile; fileRef = 05E6259B127EEC3D00B4A69C /* GLRenderbuffer.m */; };
+		050DB82414890F2F00812267 /* GLShader.h in Headers */ = {isa = PBXBuildFile; fileRef = 05E625A7127EECA000B4A69C /* GLShader.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		050DB82514890F2F00812267 /* GLShader.m in Sources */ = {isa = PBXBuildFile; fileRef = 05E625A8127EECA000B4A69C /* GLShader.m */; };
+		050DB82614890F2F00812267 /* GLProgram.h in Headers */ = {isa = PBXBuildFile; fileRef = 05E625A3127EEC9100B4A69C /* GLProgram.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		050DB82714890F2F00812267 /* GLProgram.m in Sources */ = {isa = PBXBuildFile; fileRef = 05E625A4127EEC9100B4A69C /* GLProgram.m */; };
+		050DB82814890F2F00812267 /* GLDrawCommand.h in Headers */ = {isa = PBXBuildFile; fileRef = 05E6259F127EEC6700B4A69C /* GLDrawCommand.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		050DB82914890F2F00812267 /* GLDrawCommand.m in Sources */ = {isa = PBXBuildFile; fileRef = 05E625A0127EEC6700B4A69C /* GLDrawCommand.m */; };
+		050DB8321489145800812267 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 050DB80814890EE300812267 /* Foundation.framework */; };
+		050DB85714891BBE00812267 /* CeedGLDemoAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 050DB84D1489184B00812267 /* CeedGLDemoAppDelegate.m */; };
+		050DB85814891BBE00812267 /* CeedGLDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 050DB84F1489184B00812267 /* CeedGLDemoViewController.m */; };
+		050DB85914891BBE00812267 /* EAGLView.m in Sources */ = {isa = PBXBuildFile; fileRef = 050DB8511489184B00812267 /* EAGLView.m */; };
+		050DB85A14891BBE00812267 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 050DB8521489184B00812267 /* main.m */; };
+		050DB85B14891BC800812267 /* CeedGLDemoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 050DB84A1489184B00812267 /* CeedGLDemoViewController.xib */; };
+		050DB85C14891BC800812267 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 050DB8531489184B00812267 /* MainWindow.xib */; };
+		050DB85D14891BCE00812267 /* Shader.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 050DB8551489184B00812267 /* Shader.fsh */; };
+		050DB85E14891BCE00812267 /* Shader.vsh in Resources */ = {isa = PBXBuildFile; fileRef = 050DB8561489184B00812267 /* Shader.vsh */; };
+		050DB86014891C1600812267 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 050DB85F14891C1500812267 /* OpenGLES.framework */; };
+		050DB86114891C3900812267 /* libCeedGL.ios.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 050DB80714890EE300812267 /* libCeedGL.ios.a */; };
+		050DB86314891C5600812267 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 050DB86214891C5600812267 /* QuartzCore.framework */; };
+		050DB8651489204F00812267 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 050DB8641489204F00812267 /* UIKit.framework */; };
+		050DB8671489205700812267 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 050DB8661489205700812267 /* CoreGraphics.framework */; };
+		052BD769127ECB85005A3AE9 /* GLBuffer.h in Headers */ = {isa = PBXBuildFile; fileRef = 052BD768127ECB85005A3AE9 /* GLBuffer.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		052BD76C127ECBDB005A3AE9 /* GLBuffer.m in Sources */ = {isa = PBXBuildFile; fileRef = 052BD76B127ECBDB005A3AE9 /* GLBuffer.m */; };
+		052BD76E127ECC3A005A3AE9 /* GLTexture.h in Headers */ = {isa = PBXBuildFile; fileRef = 052BD76D127ECC3A005A3AE9 /* GLTexture.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		052BD770127ECC56005A3AE9 /* GLTexture.m in Sources */ = {isa = PBXBuildFile; fileRef = 052BD76F127ECC56005A3AE9 /* GLTexture.m */; };
+		052BD773127ECEB1005A3AE9 /* GLFramebuffer.h in Headers */ = {isa = PBXBuildFile; fileRef = 052BD772127ECEB1005A3AE9 /* GLFramebuffer.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0592DB831286AF810030F780 /* GLPlatform.h in Headers */ = {isa = PBXBuildFile; fileRef = 0592DB821286AF810030F780 /* GLPlatform.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		05BE5874128553050054FD91 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05BE5873128553050054FD91 /* Cocoa.framework */; };
+		05BE5879128553050054FD91 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 05BE5877128553050054FD91 /* InfoPlist.strings */; };
+		05BE587B128553050054FD91 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 05BE587A128553050054FD91 /* main.m */; };
+		05BE587E128553050054FD91 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 05BE587C128553050054FD91 /* MainMenu.xib */; };
+		05BE5881128553050054FD91 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 05BE587F128553050054FD91 /* Credits.rtf */; };
+		05BE588B128553330054FD91 /* CeedGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 052BD757127ECB10005A3AE9 /* CeedGL.framework */; };
+		05BE5891128556DF0054FD91 /* CeedGLDemoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 05BE588F128555070054FD91 /* CeedGLDemoView.m */; };
+		05BE5892128556E30054FD91 /* CeedGLDemoAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 05BE5883128553050054FD91 /* CeedGLDemoAppDelegate.m */; };
+		05E6259C127EEC3D00B4A69C /* GLRenderbuffer.h in Headers */ = {isa = PBXBuildFile; fileRef = 05E6259A127EEC3D00B4A69C /* GLRenderbuffer.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		05E6259D127EEC3D00B4A69C /* GLRenderbuffer.m in Sources */ = {isa = PBXBuildFile; fileRef = 05E6259B127EEC3D00B4A69C /* GLRenderbuffer.m */; };
+		05E625A1127EEC6700B4A69C /* GLDrawCommand.h in Headers */ = {isa = PBXBuildFile; fileRef = 05E6259F127EEC6700B4A69C /* GLDrawCommand.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		05E625A2127EEC6700B4A69C /* GLDrawCommand.m in Sources */ = {isa = PBXBuildFile; fileRef = 05E625A0127EEC6700B4A69C /* GLDrawCommand.m */; };
+		05E625A5127EEC9100B4A69C /* GLProgram.h in Headers */ = {isa = PBXBuildFile; fileRef = 05E625A3127EEC9100B4A69C /* GLProgram.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		05E625A6127EEC9100B4A69C /* GLProgram.m in Sources */ = {isa = PBXBuildFile; fileRef = 05E625A4127EEC9100B4A69C /* GLProgram.m */; };
+		05E625A9127EECA000B4A69C /* GLShader.h in Headers */ = {isa = PBXBuildFile; fileRef = 05E625A7127EECA000B4A69C /* GLShader.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		05E625AA127EECA000B4A69C /* GLShader.m in Sources */ = {isa = PBXBuildFile; fileRef = 05E625A8127EECA000B4A69C /* GLShader.m */; };
+		05E625AC127EED5A00B4A69C /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05E625AB127EED5A00B4A69C /* OpenGL.framework */; };
+		05E625AE127EED7B00B4A69C /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05E625AD127EED7B00B4A69C /* Cocoa.framework */; };
+		05E625B0127EEDE100B4A69C /* GLFramebuffer.m in Sources */ = {isa = PBXBuildFile; fileRef = 05E625AF127EEDE100B4A69C /* GLFramebuffer.m */; };
+		05E625B2127EEF1A00B4A69C /* GLBufferDataSource.h in Headers */ = {isa = PBXBuildFile; fileRef = 05E625B1127EEF1A00B4A69C /* GLBufferDataSource.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		05E625B5127EF48200B4A69C /* GLDebug.h in Headers */ = {isa = PBXBuildFile; fileRef = 05E625B3127EF48200B4A69C /* GLDebug.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		05E625B6127EF48200B4A69C /* GLDebug.m in Sources */ = {isa = PBXBuildFile; fileRef = 05E625B4127EF48200B4A69C /* GLDebug.m */; };
+		05E625B8127EFBF000B4A69C /* CeedGL.h in Headers */ = {isa = PBXBuildFile; fileRef = 05E625B7127EFBF000B4A69C /* CeedGL.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		05E625BB127F20D700B4A69C /* GLObject.h in Headers */ = {isa = PBXBuildFile; fileRef = 05E625B9127F20D700B4A69C /* GLObject.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		05E625BC127F20D700B4A69C /* GLObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 05E625BA127F20D700B4A69C /* GLObject.m */; };
+		05F693EB1285691700B5082C /* GLValue.h in Headers */ = {isa = PBXBuildFile; fileRef = 05F693E91285691700B5082C /* GLValue.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		05F693EC1285691700B5082C /* GLValue.m in Sources */ = {isa = PBXBuildFile; fileRef = 05F693EA1285691700B5082C /* GLValue.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		05BE588C1285533D0054FD91 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 052BD749127ECB10005A3AE9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 052BD756127ECB10005A3AE9;
+			remoteInfo = CeedGL;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		050DB7DD148909E300812267 /* libCeedGL.mac.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libCeedGL.mac.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		050DB7E0148909E300812267 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		050DB7E1148909E300812267 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		050DB7E2148909E300812267 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		050DB80714890EE300812267 /* libCeedGL.ios.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libCeedGL.ios.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		050DB80814890EE300812267 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		050DB82E1489145800812267 /* CeedGLDemo.ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CeedGLDemo.ios.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		050DB8461489184B00812267 /* CeedGL_Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CeedGL_Prefix.pch; sourceTree = "<group>"; };
+		050DB8481489184B00812267 /* CeedGLDemo-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CeedGLDemo-Info.plist"; sourceTree = "<group>"; };
+		050DB8491489184B00812267 /* CeedGLDemo_Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CeedGLDemo_Prefix.pch; sourceTree = "<group>"; };
+		050DB84A1489184B00812267 /* CeedGLDemoViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CeedGLDemoViewController.xib; sourceTree = "<group>"; };
+		050DB84C1489184B00812267 /* CeedGLDemoAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CeedGLDemoAppDelegate.h; sourceTree = "<group>"; };
+		050DB84D1489184B00812267 /* CeedGLDemoAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CeedGLDemoAppDelegate.m; sourceTree = "<group>"; };
+		050DB84E1489184B00812267 /* CeedGLDemoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CeedGLDemoViewController.h; sourceTree = "<group>"; };
+		050DB84F1489184B00812267 /* CeedGLDemoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CeedGLDemoViewController.m; sourceTree = "<group>"; };
+		050DB8501489184B00812267 /* EAGLView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EAGLView.h; sourceTree = "<group>"; };
+		050DB8511489184B00812267 /* EAGLView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EAGLView.m; sourceTree = "<group>"; };
+		050DB8521489184B00812267 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		050DB8531489184B00812267 /* MainWindow.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainWindow.xib; sourceTree = "<group>"; };
+		050DB8551489184B00812267 /* Shader.fsh */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = Shader.fsh; sourceTree = "<group>"; };
+		050DB8561489184B00812267 /* Shader.vsh */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = Shader.vsh; sourceTree = "<group>"; };
+		050DB85F14891C1500812267 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS5.0.sdk/System/Library/Frameworks/OpenGLES.framework; sourceTree = DEVELOPER_DIR; };
+		050DB86214891C5600812267 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS5.0.sdk/System/Library/Frameworks/QuartzCore.framework; sourceTree = DEVELOPER_DIR; };
+		050DB8641489204F00812267 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS5.0.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		050DB8661489205700812267 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS5.0.sdk/System/Library/Frameworks/CoreGraphics.framework; sourceTree = DEVELOPER_DIR; };
+		052BD757127ECB10005A3AE9 /* CeedGL.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CeedGL.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		052BD75C127ECB10005A3AE9 /* CeedGL_Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CeedGL_Prefix.pch; sourceTree = "<group>"; };
+		052BD768127ECB85005A3AE9 /* GLBuffer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = GLBuffer.h; sourceTree = "<group>"; };
+		052BD76B127ECBDB005A3AE9 /* GLBuffer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GLBuffer.m; sourceTree = "<group>"; };
+		052BD76D127ECC3A005A3AE9 /* GLTexture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = GLTexture.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		052BD76F127ECC56005A3AE9 /* GLTexture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GLTexture.m; sourceTree = "<group>"; };
+		052BD772127ECEB1005A3AE9 /* GLFramebuffer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = GLFramebuffer.h; sourceTree = "<group>"; };
+		0592DB821286AF810030F780 /* GLPlatform.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GLPlatform.h; sourceTree = "<group>"; };
+		0592DBEE1286B2D70030F780 /* CeedGL-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "CeedGL-Info.plist"; path = "Mac/CeedGL-Info.plist"; sourceTree = "<group>"; };
+		05BE5871128553040054FD91 /* CeedGLDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = CeedGLDemo.app; path = CeedGLDemo.mac.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		05BE5873128553050054FD91 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		05BE5875128553050054FD91 /* CeedGLDemo-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CeedGLDemo-Info.plist"; sourceTree = "<group>"; };
+		05BE5876128553050054FD91 /* CeedGLDemo_Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CeedGLDemo_Prefix.pch; sourceTree = "<group>"; };
+		05BE5878128553050054FD91 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		05BE587A128553050054FD91 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		05BE587D128553050054FD91 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		05BE5880128553050054FD91 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
+		05BE5882128553050054FD91 /* CeedGLDemoAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CeedGLDemoAppDelegate.h; sourceTree = "<group>"; };
+		05BE5883128553050054FD91 /* CeedGLDemoAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CeedGLDemoAppDelegate.m; sourceTree = "<group>"; };
+		05BE588E128555070054FD91 /* CeedGLDemoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CeedGLDemoView.h; sourceTree = "<group>"; };
+		05BE588F128555070054FD91 /* CeedGLDemoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CeedGLDemoView.m; sourceTree = "<group>"; };
+		05E6259A127EEC3D00B4A69C /* GLRenderbuffer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = GLRenderbuffer.h; sourceTree = "<group>"; };
+		05E6259B127EEC3D00B4A69C /* GLRenderbuffer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GLRenderbuffer.m; sourceTree = "<group>"; };
+		05E6259F127EEC6700B4A69C /* GLDrawCommand.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = GLDrawCommand.h; sourceTree = "<group>"; };
+		05E625A0127EEC6700B4A69C /* GLDrawCommand.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GLDrawCommand.m; sourceTree = "<group>"; };
+		05E625A3127EEC9100B4A69C /* GLProgram.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = GLProgram.h; sourceTree = "<group>"; };
+		05E625A4127EEC9100B4A69C /* GLProgram.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GLProgram.m; sourceTree = "<group>"; };
+		05E625A7127EECA000B4A69C /* GLShader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = GLShader.h; sourceTree = "<group>"; };
+		05E625A8127EECA000B4A69C /* GLShader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GLShader.m; sourceTree = "<group>"; };
+		05E625AB127EED5A00B4A69C /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
+		05E625AD127EED7B00B4A69C /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		05E625AF127EEDE100B4A69C /* GLFramebuffer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GLFramebuffer.m; sourceTree = "<group>"; };
+		05E625B1127EEF1A00B4A69C /* GLBufferDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GLBufferDataSource.h; sourceTree = "<group>"; };
+		05E625B3127EF48200B4A69C /* GLDebug.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GLDebug.h; sourceTree = "<group>"; };
+		05E625B4127EF48200B4A69C /* GLDebug.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GLDebug.m; sourceTree = "<group>"; };
+		05E625B7127EFBF000B4A69C /* CeedGL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CeedGL.h; sourceTree = "<group>"; };
+		05E625B9127F20D700B4A69C /* GLObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GLObject.h; sourceTree = "<group>"; };
+		05E625BA127F20D700B4A69C /* GLObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GLObject.m; sourceTree = "<group>"; };
+		05F693E91285691700B5082C /* GLValue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GLValue.h; sourceTree = "<group>"; };
+		05F693EA1285691700B5082C /* GLValue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GLValue.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		050DB7DA148909E300812267 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				050DB7DE148909E300812267 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		050DB80414890EE300812267 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				050DB80914890EE300812267 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		050DB82B1489145800812267 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				050DB8671489205700812267 /* CoreGraphics.framework in Frameworks */,
+				050DB8651489204F00812267 /* UIKit.framework in Frameworks */,
+				050DB86314891C5600812267 /* QuartzCore.framework in Frameworks */,
+				050DB86114891C3900812267 /* libCeedGL.ios.a in Frameworks */,
+				050DB86014891C1600812267 /* OpenGLES.framework in Frameworks */,
+				050DB8321489145800812267 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		052BD753127ECB10005A3AE9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				05E625AE127EED7B00B4A69C /* Cocoa.framework in Frameworks */,
+				05E625AC127EED5A00B4A69C /* OpenGL.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		05BE586E128553040054FD91 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				050DB7D41488FBA000812267 /* OpenGL.framework in Frameworks */,
+				05BE588B128553330054FD91 /* CeedGL.framework in Frameworks */,
+				05BE5874128553050054FD91 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		050DB7DF148909E300812267 /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				050DB7E0148909E300812267 /* AppKit.framework */,
+				050DB7E1148909E300812267 /* CoreData.framework */,
+				050DB7E2148909E300812267 /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		050DB8441489179C00812267 /* Mac */ = {
+			isa = PBXGroup;
+			children = (
+				052BD75C127ECB10005A3AE9 /* CeedGL_Prefix.pch */,
+				05BE5868128553040054FD91 /* CeedGLDemo */,
+			);
+			path = Mac;
+			sourceTree = "<group>";
+		};
+		050DB845148917BC00812267 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				050DB8461489184B00812267 /* CeedGL_Prefix.pch */,
+				050DB8471489184B00812267 /* CeedGLDemo */,
+			);
+			path = iOS;
+			sourceTree = "<group>";
+		};
+		050DB8471489184B00812267 /* CeedGLDemo */ = {
+			isa = PBXGroup;
+			children = (
+				050DB8481489184B00812267 /* CeedGLDemo-Info.plist */,
+				050DB8491489184B00812267 /* CeedGLDemo_Prefix.pch */,
+				050DB84A1489184B00812267 /* CeedGLDemoViewController.xib */,
+				050DB84B1489184B00812267 /* Classes */,
+				050DB8521489184B00812267 /* main.m */,
+				050DB8531489184B00812267 /* MainWindow.xib */,
+				050DB8541489184B00812267 /* Shaders */,
+			);
+			path = CeedGLDemo;
+			sourceTree = "<group>";
+		};
+		050DB84B1489184B00812267 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				050DB84C1489184B00812267 /* CeedGLDemoAppDelegate.h */,
+				050DB84D1489184B00812267 /* CeedGLDemoAppDelegate.m */,
+				050DB84E1489184B00812267 /* CeedGLDemoViewController.h */,
+				050DB84F1489184B00812267 /* CeedGLDemoViewController.m */,
+				050DB8501489184B00812267 /* EAGLView.h */,
+				050DB8511489184B00812267 /* EAGLView.m */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		050DB8541489184B00812267 /* Shaders */ = {
+			isa = PBXGroup;
+			children = (
+				050DB8551489184B00812267 /* Shader.fsh */,
+				050DB8561489184B00812267 /* Shader.vsh */,
+			);
+			path = Shaders;
+			sourceTree = "<group>";
+		};
+		052BD747127ECB10005A3AE9 = {
+			isa = PBXGroup;
+			children = (
+				052BD74E127ECB10005A3AE9 /* Sources */,
+				050DB8441489179C00812267 /* Mac */,
+				050DB845148917BC00812267 /* iOS */,
+				052BD74F127ECB10005A3AE9 /* Other Sources */,
+				052BD750127ECB10005A3AE9 /* Resources */,
+				052BD751127ECB10005A3AE9 /* Frameworks */,
+				052BD758127ECB10005A3AE9 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		052BD74E127ECB10005A3AE9 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				05E625B7127EFBF000B4A69C /* CeedGL.h */,
+				0592DB821286AF810030F780 /* GLPlatform.h */,
+				05E625B3127EF48200B4A69C /* GLDebug.h */,
+				05E625B4127EF48200B4A69C /* GLDebug.m */,
+				05F693E91285691700B5082C /* GLValue.h */,
+				05F693EA1285691700B5082C /* GLValue.m */,
+				05E625B9127F20D700B4A69C /* GLObject.h */,
+				05E625BA127F20D700B4A69C /* GLObject.m */,
+				05E625B1127EEF1A00B4A69C /* GLBufferDataSource.h */,
+				052BD768127ECB85005A3AE9 /* GLBuffer.h */,
+				052BD76B127ECBDB005A3AE9 /* GLBuffer.m */,
+				052BD76D127ECC3A005A3AE9 /* GLTexture.h */,
+				052BD76F127ECC56005A3AE9 /* GLTexture.m */,
+				052BD772127ECEB1005A3AE9 /* GLFramebuffer.h */,
+				05E625AF127EEDE100B4A69C /* GLFramebuffer.m */,
+				05E6259A127EEC3D00B4A69C /* GLRenderbuffer.h */,
+				05E6259B127EEC3D00B4A69C /* GLRenderbuffer.m */,
+				05E625A7127EECA000B4A69C /* GLShader.h */,
+				05E625A8127EECA000B4A69C /* GLShader.m */,
+				05E625A3127EEC9100B4A69C /* GLProgram.h */,
+				05E625A4127EEC9100B4A69C /* GLProgram.m */,
+				05E6259F127EEC6700B4A69C /* GLDrawCommand.h */,
+				05E625A0127EEC6700B4A69C /* GLDrawCommand.m */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		052BD74F127ECB10005A3AE9 /* Other Sources */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "Other Sources";
+			sourceTree = "<group>";
+		};
+		052BD750127ECB10005A3AE9 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				0592DBEE1286B2D70030F780 /* CeedGL-Info.plist */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		052BD751127ECB10005A3AE9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				05E625AD127EED7B00B4A69C /* Cocoa.framework */,
+				05E625AB127EED5A00B4A69C /* OpenGL.framework */,
+				050DB80814890EE300812267 /* Foundation.framework */,
+				050DB8661489205700812267 /* CoreGraphics.framework */,
+				050DB8641489204F00812267 /* UIKit.framework */,
+				050DB86214891C5600812267 /* QuartzCore.framework */,
+				050DB85F14891C1500812267 /* OpenGLES.framework */,
+				050DB7DF148909E300812267 /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		052BD758127ECB10005A3AE9 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				05BE5871128553040054FD91 /* CeedGLDemo.app */,
+				050DB7DD148909E300812267 /* libCeedGL.mac.a */,
+				050DB80714890EE300812267 /* libCeedGL.ios.a */,
+				050DB82E1489145800812267 /* CeedGLDemo.ios.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		05BE5868128553040054FD91 /* CeedGLDemo */ = {
+			isa = PBXGroup;
+			children = (
+				05BE5869128553040054FD91 /* Classes */,
+				05BE586A128553040054FD91 /* Other Sources */,
+				05BE586B128553040054FD91 /* Resources */,
+				05BE586C128553040054FD91 /* Frameworks */,
+			);
+			path = CeedGLDemo;
+			sourceTree = "<group>";
+		};
+		05BE5869128553040054FD91 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				05BE588E128555070054FD91 /* CeedGLDemoView.h */,
+				05BE588F128555070054FD91 /* CeedGLDemoView.m */,
+				05BE5882128553050054FD91 /* CeedGLDemoAppDelegate.h */,
+				05BE5883128553050054FD91 /* CeedGLDemoAppDelegate.m */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		05BE586A128553040054FD91 /* Other Sources */ = {
+			isa = PBXGroup;
+			children = (
+				05BE5876128553050054FD91 /* CeedGLDemo_Prefix.pch */,
+				05BE587A128553050054FD91 /* main.m */,
+			);
+			name = "Other Sources";
+			sourceTree = "<group>";
+		};
+		05BE586B128553040054FD91 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				05BE5875128553050054FD91 /* CeedGLDemo-Info.plist */,
+				05BE5877128553050054FD91 /* InfoPlist.strings */,
+				05BE587C128553050054FD91 /* MainMenu.xib */,
+				05BE587F128553050054FD91 /* Credits.rtf */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		05BE586C128553040054FD91 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				052BD757127ECB10005A3AE9 /* CeedGL.framework */,
+				05BE5873128553050054FD91 /* Cocoa.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		050DB7DB148909E300812267 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				050DB7EC14890AA900812267 /* CeedGL.h in Headers */,
+				050DB7ED14890AA900812267 /* GLPlatform.h in Headers */,
+				050DB7EE14890AA900812267 /* GLDebug.h in Headers */,
+				050DB7F014890AA900812267 /* GLValue.h in Headers */,
+				050DB7F214890AA900812267 /* GLObject.h in Headers */,
+				050DB7F414890AA900812267 /* GLBufferDataSource.h in Headers */,
+				050DB7F514890AA900812267 /* GLBuffer.h in Headers */,
+				050DB7F714890AA900812267 /* GLTexture.h in Headers */,
+				050DB7F914890AA900812267 /* GLFramebuffer.h in Headers */,
+				050DB7FB14890AA900812267 /* GLRenderbuffer.h in Headers */,
+				050DB7FD14890AA900812267 /* GLShader.h in Headers */,
+				050DB7FF14890AA900812267 /* GLProgram.h in Headers */,
+				050DB80114890AA900812267 /* GLDrawCommand.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		050DB80514890EE300812267 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				050DB81314890F2F00812267 /* CeedGL.h in Headers */,
+				050DB81414890F2F00812267 /* GLPlatform.h in Headers */,
+				050DB81514890F2F00812267 /* GLDebug.h in Headers */,
+				050DB81714890F2F00812267 /* GLValue.h in Headers */,
+				050DB81914890F2F00812267 /* GLObject.h in Headers */,
+				050DB81B14890F2F00812267 /* GLBufferDataSource.h in Headers */,
+				050DB81C14890F2F00812267 /* GLBuffer.h in Headers */,
+				050DB81E14890F2F00812267 /* GLTexture.h in Headers */,
+				050DB82014890F2F00812267 /* GLFramebuffer.h in Headers */,
+				050DB82214890F2F00812267 /* GLRenderbuffer.h in Headers */,
+				050DB82414890F2F00812267 /* GLShader.h in Headers */,
+				050DB82614890F2F00812267 /* GLProgram.h in Headers */,
+				050DB82814890F2F00812267 /* GLDrawCommand.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		052BD754127ECB10005A3AE9 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				052BD769127ECB85005A3AE9 /* GLBuffer.h in Headers */,
+				052BD76E127ECC3A005A3AE9 /* GLTexture.h in Headers */,
+				052BD773127ECEB1005A3AE9 /* GLFramebuffer.h in Headers */,
+				05E6259C127EEC3D00B4A69C /* GLRenderbuffer.h in Headers */,
+				05E625A1127EEC6700B4A69C /* GLDrawCommand.h in Headers */,
+				05E625A5127EEC9100B4A69C /* GLProgram.h in Headers */,
+				05E625A9127EECA000B4A69C /* GLShader.h in Headers */,
+				05E625B2127EEF1A00B4A69C /* GLBufferDataSource.h in Headers */,
+				05E625B5127EF48200B4A69C /* GLDebug.h in Headers */,
+				05E625B8127EFBF000B4A69C /* CeedGL.h in Headers */,
+				05E625BB127F20D700B4A69C /* GLObject.h in Headers */,
+				05F693EB1285691700B5082C /* GLValue.h in Headers */,
+				0592DB831286AF810030F780 /* GLPlatform.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		050DB7DC148909E300812267 /* CeedGL.mac */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 050DB7E9148909E300812267 /* Build configuration list for PBXNativeTarget "CeedGL.mac" */;
+			buildPhases = (
+				050DB7D9148909E300812267 /* Sources */,
+				050DB7DA148909E300812267 /* Frameworks */,
+				050DB7DB148909E300812267 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CeedGL.mac;
+			productName = CeedGL;
+			productReference = 050DB7DD148909E300812267 /* libCeedGL.mac.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		050DB80614890EE300812267 /* CeedGL.ios */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 050DB81014890EE300812267 /* Build configuration list for PBXNativeTarget "CeedGL.ios" */;
+			buildPhases = (
+				050DB80314890EE300812267 /* Sources */,
+				050DB80414890EE300812267 /* Frameworks */,
+				050DB80514890EE300812267 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CeedGL.ios;
+			productName = CeedGL.ios;
+			productReference = 050DB80714890EE300812267 /* libCeedGL.ios.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		050DB82D1489145800812267 /* CeedGLDemo.ios */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 050DB8411489145900812267 /* Build configuration list for PBXNativeTarget "CeedGLDemo.ios" */;
+			buildPhases = (
+				050DB82A1489145800812267 /* Sources */,
+				050DB82B1489145800812267 /* Frameworks */,
+				050DB82C1489145800812267 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CeedGLDemo.ios;
+			productName = CeedGLDemo.ios;
+			productReference = 050DB82E1489145800812267 /* CeedGLDemo.ios.app */;
+			productType = "com.apple.product-type.application";
+		};
+		052BD756127ECB10005A3AE9 /* CeedGL Mac Framework */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 052BD762127ECB10005A3AE9 /* Build configuration list for PBXNativeTarget "CeedGL Mac Framework" */;
+			buildPhases = (
+				052BD752127ECB10005A3AE9 /* Sources */,
+				052BD753127ECB10005A3AE9 /* Frameworks */,
+				052BD754127ECB10005A3AE9 /* Headers */,
+				052BD755127ECB10005A3AE9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "CeedGL Mac Framework";
+			productName = CeedGL;
+			productReference = 052BD757127ECB10005A3AE9 /* CeedGL.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		05BE5870128553040054FD91 /* CeedGLDemo.mac */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 05BE5887128553050054FD91 /* Build configuration list for PBXNativeTarget "CeedGLDemo.mac" */;
+			buildPhases = (
+				05BE586D128553040054FD91 /* Sources */,
+				05BE586E128553040054FD91 /* Frameworks */,
+				05BE586F128553040054FD91 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				05BE588D1285533D0054FD91 /* PBXTargetDependency */,
+			);
+			name = CeedGLDemo.mac;
+			productName = CeedGLDemo;
+			productReference = 05BE5871128553040054FD91 /* CeedGLDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		052BD749127ECB10005A3AE9 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0420;
+				ORGANIZATIONNAME = Creaceed;
+			};
+			buildConfigurationList = 052BD74C127ECB10005A3AE9 /* Build configuration list for PBXProject "CeedGL" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 052BD747127ECB10005A3AE9;
+			productRefGroup = 052BD758127ECB10005A3AE9 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				052BD756127ECB10005A3AE9 /* CeedGL Mac Framework */,
+				050DB7DC148909E300812267 /* CeedGL.mac */,
+				050DB80614890EE300812267 /* CeedGL.ios */,
+				05BE5870128553040054FD91 /* CeedGLDemo.mac */,
+				050DB82D1489145800812267 /* CeedGLDemo.ios */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		050DB82C1489145800812267 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				050DB85B14891BC800812267 /* CeedGLDemoViewController.xib in Resources */,
+				050DB85C14891BC800812267 /* MainWindow.xib in Resources */,
+				050DB85D14891BCE00812267 /* Shader.fsh in Resources */,
+				050DB85E14891BCE00812267 /* Shader.vsh in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		052BD755127ECB10005A3AE9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		05BE586F128553040054FD91 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				05BE5879128553050054FD91 /* InfoPlist.strings in Resources */,
+				05BE587E128553050054FD91 /* MainMenu.xib in Resources */,
+				05BE5881128553050054FD91 /* Credits.rtf in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		050DB7D9148909E300812267 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				050DB7EF14890AA900812267 /* GLDebug.m in Sources */,
+				050DB7F114890AA900812267 /* GLValue.m in Sources */,
+				050DB7F314890AA900812267 /* GLObject.m in Sources */,
+				050DB7F614890AA900812267 /* GLBuffer.m in Sources */,
+				050DB7F814890AA900812267 /* GLTexture.m in Sources */,
+				050DB7FA14890AA900812267 /* GLFramebuffer.m in Sources */,
+				050DB7FC14890AA900812267 /* GLRenderbuffer.m in Sources */,
+				050DB7FE14890AA900812267 /* GLShader.m in Sources */,
+				050DB80014890AA900812267 /* GLProgram.m in Sources */,
+				050DB80214890AA900812267 /* GLDrawCommand.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		050DB80314890EE300812267 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				050DB81614890F2F00812267 /* GLDebug.m in Sources */,
+				050DB81814890F2F00812267 /* GLValue.m in Sources */,
+				050DB81A14890F2F00812267 /* GLObject.m in Sources */,
+				050DB81D14890F2F00812267 /* GLBuffer.m in Sources */,
+				050DB81F14890F2F00812267 /* GLTexture.m in Sources */,
+				050DB82114890F2F00812267 /* GLFramebuffer.m in Sources */,
+				050DB82314890F2F00812267 /* GLRenderbuffer.m in Sources */,
+				050DB82514890F2F00812267 /* GLShader.m in Sources */,
+				050DB82714890F2F00812267 /* GLProgram.m in Sources */,
+				050DB82914890F2F00812267 /* GLDrawCommand.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		050DB82A1489145800812267 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				050DB85714891BBE00812267 /* CeedGLDemoAppDelegate.m in Sources */,
+				050DB85814891BBE00812267 /* CeedGLDemoViewController.m in Sources */,
+				050DB85914891BBE00812267 /* EAGLView.m in Sources */,
+				050DB85A14891BBE00812267 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		052BD752127ECB10005A3AE9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				052BD76C127ECBDB005A3AE9 /* GLBuffer.m in Sources */,
+				052BD770127ECC56005A3AE9 /* GLTexture.m in Sources */,
+				05E6259D127EEC3D00B4A69C /* GLRenderbuffer.m in Sources */,
+				05E625A2127EEC6700B4A69C /* GLDrawCommand.m in Sources */,
+				05E625A6127EEC9100B4A69C /* GLProgram.m in Sources */,
+				05E625AA127EECA000B4A69C /* GLShader.m in Sources */,
+				05E625B0127EEDE100B4A69C /* GLFramebuffer.m in Sources */,
+				05E625B6127EF48200B4A69C /* GLDebug.m in Sources */,
+				05E625BC127F20D700B4A69C /* GLObject.m in Sources */,
+				05F693EC1285691700B5082C /* GLValue.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		05BE586D128553040054FD91 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				05BE587B128553050054FD91 /* main.m in Sources */,
+				05BE5891128556DF0054FD91 /* CeedGLDemoView.m in Sources */,
+				05BE5892128556E30054FD91 /* CeedGLDemoAppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		05BE588D1285533D0054FD91 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 052BD756127ECB10005A3AE9 /* CeedGL Mac Framework */;
+			targetProxy = 05BE588C1285533D0054FD91 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		05BE5877128553050054FD91 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				05BE5878128553050054FD91 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		05BE587C128553050054FD91 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				05BE587D128553050054FD91 /* en */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+		05BE587F128553050054FD91 /* Credits.rtf */ = {
+			isa = PBXVariantGroup;
+			children = (
+				05BE5880128553050054FD91 /* en */,
+			);
+			name = Credits.rtf;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		050DB7EA148909E300812267 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = Mac/CeedGL_Prefix.pch;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		050DB7EB148909E300812267 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = Mac/CeedGL_Prefix.pch;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		050DB81114890EE300812267 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = iOS/CeedGL_Prefix.pch;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = /usr/local/include/CeedGL;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		050DB81214890EE300812267 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				COPY_PHASE_STRIP = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = iOS/CeedGL_Prefix.pch;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = /usr/local/include/CeedGL;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		050DB8421489145900812267 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = iOS/CeedGLDemo/CeedGLDemo_Prefix.pch;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				INFOPLIST_FILE = "iOS/CeedGLDemo/CeedGLDemo-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		050DB8431489145900812267 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = iOS/CeedGLDemo/CeedGLDemo_Prefix.pch;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				INFOPLIST_FILE = "iOS/CeedGLDemo/CeedGLDemo-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		052BD760127ECB10005A3AE9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = DEBUG;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		052BD761127ECB10005A3AE9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		052BD763127ECB10005A3AE9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				FRAMEWORK_VERSION = A;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = Mac/CeedGL_Prefix.pch;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					DEBUG,
+					"GL_DEBUG=1",
+				);
+				INFOPLIST_FILE = "Mac/CeedGL-Info.plist";
+				PRODUCT_NAME = CeedGL;
+				WRAPPER_EXTENSION = framework;
+			};
+			name = Debug;
+		};
+		052BD764127ECB10005A3AE9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				FRAMEWORK_VERSION = A;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = Mac/CeedGL_Prefix.pch;
+				GCC_PREPROCESSOR_DEFINITIONS = "GL_DEBUG=0";
+				INFOPLIST_FILE = "Mac/CeedGL-Info.plist";
+				PRODUCT_NAME = CeedGL;
+				WRAPPER_EXTENSION = framework;
+			};
+			name = Release;
+		};
+		05BE5885128553050054FD91 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SDKROOT)/Volumes/Safe/Users/raf/WorkArea/Creacode/CeedGL/build/Debug\"",
+				);
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = Mac/CeedGLDemo/CeedGLDemo_Prefix.pch;
+				INFOPLIST_FILE = "Mac/CeedGLDemo/CeedGLDemo-Info.plist";
+				INSTALL_PATH = "$(HOME)/Applications";
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		05BE5886128553050054FD91 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SDKROOT)/Volumes/Safe/Users/raf/WorkArea/Creacode/CeedGL/build/Debug\"",
+				);
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = Mac/CeedGLDemo/CeedGLDemo_Prefix.pch;
+				INFOPLIST_FILE = "Mac/CeedGLDemo/CeedGLDemo-Info.plist";
+				INSTALL_PATH = "$(HOME)/Applications";
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		050DB7E9148909E300812267 /* Build configuration list for PBXNativeTarget "CeedGL.mac" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				050DB7EA148909E300812267 /* Debug */,
+				050DB7EB148909E300812267 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		050DB81014890EE300812267 /* Build configuration list for PBXNativeTarget "CeedGL.ios" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				050DB81114890EE300812267 /* Debug */,
+				050DB81214890EE300812267 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		050DB8411489145900812267 /* Build configuration list for PBXNativeTarget "CeedGLDemo.ios" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				050DB8421489145900812267 /* Debug */,
+				050DB8431489145900812267 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		052BD74C127ECB10005A3AE9 /* Build configuration list for PBXProject "CeedGL" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				052BD760127ECB10005A3AE9 /* Debug */,
+				052BD761127ECB10005A3AE9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		052BD762127ECB10005A3AE9 /* Build configuration list for PBXNativeTarget "CeedGL Mac Framework" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				052BD763127ECB10005A3AE9 /* Debug */,
+				052BD764127ECB10005A3AE9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		05BE5887128553050054FD91 /* Build configuration list for PBXNativeTarget "CeedGLDemo.mac" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				05BE5885128553050054FD91 /* Debug */,
+				05BE5886128553050054FD91 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 052BD749127ECB10005A3AE9 /* Project object */;
+}
