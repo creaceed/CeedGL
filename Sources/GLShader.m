@@ -10,7 +10,7 @@
 
 
 @implementation GLShader
-@synthesize type = mType, source = mSource;
+@synthesize type = mType;
 
 - (id)init {
     if ((self = [super init])) {
@@ -81,6 +81,11 @@
 	const char *s = [source cStringUsingEncoding:NSUTF8StringEncoding];
 	glShaderSource(mHandle, 1, &s, NULL);
 	
+	if(mSource != source)
+	{
+		[mSource release];
+		mSource = [source retain];
+	}
 }
 - (BOOL)compile:(NSError**)error
 {

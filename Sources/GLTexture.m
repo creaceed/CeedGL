@@ -63,14 +63,36 @@
 		mBorder = border;
 	}
 }
-- (void)loadImage:(const GLvoid*)pixels level:(GLint)level width:(GLsizei)w height:(GLsizei)h format:(GLenum)format type:(GLenum)type border:(GLint)border internalFormat:(GLenum)iformat target:(GLenum)target
+- (void)loadImage:(const GLvoid *)pixels width:(GLsizei)w height:(GLsizei)h format:(GLenum)format type:(GLenum)type internalFormat:(GLenum)iformat target:(GLenum)target
 {
+	[self loadImage:pixels level:0 width:w height:h format:format type:type border:0 internalFormat:iformat target:target magFilter:GL_NEAREST minFilter:GL_NEAREST wrapS:GL_CLAMP_TO_EDGE wrapT:GL_CLAMP_TO_EDGE];
+}
+
+- (void)loadImage:(const GLvoid*)pixels level:(GLint)level width:(GLsizei)w height:(GLsizei)h format:(GLenum)format type:(GLenum)type border:(GLint)border internalFormat:(GLenum)iformat target:(GLenum)target magFilter:(GLenum)magfil minFilter:(GLenum)minfil wrapS:(GLenum)wraps wrapT:(GLenum)wrapt
+{
+	BOOL npot = ((w & (w - 1)) != 0) || ((h & (h - 1)) != 0);
+	
 	if(mHandle == 0) 
 		[self createHandle];
 	
 	glBindTexture(target, mHandle);
+		
+	if(npot)
+	{
+		// NPOT textures always need this, or may otherwise be incomplete
+		// And thus we set it here.
+		wraps = GL_CLAMP_TO_EDGE;
+		wrapt = GL_CLAMP_TO_EDGE;
+	}
+	
+	glTexParameteri(target, GL_TEXTURE_WRAP_S, wraps);
+	glTexParameteri(target, GL_TEXTURE_WRAP_T, wrapt);
+	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_NEAREST);
+	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_NEAREST);
+	GLCheckError();
+	
 	glTexImage2D(target, level, iformat, w, h, border, format, type, pixels);
-	glBindTexture(target, 0);
+	GLCheckError();
 	
 	mWidth = w;
 	mHeight = h;
@@ -97,6 +119,9 @@
 {
 	GL_EXCEPT(mHandle == 0, @"Trying to bind non-existing buffer");
 	
+	// should not be passed in modern profile OpenGL. Only for fixed-function pipeline, which we don't handle.
+	// glEnable(GL_TEXTURE_2D);
 	glBindTexture(target, mHandle);
+	GLCheckError();
 }
 @end

@@ -12,8 +12,6 @@
 #import "GLBuffer.h"
 #import "GLTexture.h"
 
-#define ERROR_CHECK {GLenum err; if((err = glGetError()) != GL_NO_ERROR) { GLLog(@"GL error: 0x%x", err) }}
-
 @implementation GLDrawCommand
 
 @synthesize firstElement = mFirstElement, elementCount = mElementCount;
@@ -139,7 +137,7 @@
 			[(GLValue*)obj setUniformAtLocation:[prog uniformLocationForName:key]];
 		}
 		else {
-			//GLLog(@"Trying to set non existent uniform (%@), ignoring...", key);
+			GLLogWarning(@"Trying to set non existent uniform (%@), ignoring...", key);
 		}
 
 	}];
@@ -182,9 +180,13 @@
 	
 	[mTextures enumerateKeysAndObjectsUsingBlock:^(id key, id obj, BOOL *stop) {
 		GLTexture *texture = [obj objectForKey:@"texture"];
-		
+	
+		// should not be passed in modern profile OpenGL. Only for fixed-function pipeline, which we don't handle.
+		//glEnable(GL_TEXTURE_2D);
 		glActiveTexture([key intValue]); // unit
 		[texture bind:[[obj objectForKey:@"target"] intValue]];
+		
+		GLCheckError();
 	}];
 	
 	if(mElementCount > 0)
@@ -203,11 +205,11 @@
 		}
 		else {
 			glDrawArrays(mMode, mFirstElement, mElementCount);
-			ERROR_CHECK;
+			GLCheckError();
 		}
 	}
 	else {
-		GLLog(@"Trying to draw empty array, forgot to set firstElement/elementCount");
+		GLLogWarning(@"Trying to draw empty array, forgot to set firstElement/elementCount");
 	}
 }
 //- (void)drawWithProgram:(GLProgram*)program

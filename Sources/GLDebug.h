@@ -12,7 +12,7 @@
 extern "C" {
 #endif
 	
-extern void ex_debug_terminate();
+extern void ex_debug_terminate(void);
 	
 #ifdef __cplusplus
 }
@@ -47,6 +47,9 @@ exit(1); \
 #define GLLogMethod(...)
 #define GLLogMethodArg(...)
 #endif
+
+#define GLLogWarning NSLog
+#define GLCheckError() {GLenum err; if((err = glGetError()) != GL_NO_ERROR) { GLLogWarning(@"GL error: 0x%x (%s:%d)", err, __FILE__, __LINE__); }}
 
 // raises an exception if condition is true
 #define GL_EXCEPT(condition, exception) {if((condition)) [NSException raise:exception format:@""];}

@@ -17,7 +17,7 @@
 }
 
 @property (readonly, nonatomic) GLenum 		type;
-@property (readonly, nonatomic) NSString 	*source;
+//@property (readwrite, nonatomic, strong) NSString 	*source;
 
 - (GLShader*)initWithType:(GLenum)type;
 - (GLShader*)initVertexShader;
