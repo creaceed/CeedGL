@@ -148,6 +148,7 @@
 		052BD76D127ECC3A005A3AE9 /* GLTexture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = GLTexture.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
 		052BD76F127ECC56005A3AE9 /* GLTexture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GLTexture.m; sourceTree = "<group>"; };
 		052BD772127ECEB1005A3AE9 /* GLFramebuffer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = GLFramebuffer.h; sourceTree = "<group>"; };
+		0538C9DD154C264000D305EC /* CeedGLDemo.ios.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = CeedGLDemo.ios.entitlements; sourceTree = "<group>"; };
 		0592DB821286AF810030F780 /* GLPlatform.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GLPlatform.h; sourceTree = "<group>"; };
 		0592DBEE1286B2D70030F780 /* CeedGL-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "CeedGL-Info.plist"; path = "Mac/CeedGL-Info.plist"; sourceTree = "<group>"; };
 		05BE5871128553040054FD91 /* CeedGLDemo.mac.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CeedGLDemo.mac.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -302,6 +303,7 @@
 		052BD747127ECB10005A3AE9 = {
 			isa = PBXGroup;
 			children = (
+				0538C9DD154C264000D305EC /* CeedGLDemo.ios.entitlements */,
 				052BD74E127ECB10005A3AE9 /* Sources */,
 				050DB8441489179C00812267 /* Mac */,
 				050DB845148917BC00812267 /* iOS */,
@@ -593,7 +595,7 @@
 		052BD749127ECB10005A3AE9 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0420;
+				LastUpgradeCheck = 0440;
 				ORGANIZATIONNAME = Creaceed;
 			};
 			buildConfigurationList = 052BD74C127ECB10005A3AE9 /* Build configuration list for PBXProject "CeedGL" */;
@@ -779,6 +781,7 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.7;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PUBLIC_HEADERS_FOLDER_PATH = CeedGL;
+				SKIP_INSTALL = YES;
 			};
 			name = Debug;
 		};
@@ -797,6 +800,7 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.7;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PUBLIC_HEADERS_FOLDER_PATH = CeedGL;
+				SKIP_INSTALL = YES;
 			};
 			name = Release;
 		};
@@ -848,6 +852,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CODE_SIGN_ENTITLEMENTS = CeedGLDemo.ios.entitlements;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -872,6 +877,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CODE_SIGN_ENTITLEMENTS = CeedGLDemo.ios.entitlements;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -890,6 +896,7 @@
 		052BD760127ECB10005A3AE9 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = DEBUG;
@@ -904,6 +911,7 @@
 		052BD761127ECB10005A3AE9 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
