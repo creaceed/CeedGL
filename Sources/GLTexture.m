@@ -63,6 +63,11 @@
 		mBorder = border;
 	}
 }
+
+- (void)allocateStorageWithWidth:(GLsizei)w height:(GLsizei)h format:(GLenum)format type:(GLenum)type internalFormat:(GLenum)iformat target:(GLenum)target
+{
+	[self loadImage:NULL width:w height:h format:format type:type internalFormat:iformat target:target];
+}
 - (void)loadImage:(const GLvoid *)pixels width:(GLsizei)w height:(GLsizei)h format:(GLenum)format type:(GLenum)type internalFormat:(GLenum)iformat target:(GLenum)target
 {
 	[self loadImage:pixels level:0 width:w height:h format:format type:type border:0 internalFormat:iformat target:target magFilter:GL_NEAREST minFilter:GL_NEAREST wrapS:GL_CLAMP_TO_EDGE wrapT:GL_CLAMP_TO_EDGE];
@@ -123,5 +128,11 @@
 	// glEnable(GL_TEXTURE_2D);
 	glBindTexture(target, mHandle);
 	GLCheckError();
+}
+#pragma mark -
+#pragma mark Accessors
+- (CGSize)size
+{
+	return CGSizeMake(mWidth, mHeight);
 }
 @end

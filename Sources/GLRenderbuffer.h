@@ -17,6 +17,7 @@
 
 @property (readonly, nonatomic)	GLenum 		internalFormat;
 @property (readonly, nonatomic)	GLsizei 	width, height;
+@property (readonly, nonatomic) CGSize 		size; // same as width/height
 
 - (void)setFromExistingHandle:(GLuint)handle width:(GLsizei)w height:(GLsizei)h internalFormat:(GLenum)iformat;
 - (void)allocateStorageWithWidth:(GLsizei)w height:(GLsizei)h internalFormat:(GLenum)internalFormat ;

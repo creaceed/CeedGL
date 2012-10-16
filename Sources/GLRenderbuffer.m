@@ -67,4 +67,12 @@
 	mHeight = h;
 	mInternalFormat = internalFormat;
 }
+
+#pragma mark -
+#pragma mark Accessors
+- (CGSize)size
+{
+	return CGSizeMake(mWidth, mHeight);
+}
+
 @end
