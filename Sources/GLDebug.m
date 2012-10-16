@@ -8,7 +8,7 @@
 
 #import "GLDebug.h"
 
-void ex_debug_terminate(void)
+void ceedgl_debug_terminate(void)
 {
 	printf("assert\n");
 }

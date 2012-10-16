@@ -12,7 +12,7 @@
 extern "C" {
 #endif
 	
-extern void ex_debug_terminate(void);
+extern void ceedgl_debug_terminate(void);
 	
 #ifdef __cplusplus
 }
@@ -26,7 +26,7 @@ if(!(condition)) \
 NSString *s = [NSString stringWithFormat:@"File: %s, Line: %d \nCondition: (%s)\n\n",\
 __FILE__, __LINE__, #condition];\
 NSLog(@"Debugging... %@",s);\
-ex_debug_terminate();\
+ceedgl_debug_terminate();\
 exit(1); \
 }\
 }
