@@ -7,8 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
-#import <CeedGL/GLObject.h>
-#import <CeedGL/GLBufferDataSource.h>
+#import "GLObject.h"
+#import "GLBufferDataSource.h"
 
 @interface GLBuffer : GLObject {
 	GLenum 		mUsage;

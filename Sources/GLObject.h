@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import <CeedGL/GLPlatform.h>
+#import "GLPlatform.h"
 
 // Handle based OpenGL object
 

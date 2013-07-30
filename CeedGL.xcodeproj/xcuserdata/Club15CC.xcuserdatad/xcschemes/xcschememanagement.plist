@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>SchemeUserState</key>
+	<dict>
+		<key>CeedGL Mac Framework.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>0</integer>
+		</dict>
+		<key>CeedGL.ios.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>2</integer>
+		</dict>
+		<key>CeedGL.mac.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
+		<key>CeedGLDemo.ios.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>4</integer>
+		</dict>
+		<key>CeedGLDemo.mac.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>3</integer>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>050DB7DC148909E300812267</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>050DB80614890EE300812267</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>050DB82D1489145800812267</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>052BD756127ECB10005A3AE9</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>05BE5870128553040054FD91</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+	</dict>
+</dict>
+</plist>

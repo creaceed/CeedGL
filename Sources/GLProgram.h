@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import <CeedGL/GLObject.h>
+#import "GLObject.h"
 
 @class GLShader;
 

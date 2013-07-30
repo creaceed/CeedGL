@@ -103,6 +103,8 @@
 		05E625BC127F20D700B4A69C /* GLObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 05E625BA127F20D700B4A69C /* GLObject.m */; };
 		05F693EB1285691700B5082C /* GLValue.h in Headers */ = {isa = PBXBuildFile; fileRef = 05F693E91285691700B5082C /* GLValue.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		05F693EC1285691700B5082C /* GLValue.m in Sources */ = {isa = PBXBuildFile; fileRef = 05F693EA1285691700B5082C /* GLValue.m */; };
+		A661A6E217A82BDE00057C71 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A661A6E117A82BDE00057C71 /* CoreGraphics.framework */; };
+		A661A6E417A82BE800057C71 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A661A6E317A82BE800057C71 /* QuartzCore.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -182,6 +184,8 @@
 		05E625BA127F20D700B4A69C /* GLObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GLObject.m; sourceTree = "<group>"; };
 		05F693E91285691700B5082C /* GLValue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GLValue.h; sourceTree = "<group>"; };
 		05F693EA1285691700B5082C /* GLValue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GLValue.m; sourceTree = "<group>"; };
+		A661A6E117A82BDE00057C71 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		A661A6E317A82BE800057C71 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -218,6 +222,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A661A6E417A82BE800057C71 /* QuartzCore.framework in Frameworks */,
+				A661A6E217A82BDE00057C71 /* CoreGraphics.framework in Frameworks */,
 				05E625AE127EED7B00B4A69C /* Cocoa.framework in Frameworks */,
 				05E625AC127EED5A00B4A69C /* OpenGL.framework in Frameworks */,
 			);
@@ -362,6 +368,8 @@
 		052BD751127ECB10005A3AE9 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				A661A6E317A82BE800057C71 /* QuartzCore.framework */,
+				A661A6E117A82BDE00057C71 /* CoreGraphics.framework */,
 				05E625AD127EED7B00B4A69C /* Cocoa.framework */,
 				05E625AB127EED5A00B4A69C /* OpenGL.framework */,
 				050DB80814890EE300812267 /* Foundation.framework */,

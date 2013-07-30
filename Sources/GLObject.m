@@ -7,6 +7,7 @@
 //
 
 #import "GLObject.h"
+#import "GLDebug.h"
 
 
 @implementation GLObject
