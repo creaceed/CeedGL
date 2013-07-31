@@ -63,6 +63,8 @@
 	glRenderbufferStorage(GL_RENDERBUFFER, internalFormat, w, h);
 	glBindRenderbuffer(GL_RENDERBUFFER, 0);
 	
+	GLCheckError();
+	
 	mWidth = w;
 	mHeight = h;
 	mInternalFormat = internalFormat;
@@ -74,5 +76,17 @@
 {
 	return CGSizeMake(mWidth, mHeight);
 }
+
+#pragma mark - Binding -
+- (void)bind
+{
+	GL_EXCEPT(mHandle == 0, @"Trying to bind non-existing renderbuffer");
+	glBindRenderbuffer(GL_RENDERBUFFER, mHandle);
+}
++ (void)unbind
+{
+	glBindRenderbuffer(GL_RENDERBUFFER, 0);	
+}
+
 
 @end

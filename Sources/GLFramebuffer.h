@@ -28,5 +28,6 @@
 
 // Binding
 - (void)bind;
++ (void)unbind;
 
 @end

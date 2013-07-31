@@ -58,6 +58,7 @@
 #pragma mark Textures
 - (void)setTexture:(GLTexture*)texture target:(GLenum)target unit:(GLenum)unit
 {
+	GL_EXCEPT(texture == nil, NSInvalidArgumentException);
 	id binder = [NSDictionary dictionaryWithObjectsAndKeys:texture, @"texture", [NSNumber numberWithInt:target],@"target", nil];
 	
 	[mTextures setObject:binder forKey:[NSNumber numberWithInt:unit]];

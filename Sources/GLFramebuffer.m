@@ -134,5 +134,10 @@
 	GL_EXCEPT(mHandle == 0, @"Trying to bind non-existing buffer");
 	glBindFramebuffer(GL_FRAMEBUFFER, mHandle);
 }
++ (void)unbind
+{
+	glBindFramebuffer(GL_FRAMEBUFFER, 0);
+}
+
 
 @end

@@ -22,4 +22,9 @@
 - (void)setFromExistingHandle:(GLuint)handle width:(GLsizei)w height:(GLsizei)h internalFormat:(GLenum)iformat;
 - (void)allocateStorageWithWidth:(GLsizei)w height:(GLsizei)h internalFormat:(GLenum)internalFormat ;
 
+// Don't bind a renderbuffer to draw, just bind its associated framebuffer.
+// Bind a renderbuffer to edit/query it with glRenderbuffer*
+- (void)bind;
++ (void)unbind;
+
 @end

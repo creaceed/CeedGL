@@ -90,6 +90,8 @@
 		wrapt = GL_CLAMP_TO_EDGE;
 	}
 	
+//	int align = 1;
+//	glPixelStorei(GL_UNPACK_ALIGNMENT, align);
 	glTexParameteri(target, GL_TEXTURE_WRAP_S, wraps);
 	glTexParameteri(target, GL_TEXTURE_WRAP_T, wrapt);
 	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_NEAREST);
@@ -104,6 +106,17 @@
 	mInternalFormat = iformat;
 	//mType = type;
 	mBorder = border;
+}
+
+- (void)updateImage:(const GLvoid*)pixels level:(GLint)level xOffset:(GLint)xoff yOffset:(GLint)yoff width:(GLsizei)w height:(GLsizei)h format:(GLenum)format type:(GLenum)type target:(GLenum)target
+{
+	GL_EXCEPT(mHandle == 0, @"Trying to update non-existing buffer");
+	
+	glBindTexture(target, mHandle);
+	GLCheckError();
+	
+	glTexSubImage2D(target, level, xoff, yoff, w, h, format, type, pixels);
+	GLCheckError();
 }
 
 - (void)copyFramebufferImageToLevel:(GLint)level x:(GLint)x y:(GLint)y width:(GLint)w height:(GLint)h border:(GLint)border internalFormat:(GLenum)iformat target:(GLenum)target
@@ -129,6 +142,11 @@
 	glBindTexture(target, mHandle);
 	GLCheckError();
 }
++ (void)unbind:(GLenum)target
+{
+	glBindTexture(target, 0);
+}
+
 #pragma mark -
 #pragma mark Accessors
 - (CGSize)size

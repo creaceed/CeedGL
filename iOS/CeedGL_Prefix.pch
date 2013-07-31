@@ -1,5 +1,6 @@
 
 #ifdef __OBJC__
     #import <Foundation/Foundation.h>
+	#import <CoreGraphics/CoreGraphics.h>
 	#import <CeedGL/GLDebug.h>
 #endif
