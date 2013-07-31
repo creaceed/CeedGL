@@ -7,7 +7,7 @@
 //
 
 #import "GLTexture.h"
-
+#import "GLDebug.h"
 
 @implementation GLTexture
 

@@ -7,6 +7,7 @@
 //
 
 #import "GLShader.h"
+#import "GLDebug.h"
 
 
 @implementation GLShader

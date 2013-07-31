@@ -7,6 +7,7 @@
 //
 
 #import "GLValue.h"
+#import "GLDebug.h"
 
 #define mINT_ARRAY ((GLint*)mValues)
 

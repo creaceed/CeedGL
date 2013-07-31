@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import <CeedGL/GLPlatform.h>
+#import "GLPlatform.h"
 
 @interface GLValue : NSObject {
 	GLsizei 	mSize; 			// 1, 2, 3, or 4;

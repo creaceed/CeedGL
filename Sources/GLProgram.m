@@ -8,6 +8,7 @@
 
 #import "GLProgram.h"
 #import "GLShader.h"
+#import "GLDebug.h"
 
 @implementation GLProgram
 
