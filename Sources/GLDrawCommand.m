@@ -30,6 +30,8 @@
 		mTextures = [NSMutableDictionary new];
 		mAttributes = [NSMutableDictionary new];
 		mUniforms = [NSMutableDictionary new];
+        mUniformsDirtyState = [NSMutableDictionary new];
+        mAttributesDirtyState = [NSMutableDictionary new];
     }
     
     return self;
@@ -76,6 +78,9 @@
 - (void)setUniform:(GLValue*)value forName:(NSString*)name
 {
 	[mUniforms setObject:value forKey:name];
+    
+    // Indicate that the uniform needs updating in the program
+    [mUniformsDirtyState setObject:@YES forKey:name];
 }
 - (GLValue*)uniformForName:(NSString*)name
 {
@@ -84,6 +89,7 @@
 - (void)removeUniformForName:(NSString*)name
 {
 	[mUniforms removeObjectForKey:name];
+    [mUniformsDirtyState removeObjectForKey:name];
 }
 
 #pragma mark Attributes
@@ -92,6 +98,9 @@
 	id binder = [NSDictionary dictionaryWithObjectsAndKeys:value, @"value", @"GLValue",@"kind", nil];
 	
 	[mAttributes setObject:binder forKey:name];
+    
+    // Indicate that the attribute needs updating in the program
+    [mAttributesDirtyState setObject:@YES forKey:name];
 }
 - (void)setAttributeBuffer:(GLBuffer*)buffer size:(GLint)size type:(GLenum)type normalized:(GLboolean)norm stride:(GLsizei)stride offset:(GLsizeiptr)off forName:(NSString*)name
 {
@@ -105,6 +114,7 @@
 				 nil];
 	
 	[mAttributes setObject:binder forKey:name];
+    [mAttributesDirtyState setObject:@YES forKey:name];
 }
 - (id)attributeForName:(NSString*)name
 {
@@ -116,6 +126,7 @@
 - (void)removeAttributeForName:(NSString*)name
 {
 	[mAttributes removeObjectForKey:name];
+    [mAttributesDirtyState removeObjectForKey:name];
 }
 
 
@@ -132,6 +143,11 @@
 	[mUniforms enumerateKeysAndObjectsUsingBlock:^(id key, id obj, BOOL *stop) {
 		*stop = NO;
 		
+        // If not dirty then skip
+        if (![[mUniformsDirtyState objectForKey:key] boolValue]) {
+            return;
+        }
+        
 		if([prog hasUniformNamed:key])
 		{
 			//GLLog(@"Setting value %@ to uniform %@", obj, key);
@@ -140,7 +156,8 @@
 		else {
 			GLLogWarning(@"Trying to set non existent uniform (%@), ignoring...", key);
 		}
-
+        
+        [mUniformsDirtyState setObject:@NO forKey:key];
 	}];
 	
 	
@@ -148,6 +165,12 @@
 	
 	[mAttributes enumerateKeysAndObjectsUsingBlock:^(id key, id obj, BOOL *stop) {
 		*stop = NO;
+        
+        // If not dirty then skip
+        if (![[mAttributesDirtyState objectForKey:key] boolValue]) {
+            return;
+        }
+        
 		if([prog hasAttributeNamed:key])
 		{
 			GLint loc = [prog attributeLocationForName:key];
@@ -177,6 +200,9 @@
 		else {
 			//GLLog(@"Trying to set non existent attribute (%@), ignoring...", key);
 		}
+        
+        // Indicate that it's clean/updated
+        [mAttributesDirtyState setObject:@NO forKey:key];
 	}];
 	
 	[mTextures enumerateKeysAndObjectsUsingBlock:^(id key, id obj, BOOL *stop) {

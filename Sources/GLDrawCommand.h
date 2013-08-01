@@ -21,6 +21,8 @@
 	NSMutableDictionary *mTextures;
 	NSMutableDictionary *mUniforms;
 	NSMutableDictionary *mAttributes;
+    NSMutableDictionary *mUniformsDirtyState;
+    NSMutableDictionary *mAttributesDirtyState;
 }
 
 @property (readwrite, nonatomic)			GLint 		firstElement, elementCount;
