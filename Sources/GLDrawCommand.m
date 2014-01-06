@@ -170,7 +170,7 @@
 									  [[obj objectForKey:@"type"] intValue],
 									  [[obj objectForKey:@"normalized"] boolValue], 
 									  [[obj objectForKey:@"stride"] intValue],
-									  (void*)[[obj objectForKey:@"offset"] intValue]);
+									  (void*)[[obj objectForKey:@"offset"] integerValue]);
 				glEnableVertexAttribArray(loc);
 			}
 		}
@@ -202,7 +202,7 @@
 		if(mElementIndexes)
 		{
 			glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, mElementIndexes.handle);
-			glDrawElements(mMode, mElementCount, mElementIndexType, (void*)mFirstElement);
+			glDrawElements(mMode, mElementCount, mElementIndexType, (void*)(size_t)mFirstElement);
 		}
 		else {
 			glDrawArrays(mMode, mFirstElement, mElementCount);
