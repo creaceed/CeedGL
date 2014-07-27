@@ -71,6 +71,10 @@
 {
 	[mTextures removeObjectForKey:[NSNumber numberWithInt:unit]];
 }
+- (void)removeAllTextures
+{
+	[mTextures removeAllObjects];
+}
 
 #pragma mark Uniforms
 - (void)setUniform:(GLValue*)value forName:(NSString*)name
@@ -85,6 +89,11 @@
 {
 	[mUniforms removeObjectForKey:name];
 }
+- (void)removeAllUniforms
+{
+	[mUniforms removeAllObjects];
+}
+
 
 #pragma mark Attributes
 - (void)setAttribute:(GLValue*)value forName:(NSString*)name
@@ -117,7 +126,10 @@
 {
 	[mAttributes removeObjectForKey:name];
 }
-
+- (void)removeAllAttributes
+{
+	[mAttributes removeAllObjects];
+}
 
 #pragma mark Drawing
 - (void)draw
