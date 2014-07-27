@@ -94,8 +94,8 @@
 //	glPixelStorei(GL_UNPACK_ALIGNMENT, align);
 	glTexParameteri(target, GL_TEXTURE_WRAP_S, wraps);
 	glTexParameteri(target, GL_TEXTURE_WRAP_T, wrapt);
-	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_NEAREST);
-	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_NEAREST);
+	glTexParameteri(target, GL_TEXTURE_MIN_FILTER, minfil);
+	glTexParameteri(target, GL_TEXTURE_MAG_FILTER, magfil);
 	GLCheckError();
 	
 	glTexImage2D(target, level, iformat, w, h, border, format, type, pixels);
@@ -116,6 +116,18 @@
 	GLCheckError();
 	
 	glTexSubImage2D(target, level, xoff, yoff, w, h, format, type, pixels);
+	GLCheckError();
+}
+
+- (void)setMagFilter:(GLenum)magfil minFilter:(GLenum)minfil wrapS:(GLenum)wraps wrapT:(GLenum)wrapt target:(GLenum)target
+{
+	glBindTexture(target, mHandle);
+	
+	glTexParameteri(target, GL_TEXTURE_WRAP_S, wraps);
+	glTexParameteri(target, GL_TEXTURE_WRAP_T, wrapt);
+	glTexParameteri(target, GL_TEXTURE_MIN_FILTER, minfil);
+	glTexParameteri(target, GL_TEXTURE_MAG_FILTER, magfil);
+
 	GLCheckError();
 }
 
