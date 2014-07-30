@@ -22,6 +22,8 @@
 
 // Loading data 
 - (void)setFromExistingHandle:(GLuint)handle size:(GLsizeiptr)size usage:(GLenum)usage;
+- (void)setFromExistingHandle:(GLuint)handle size:(GLsizeiptr)size usage:(GLenum)usage owner:(id)owner;
+
 - (void)loadData:(const GLvoid*)data size:(GLsizeiptr)size usage:(GLenum)usage target:(GLenum)target;
 - (void)loadSubData:(const GLvoid*)data offset:(GLintptr)offset size:(GLsizeiptr)size target:(GLenum)target;
 

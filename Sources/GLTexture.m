@@ -23,7 +23,7 @@
 
 - (void)dealloc {
     // Clean-up code here.
-    if(mHandle)
+    if(mHandle && mHandleOwner == nil)
 	{
 		GLLog(@"warning: handle not destroyed");
 	}
@@ -54,16 +54,18 @@
 
 - (void)setFromExistingHandle:(GLuint)handle width:(GLsizei)w height:(GLsizei)h internalFormat:(GLenum)iformat border:(GLint)border
 {
-	if(handle != mHandle)
-	{
-		mHandle = handle;
-		mWidth = w;
-		mHeight = h;
-		mInternalFormat = iformat;
-		mBorder = border;
-	}
+	[self setFromExistingHandle:handle width:w height:h internalFormat:iformat border:border owner:nil];
 }
-
+- (void)setFromExistingHandle:(GLuint)handle width:(GLsizei)w height:(GLsizei)h internalFormat:(GLenum)iformat border:(GLint)border owner:(id)owner
+{
+	mHandle = handle;
+	mWidth = w;
+	mHeight = h;
+	mInternalFormat = iformat;
+	mBorder = border;
+	
+	self.handleOwner = owner;
+}
 - (void)allocateStorageWithWidth:(GLsizei)w height:(GLsizei)h format:(GLenum)format type:(GLenum)type internalFormat:(GLenum)iformat target:(GLenum)target
 {
 	[self loadImage:NULL width:w height:h format:format type:type internalFormat:iformat target:target];

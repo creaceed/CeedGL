@@ -11,6 +11,8 @@
 
 @implementation GLObject
 @synthesize handle = mHandle;
+//@synthesize handleOwner = mHandleOwner;
+
 
 - (id)init {
     if ((self = [super init])) {
@@ -22,7 +24,8 @@
 
 - (void)dealloc {
     // Clean-up code here.
-    
+	self.handleOwner = nil;
+	
     [super dealloc];
 }
 
@@ -37,6 +40,19 @@
 - (void)destroyHandle
 {
 	GL_EXCEPT(1, @"Abstract method, should be overridden");	
+}
+
+- (void)setHandleOwner:(id)handleOwner
+{
+	if(handleOwner != mHandleOwner)
+	{
+		[mHandleOwner release];
+		mHandleOwner = [handleOwner retain];
+	}
+}
+- (id)handleOwner {
+	// no retain autorelease, don't extend lifetime of owner
+	return mHandleOwner;
 }
 
 @end

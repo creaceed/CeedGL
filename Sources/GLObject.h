@@ -14,9 +14,13 @@
 @interface GLObject : NSObject {
 @protected
 	GLuint 		mHandle;
+	id 			mHandleOwner;
 }
 
-@property (readonly, nonatomic) GLuint 		handle;
+@property (readonly, nonatomic) GLuint handle;
+
+// if handle lifetime is managed by another object (like CVOpenGLESTextureRef), set it here. That object is released when GLObject is deallocated.
+@property (retain) id handleOwner;
 
 // Handle creation/destruction
 - (void)createHandle;

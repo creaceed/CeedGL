@@ -29,7 +29,7 @@
 - (void)dealloc {
     // Clean-up code here.
     
-	if(mHandle)
+	if(mHandle && mHandleOwner == nil)
 	{
 		GLLog(@"warning: handle not destroyed");
 	}
@@ -56,9 +56,14 @@
 }
 - (void)setFromExistingHandle:(GLuint)handle size:(GLsizeiptr)size usage:(GLenum)usage
 {
+	[self setFromExistingHandle:handle size:size usage:usage owner:nil];
+}
+- (void)setFromExistingHandle:(GLuint)handle size:(GLsizeiptr)size usage:(GLenum)usage owner:(id)owner
+{
 	mHandle = handle;
 	mSize = size;
 	mUsage = usage;
+	self.handleOwner = owner;
 }
 - (void)loadData:(const GLvoid*)data size:(GLsizeiptr)size usage:(GLenum)usage target:(GLenum)target
 {

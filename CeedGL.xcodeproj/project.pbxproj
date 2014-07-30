@@ -84,6 +84,9 @@
 		05BE588B128553330054FD91 /* CeedGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 052BD757127ECB10005A3AE9 /* CeedGL.framework */; };
 		05BE5891128556DF0054FD91 /* CeedGLDemoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 05BE588F128555070054FD91 /* CeedGLDemoView.m */; };
 		05BE5892128556E30054FD91 /* CeedGLDemoAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 05BE5883128553050054FD91 /* CeedGLDemoAppDelegate.m */; };
+		05D0FDF219892FFE00BB4812 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 050DB80814890EE300812267 /* Foundation.framework */; };
+		05D0FDFB198930E100BB4812 /* GLTexture+CoreVideo.h in Headers */ = {isa = PBXBuildFile; fileRef = 05D0FDF9198930E100BB4812 /* GLTexture+CoreVideo.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		05D0FDFC198930E100BB4812 /* GLTexture+CoreVideo.m in Sources */ = {isa = PBXBuildFile; fileRef = 05D0FDFA198930E100BB4812 /* GLTexture+CoreVideo.m */; };
 		05E6259C127EEC3D00B4A69C /* GLRenderbuffer.h in Headers */ = {isa = PBXBuildFile; fileRef = 05E6259A127EEC3D00B4A69C /* GLRenderbuffer.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		05E6259D127EEC3D00B4A69C /* GLRenderbuffer.m in Sources */ = {isa = PBXBuildFile; fileRef = 05E6259B127EEC3D00B4A69C /* GLRenderbuffer.m */; };
 		05E625A1127EEC6700B4A69C /* GLDrawCommand.h in Headers */ = {isa = PBXBuildFile; fileRef = 05E6259F127EEC6700B4A69C /* GLDrawCommand.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -163,6 +166,9 @@
 		05BE5883128553050054FD91 /* CeedGLDemoAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CeedGLDemoAppDelegate.m; sourceTree = "<group>"; };
 		05BE588E128555070054FD91 /* CeedGLDemoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CeedGLDemoView.h; sourceTree = "<group>"; };
 		05BE588F128555070054FD91 /* CeedGLDemoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CeedGLDemoView.m; sourceTree = "<group>"; };
+		05D0FDF819892FFE00BB4812 /* libCeedGL.CoreVideoExt.ios.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libCeedGL.CoreVideoExt.ios.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		05D0FDF9198930E100BB4812 /* GLTexture+CoreVideo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "GLTexture+CoreVideo.h"; sourceTree = "<group>"; };
+		05D0FDFA198930E100BB4812 /* GLTexture+CoreVideo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "GLTexture+CoreVideo.m"; sourceTree = "<group>"; };
 		05E6259A127EEC3D00B4A69C /* GLRenderbuffer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = GLRenderbuffer.h; sourceTree = "<group>"; };
 		05E6259B127EEC3D00B4A69C /* GLRenderbuffer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GLRenderbuffer.m; sourceTree = "<group>"; };
 		05E6259F127EEC6700B4A69C /* GLDrawCommand.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = GLDrawCommand.h; sourceTree = "<group>"; };
@@ -230,6 +236,14 @@
 				050DB7D41488FBA000812267 /* OpenGL.framework in Frameworks */,
 				05BE588B128553330054FD91 /* CeedGL.framework in Frameworks */,
 				05BE5874128553050054FD91 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		05D0FDF119892FFE00BB4812 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				05D0FDF219892FFE00BB4812 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -330,6 +344,8 @@
 				052BD76B127ECBDB005A3AE9 /* GLBuffer.m */,
 				052BD76D127ECC3A005A3AE9 /* GLTexture.h */,
 				052BD76F127ECC56005A3AE9 /* GLTexture.m */,
+				05D0FDF9198930E100BB4812 /* GLTexture+CoreVideo.h */,
+				05D0FDFA198930E100BB4812 /* GLTexture+CoreVideo.m */,
 				052BD772127ECEB1005A3AE9 /* GLFramebuffer.h */,
 				05E625AF127EEDE100B4A69C /* GLFramebuffer.m */,
 				05E6259A127EEC3D00B4A69C /* GLRenderbuffer.h */,
@@ -381,6 +397,7 @@
 				050DB7DD148909E300812267 /* libCeedGL.mac.a */,
 				050DB80714890EE300812267 /* libCeedGL.ios.a */,
 				050DB82E1489145800812267 /* CeedGLDemo.ios.app */,
+				05D0FDF819892FFE00BB4812 /* libCeedGL.CoreVideoExt.ios.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -499,6 +516,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		05D0FDD819892FFE00BB4812 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				05D0FDFB198930E100BB4812 /* GLTexture+CoreVideo.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
@@ -589,6 +614,23 @@
 			productReference = 05BE5871128553040054FD91 /* CeedGLDemo.mac.app */;
 			productType = "com.apple.product-type.application";
 		};
+		05D0FDD719892FFE00BB4812 /* CeedGL.CoreVideoExt.ios */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 05D0FDF319892FFE00BB4812 /* Build configuration list for PBXNativeTarget "CeedGL.CoreVideoExt.ios" */;
+			buildPhases = (
+				05D0FDD819892FFE00BB4812 /* Headers */,
+				05D0FDE619892FFE00BB4812 /* Sources */,
+				05D0FDF119892FFE00BB4812 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CeedGL.CoreVideoExt.ios;
+			productName = CeedGL.ios;
+			productReference = 05D0FDF819892FFE00BB4812 /* libCeedGL.CoreVideoExt.ios.a */;
+			productType = "com.apple.product-type.library.static";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -613,6 +655,7 @@
 				052BD756127ECB10005A3AE9 /* CeedGL Mac Framework */,
 				050DB7DC148909E300812267 /* CeedGL.mac */,
 				050DB80614890EE300812267 /* CeedGL.ios */,
+				05D0FDD719892FFE00BB4812 /* CeedGL.CoreVideoExt.ios */,
 				05BE5870128553040054FD91 /* CeedGLDemo.mac */,
 				050DB82D1489145800812267 /* CeedGLDemo.ios */,
 			);
@@ -723,6 +766,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		05D0FDE619892FFE00BB4812 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				05D0FDFC198930E100BB4812 /* GLTexture+CoreVideo.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -808,7 +859,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				ARCHS = "$(ARCHS_STANDARD)";
 				COPY_PHASE_STRIP = NO;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -832,7 +883,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				ARCHS = "$(ARCHS_STANDARD)";
 				COPY_PHASE_STRIP = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = iOS/CeedGL_Prefix.pch;
@@ -949,7 +1000,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				ARCHS = "$(ARCHS_STANDARD)";
 				COPY_PHASE_STRIP = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = iOS/CeedGL_Prefix.pch;
@@ -1135,7 +1186,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				ARCHS = "$(ARCHS_STANDARD)";
 				COPY_PHASE_STRIP = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = iOS/CeedGL_Prefix.pch;
@@ -1240,6 +1291,91 @@
 			};
 			name = Release;
 		};
+		05D0FDF419892FFE00BB4812 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = iOS/CeedGL_Prefix.pch;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1.1;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = CeedGL;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		05D0FDF519892FFE00BB4812 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = iOS/CeedGL_Prefix.pch;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1.1;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = CeedGL;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		05D0FDF619892FFE00BB4812 /* Distribution */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = iOS/CeedGL_Prefix.pch;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1.1;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = CeedGL;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Distribution;
+		};
+		05D0FDF719892FFE00BB4812 /* AdHoc */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = iOS/CeedGL_Prefix.pch;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1.1;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = CeedGL;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = AdHoc;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -1305,6 +1441,17 @@
 				05BE5886128553050054FD91 /* Release */,
 				0510A5A5189014910022F79A /* Distribution */,
 				055F7B0A1852369E00EF3331 /* AdHoc */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		05D0FDF319892FFE00BB4812 /* Build configuration list for PBXNativeTarget "CeedGL.CoreVideoExt.ios" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				05D0FDF419892FFE00BB4812 /* Debug */,
+				05D0FDF519892FFE00BB4812 /* Release */,
+				05D0FDF619892FFE00BB4812 /* Distribution */,
+				05D0FDF719892FFE00BB4812 /* AdHoc */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
