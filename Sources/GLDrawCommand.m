@@ -19,7 +19,7 @@
 
 + (GLDrawCommand*)drawCommand
 {
-	return [[[self alloc] init] autorelease];
+	return [[self alloc] init];
 }
 
 - (id)init {
@@ -35,14 +35,7 @@
 }
 
 - (void)dealloc {
-	[mTextures release];
-	[mAttributes release];
-	[mUniforms release];
-	[mElementIndexes release];
-	
 	self.program = nil;
-	
-    [super dealloc];
 }
 
 #pragma mark Indexes
@@ -50,8 +43,7 @@
 {
 	GL_EXCEPT(type != GL_UNSIGNED_BYTE && type != GL_UNSIGNED_SHORT && type != GL_UNSIGNED_INT, NSInvalidArgumentException);
 	
-	[mElementIndexes autorelease];
-	mElementIndexes = [buffer retain];
+	mElementIndexes = buffer;
 	mElementIndexType = type;
 }
 

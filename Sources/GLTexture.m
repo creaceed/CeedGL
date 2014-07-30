@@ -27,11 +27,10 @@
 	{
 		GLLog(@"warning: handle not destroyed");
 	}
-    [super dealloc];
 }
 + (GLTexture*)texture
 {
-	return [[[self alloc] init] autorelease];
+	return [[self alloc] init];
 }
 
 

@@ -19,12 +19,6 @@
     
     return self;
 }
-- (void)dealloc {
-    // Clean-up code here.
-    [mSource release];
-	
-    [super dealloc];
-}
 - (GLShader*)initWithType:(GLenum)type
 {
     if ((self = [super init])) {
@@ -45,11 +39,11 @@
 
 + (GLShader*)vertexShader
 {
-	return [[[self alloc] initVertexShader] autorelease];
+	return [[self alloc] initVertexShader];
 }
 + (GLShader*)fragmentShader
 {
-	return [[[self alloc] initFragmentShader] autorelease];
+	return [[self alloc] initFragmentShader];
 }
 
 
@@ -83,8 +77,7 @@
 	
 	if(mSource != source)
 	{
-		[mSource release];
-		mSource = [source retain];
+		mSource = source;
 	}
 }
 - (BOOL)compile:(NSError**)error

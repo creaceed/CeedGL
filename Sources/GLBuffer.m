@@ -15,7 +15,7 @@
 
 + (GLBuffer*)buffer
 {
-	return [[[self alloc] init] autorelease];
+	return [[self alloc] init];
 }
 
 - (id)init {
@@ -28,13 +28,10 @@
 
 - (void)dealloc {
     // Clean-up code here.
-    
 	if(mHandle && mHandleOwner == nil)
 	{
 		GLLog(@"warning: handle not destroyed");
 	}
-	
-    [super dealloc];
 }
 
 #pragma mark -

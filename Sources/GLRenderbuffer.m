@@ -21,12 +21,6 @@
     return self;
 }
 
-- (void)dealloc {
-    // Clean-up code here.
-    
-    [super dealloc];
-}
-
 #pragma mark -
 #pragma mark Handle creation/destruction
 - (void)createHandle

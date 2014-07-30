@@ -25,8 +25,6 @@
 - (void)dealloc {
     // Clean-up code here.
 	self.handleOwner = nil;
-	
-    [super dealloc];
 }
 
 - (void)createHandle
@@ -46,8 +44,7 @@
 {
 	if(handleOwner != mHandleOwner)
 	{
-		[mHandleOwner release];
-		mHandleOwner = [handleOwner retain];
+		mHandleOwner = handleOwner;
 	}
 }
 - (id)handleOwner {

@@ -13,7 +13,7 @@
 
 + (GLProgram*)program
 {
-	return [[[self alloc] init] autorelease];
+	return [[self alloc] init];
 }
 
 - (id)init {
@@ -25,15 +25,6 @@
     }
     
     return self;
-}
-
-- (void)dealloc {
-    [mAttachedShaders release];
-	[mUniformLookup release];
-	[mAttribLookup release];
-	
-	
-    [super dealloc];
 }
 
 #pragma mark -

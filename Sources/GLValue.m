@@ -15,12 +15,6 @@
 @synthesize size = mSize;
 @synthesize isMatrix = mIsMatrix, isArray = mIsArray;
 
-- (void)dealloc
-{
-	[mValuesArrayData release];
-	
-	[super dealloc];
-}
 
 - (NSString*)description
 {
@@ -101,7 +95,7 @@
 	
 	if((self = [super init]))
 	{
-		mValuesArrayData = [[NSData dataWithBytes:px length:size*count*sizeof(GLint)] retain];
+		mValuesArrayData = [NSData dataWithBytes:px length:size*count*sizeof(GLint)];
 		mSize = size;
 		mCount = count;
 		mType = GL_INT;
@@ -183,7 +177,7 @@
 	
 	if((self = [super init]))
 	{
-		mValuesArrayData = [[NSData dataWithBytes:px length:size*count*sizeof(GLfloat)] retain];
+		mValuesArrayData = [NSData dataWithBytes:px length:size*count*sizeof(GLfloat)];
 		mSize = size;
 		mCount = count;
 		mType = GL_FLOAT;
@@ -228,7 +222,7 @@
 	
 	if((self = [super init]))
 	{
-		mValuesArrayData = [[NSData dataWithBytes:px length:size*size*sizeof(GLfloat)*count] retain];
+		mValuesArrayData = [NSData dataWithBytes:px length:size*size*sizeof(GLfloat)*count];
 		mSize = size;
 		mCount = count;
 		mType = GL_FLOAT;
@@ -241,51 +235,51 @@
 // Convenience methods
 + (GLValue*)valueWithFloat:(GLfloat)x
 {
-	return [[[self alloc] initWithFloat:x] autorelease];
+	return [[self alloc] initWithFloat:x];
 }
 + (GLValue*)vectorWithFloats:(GLfloat)x :(GLfloat)y
 {
-	return [[[self alloc] initVectorWithFloats:x :y] autorelease];
+	return [[self alloc] initVectorWithFloats:x :y];
 }
 + (GLValue*)vectorWithFloats:(GLfloat)x :(GLfloat)y :(GLfloat)z
 {
-	return [[[self alloc] initVectorWithFloats:x :y :z] autorelease];
+	return [[self alloc] initVectorWithFloats:x :y :z];
 }
 + (GLValue*)vectorWithFloats:(GLfloat)x :(GLfloat)y :(GLfloat)z :(GLfloat)w
 {
-	return [[[self alloc] initVectorWithFloats:x :y :z :w] autorelease];
+	return [[self alloc] initVectorWithFloats:x :y :z :w];
 }
 + (GLValue*)vectorWithFloats:(const GLfloat*)px size:(GLsizei)size
 {
-	return [[[self alloc] initVectorWithFloats:px size:size] autorelease];
+	return [[self alloc] initVectorWithFloats:px size:size];
 }
 + (GLValue*)matrixWithFloats:(const GLfloat*)px size:(GLsizei)size
 {
-	return [[[self alloc] initMatrixWithFloats:px size:size] autorelease];
+	return [[self alloc] initMatrixWithFloats:px size:size];
 }
 + (GLValue*)matrixWithFloats:(const GLfloat*)px size:(GLsizei)size transpose:(BOOL)transpose
 {
-	return [[[self alloc] initMatrixWithFloats:px size:size transpose:transpose] autorelease];
+	return [[self alloc] initMatrixWithFloats:px size:size transpose:transpose];
 }
 + (GLValue*)valueWithInt:(GLint)x
 {
-	return [[[self alloc] initWithInt:x] autorelease];
+	return [[self alloc] initWithInt:x];
 }
 + (GLValue*)vectorWithInts:(GLint)x :(GLint)y
 {
-	return [[[self alloc] initVectorWithInts:x :y] autorelease];
+	return [[self alloc] initVectorWithInts:x :y];
 }
 + (GLValue*)vectorWithInts:(GLint)x :(GLint)y :(GLint)z
 {
-	return [[[self alloc] initVectorWithInts:x :y :z] autorelease];
+	return [[self alloc] initVectorWithInts:x :y :z];
 }
 + (GLValue*)vectorWithInts:(GLint)x :(GLint)y :(GLint)z :(GLint)w
 {
-	return [[[self alloc] initVectorWithInts:x :y :z :w] autorelease];
+	return [[self alloc] initVectorWithInts:x :y :z :w];
 }
 + (GLValue*)vectorWithInts:(const GLint*)px size:(GLsizei)size
 {
-	return [[[self alloc] initVectorWithInts:px size:size] autorelease];
+	return [[self alloc] initVectorWithInts:px size:size];
 }
 #pragma mark Accessors
 - (BOOL)isVector { return !mIsMatrix; }

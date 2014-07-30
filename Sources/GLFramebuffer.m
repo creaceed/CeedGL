@@ -21,17 +21,10 @@
     return self;
 }
 
-- (void)dealloc {
-    // Clean-up code here.
-    
-	[mAttachments release];
-	
-    [super dealloc];
-}
 
 + (GLFramebuffer*)framebuffer
 {
-	return [[[self alloc] init] autorelease];
+	return [[self alloc] init];
 }
 
 #pragma mark -
