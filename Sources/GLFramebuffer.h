@@ -23,8 +23,10 @@
 - (void)attachTexture:(GLTexture*)texture toPoint:(GLenum)attachmentPoint target:(GLenum)textureTarget level:(GLint)level;
 - (id)attachmentToPoint:(GLenum)attpoint;
 - (void)detach:(GLenum)attachmentPoint;
+- (void)discardAttachments:(NSArray*)attachements; // iOS-only
 - (GLenum)checkStatus;
 - (BOOL)checkCompleteness;
+
 
 // Binding
 - (void)bind;

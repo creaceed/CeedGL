@@ -10,6 +10,7 @@
 #import "GLRenderbuffer.h"
 #import "GLTexture.h"
 
+
 @implementation GLFramebuffer
 
 - (id)init {
@@ -109,6 +110,18 @@
 		glBindFramebuffer(GL_FRAMEBUFFER, 0);
 		[mAttachments removeObjectForKey:[NSNumber numberWithLong:attachmentPoint]];
 	}
+}
+- (void)discardAttachments:(NSArray*)attachments
+{
+#if TARGET_OS_IPHONE==1
+	GLenum atts[attachments.count];
+	for(int i=0; i<attachments.count; i++) atts[i] = [attachments[i] intValue];
+	
+	if([EAGLContext currentContext].API <= kEAGLRenderingAPIOpenGLES2)
+		glDiscardFramebufferEXT(GL_FRAMEBUFFER, (GLsizei)attachments.count, atts);
+	else
+		glInvalidateFramebuffer(GL_FRAMEBUFFER, (GLsizei)attachments.count, atts);
+#endif
 }
 - (GLenum)checkStatus
 {
