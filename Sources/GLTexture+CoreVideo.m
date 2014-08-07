@@ -9,6 +9,10 @@
 #import "GLTexture+CoreVideo.h"
 #import <OpenGLES/ES2/glext.h>
 
+// Linker is issuing warning because there is no symbol in this static lib (just a category)
+// Defining this global variable solves that issue.
+NSString * const _CeedGLCoreVideoExt_linkerWarningWorkaround = nil;
+
 static GLenum _glFormatForTextureType(GLVideoTextureType type)
 {
 	switch (type) {
