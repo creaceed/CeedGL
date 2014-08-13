@@ -16,19 +16,46 @@ NSString * const _CeedGLCoreVideoExt_linkerWarningWorkaround = nil;
 static GLenum _glFormatForTextureType(GLVideoTextureType type)
 {
 	switch (type) {
+		// Non-planar
 		case GLVideoTextureTypeRGBA: return GL_RGBA;
+		case GLVideoTextureTypeR: return GL_RED_EXT;
+		case GLVideoTextureTypeR16h: return GL_RED_EXT;
+			
+		// Planar
 		case GLVideoTextureTypeLuma: return GL_RED_EXT;
 		case GLVideoTextureTypeChroma: return GL_RG_EXT;
 	}
+	GL_ASSERT(0);
 }
+
+static GLenum _glTypeForTextureType(GLVideoTextureType type)
+{
+	switch (type) {
+		// Non-planar
+		case GLVideoTextureTypeRGBA: return GL_UNSIGNED_BYTE;
+		case GLVideoTextureTypeR: return GL_UNSIGNED_BYTE;
+#if TARGET_OS_IPHONE
+		case GLVideoTextureTypeR16h: return GL_HALF_FLOAT_OES;
+#else
+		case GLVideoTextureTypeR16h: return GL_HALF_FLOAT; // Not tested
+#endif
+		// Planar
+		case GLVideoTextureTypeLuma: return GL_UNSIGNED_BYTE;
+		case GLVideoTextureTypeChroma: return GL_UNSIGNED_BYTE;
+	}
+	
+	GL_ASSERT(0);
+}
+
 
 @implementation GLTexture (CoreVideo)
 
 + (CVOpenGLESTextureRef)_createTextureForPixelBuffer:(CVPixelBufferRef)pixelBuffer inTextureCache:(CVOpenGLESTextureCacheRef)textureCache type:(GLVideoTextureType)type outputSize:(CGSize*)osize
 {
-	BOOL planar = (type!=GLVideoTextureTypeRGBA);
+	BOOL planar = (type >= GLVideoTextureTypeLuma);
 	size_t planei = (type==GLVideoTextureTypeChroma?1:0);
 	GLenum format = _glFormatForTextureType(type);
+	GLenum gltype = _glTypeForTextureType(type);
 	int w,h;
 	
 	if(planar) {
@@ -58,7 +85,7 @@ static GLenum _glFormatForTextureType(GLVideoTextureType type)
 													   w,
 													   h,
 													   format,
-													   GL_UNSIGNED_BYTE,
+													   gltype,
 													   planei,
 													   &texture);
 	

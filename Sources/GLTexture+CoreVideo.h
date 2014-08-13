@@ -10,9 +10,12 @@
 #import <CoreVideo/CoreVideo.h>
 
 typedef NS_ENUM(NSInteger, GLVideoTextureType) {
-	GLVideoTextureTypeRGBA,
-	GLVideoTextureTypeLuma,
-	GLVideoTextureTypeChroma
+	GLVideoTextureTypeRGBA,		// not planar
+	GLVideoTextureTypeR,		// not planar
+	GLVideoTextureTypeR16h,		// not planar
+	
+	GLVideoTextureTypeLuma = 64,// plane 0
+	GLVideoTextureTypeChroma	// plane 1
 };
 
 @interface GLTexture (CoreVideo)
