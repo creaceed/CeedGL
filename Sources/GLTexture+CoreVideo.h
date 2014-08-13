@@ -9,17 +9,16 @@
 #import <CeedGL/GLTexture.h>
 #import <CoreVideo/CoreVideo.h>
 
-typedef NS_ENUM(NSInteger, GLVideoTextureType) {
-	GLVideoTextureTypeRGBA,		// not planar
-	GLVideoTextureTypeR,		// not planar
-	GLVideoTextureTypeR16h,		// not planar
-	
-	GLVideoTextureTypeLuma = 64,// plane 0
-	GLVideoTextureTypeChroma	// plane 1
+typedef NS_ENUM(NSInteger, GLVideoPlane) {
+	GLVideoPlaneDefault,	// for non-planar buffers
+	GLVideoPlaneLuma,		// plane 0
+	GLVideoPlaneChroma		// plane 1
 };
+
+
 
 @interface GLTexture (CoreVideo)
 
-+ (GLTexture*)textureFromPixelBuffer:(CVPixelBufferRef)pixelBuffer inTextureCache:(CVOpenGLESTextureCacheRef)textureCache type:(GLVideoTextureType)type outTarget:(GLenum*)otarget;
++ (GLTexture*)textureFromPixelBuffer:(CVPixelBufferRef)pixelBuffer inTextureCache:(CVOpenGLESTextureCacheRef)textureCache plane:(GLVideoPlane)plane outTarget:(GLenum*)otarget;
 
 @end

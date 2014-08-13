@@ -13,35 +13,47 @@
 // Defining this global variable solves that issue.
 NSString * const _CeedGLCoreVideoExt_linkerWarningWorkaround = nil;
 
-static GLenum _glFormatForTextureType(GLVideoTextureType type)
+static GLenum _glFormatForPixelFormat(OSType type, size_t planei)
 {
 	switch (type) {
 		// Non-planar
-		case GLVideoTextureTypeRGBA: return GL_RGBA;
-		case GLVideoTextureTypeR: return GL_RED_EXT;
-		case GLVideoTextureTypeR16h: return GL_RED_EXT;
+		case kCVPixelFormatType_32BGRA:
+		case kCVPixelFormatType_32RGBA:
+		case kCVPixelFormatType_32ABGR:
+		case kCVPixelFormatType_32ARGB:
+			return GL_RGBA;
+			
+		case kCVPixelFormatType_OneComponent8:
+		case kCVPixelFormatType_OneComponent16Half:
+			return GL_RED_EXT;
 			
 		// Planar
-		case GLVideoTextureTypeLuma: return GL_RED_EXT;
-		case GLVideoTextureTypeChroma: return GL_RG_EXT;
+		case kCVPixelFormatType_420YpCbCr8BiPlanarVideoRange:
+		case kCVPixelFormatType_420YpCbCr8BiPlanarFullRange:
+			return planei==0?GL_RED_EXT:GL_RG_EXT;
 	}
 	GL_ASSERT(0);
 }
 
-static GLenum _glTypeForTextureType(GLVideoTextureType type)
+static GLenum _glTypeForPixelFormat(OSType type, size_t planei)
 {
 	switch (type) {
-		// Non-planar
-		case GLVideoTextureTypeRGBA: return GL_UNSIGNED_BYTE;
-		case GLVideoTextureTypeR: return GL_UNSIGNED_BYTE;
+			// Non-planar
+		case kCVPixelFormatType_32BGRA:
+		case kCVPixelFormatType_32RGBA:
+		case kCVPixelFormatType_32ABGR:
+		case kCVPixelFormatType_32ARGB:
+		case kCVPixelFormatType_OneComponent8:
+		case kCVPixelFormatType_420YpCbCr8BiPlanarVideoRange:
+		case kCVPixelFormatType_420YpCbCr8BiPlanarFullRange:
+			return GL_UNSIGNED_BYTE;
+			
+		case kCVPixelFormatType_OneComponent16Half:
 #if TARGET_OS_IPHONE
-		case GLVideoTextureTypeR16h: return GL_HALF_FLOAT_OES;
+			return GL_HALF_FLOAT_OES;
 #else
-		case GLVideoTextureTypeR16h: return GL_HALF_FLOAT; // Not tested
+			return GL_HALF_FLOAT; // Not tested
 #endif
-		// Planar
-		case GLVideoTextureTypeLuma: return GL_UNSIGNED_BYTE;
-		case GLVideoTextureTypeChroma: return GL_UNSIGNED_BYTE;
 	}
 	
 	GL_ASSERT(0);
@@ -50,12 +62,15 @@ static GLenum _glTypeForTextureType(GLVideoTextureType type)
 
 @implementation GLTexture (CoreVideo)
 
-+ (CVOpenGLESTextureRef)_createTextureForPixelBuffer:(CVPixelBufferRef)pixelBuffer inTextureCache:(CVOpenGLESTextureCacheRef)textureCache type:(GLVideoTextureType)type outputSize:(CGSize*)osize
+//+ (OSType)
+
++ (CVOpenGLESTextureRef)_createTextureForPixelBuffer:(CVPixelBufferRef)pixelBuffer inTextureCache:(CVOpenGLESTextureCacheRef)textureCache plane:(GLVideoPlane)plane outputSize:(CGSize*)osize
 {
-	BOOL planar = (type >= GLVideoTextureTypeLuma);
-	size_t planei = (type==GLVideoTextureTypeChroma?1:0);
-	GLenum format = _glFormatForTextureType(type);
-	GLenum gltype = _glTypeForTextureType(type);
+	BOOL planar = CVPixelBufferIsPlanar(pixelBuffer);
+	size_t planei = (plane==GLVideoPlaneChroma?1:0);
+	OSType pixformat = CVPixelBufferGetPixelFormatType(pixelBuffer);
+	GLenum format = _glFormatForPixelFormat(pixformat, planei);
+	GLenum gltype = _glTypeForPixelFormat(pixformat, planei);
 	int w,h;
 	
 	if(planar) {
@@ -119,12 +134,14 @@ static GLenum _glTypeForTextureType(GLVideoTextureType type)
 	
 	return texture;
 }
-+ (GLTexture*)textureFromPixelBuffer:(CVPixelBufferRef)pixelBuffer inTextureCache:(CVOpenGLESTextureCacheRef)textureCache type:(GLVideoTextureType)type outTarget:(GLenum*)otarget
++ (GLTexture*)textureFromPixelBuffer:(CVPixelBufferRef)pixelBuffer inTextureCache:(CVOpenGLESTextureCacheRef)textureCache plane:(GLVideoPlane)plane outTarget:(GLenum*)otarget
 {
 	GLenum target;
 	CGSize size;
-	CVOpenGLESTextureRef CVT = [self _createTextureForPixelBuffer:pixelBuffer inTextureCache:textureCache type:(GLVideoTextureType)type outputSize:&size]; GL_ASSERT(CVT);
-	GLTexture *texture = [self _textureFromCVT:CVT format:_glFormatForTextureType(type) size:size outTarget:&target];
+	OSType pixformat = CVPixelBufferGetPixelFormatType(pixelBuffer);
+		size_t planei = (plane==GLVideoPlaneChroma?1:0);
+	CVOpenGLESTextureRef CVT = [self _createTextureForPixelBuffer:pixelBuffer inTextureCache:textureCache plane:plane outputSize:&size]; GL_ASSERT(CVT);
+	GLTexture *texture = [self _textureFromCVT:CVT format:_glFormatForPixelFormat(pixformat, planei) size:size outTarget:&target];
 	
 	// CVT is now owned by texture
 	CFRelease(CVT);
