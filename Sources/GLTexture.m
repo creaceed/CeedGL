@@ -33,6 +33,9 @@
 	return [[self alloc] init];
 }
 
+- (NSString*)description {
+	return [NSString stringWithFormat:@"<GLTexture: 0x%lx, size: %dx%d, handle: %d, format: 0x%x>", (size_t)self, self.width, self.height, self.handle, self.internalFormat];
+}
 
 - (void)createHandle
 {
