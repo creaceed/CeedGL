@@ -46,6 +46,7 @@
 }
 - (void)destroyHandle
 {
+	GL_EXCEPT(mHandle != 0 && mHandleOwner != nil, @"Cannot destroy a handle if lifetime is managed by an owner");
 	GL_EXCEPT(!mHandle, @"Trying to destroy a NULL handle");
 	
 	glDeleteBuffers(1, &mHandle);

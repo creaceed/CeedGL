@@ -130,9 +130,6 @@
 
 	[prog use];
 	
-
-	
-	
 	[mUniforms enumerateKeysAndObjectsUsingBlock:^(id key, id obj, BOOL *stop) {
 		*stop = NO;
 		
@@ -215,6 +212,16 @@
 	}
 	else {
 		GLLogWarning(@"Trying to draw empty array, forgot to set firstElement/elementCount");
+	}
+
+	
+	// may need to make that optional with some API.
+	BOOL unbindTextures = YES;
+	if(unbindTextures) {
+		[mTextures enumerateKeysAndObjectsUsingBlock:^(id key, id obj, BOOL *stop) {
+			glActiveTexture([key intValue]); // unit
+			[GLTexture unbind:[[obj objectForKey:@"target"] intValue]];
+		}];
 	}
 }
 //- (void)drawWithProgram:(GLProgram*)program
