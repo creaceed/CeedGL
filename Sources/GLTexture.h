@@ -12,13 +12,13 @@
 @interface GLTexture : GLObject {
 	GLsizei 	mWidth, mHeight;
 	GLenum		mInternalFormat;				// ex. GL_RGBA
-	//GLenum 		mType;						// ex. GL_UNSIGNED_BYTE
+	GLenum 		mType;						// ex. GL_UNSIGNED_BYTE
 	GLint		mBorder;
 }
 
 @property (readonly, nonatomic) GLsizei 	width, height;
 @property (readonly, nonatomic) CGSize 		size; // same as width/height
-@property (readonly, nonatomic) GLenum 		internalFormat;//, type;
+@property (readonly, nonatomic) GLenum 		internalFormat, type;
 @property (readonly, nonatomic) GLint 		border;
 
 
@@ -26,8 +26,8 @@
 + (GLTexture*)texture;
 
 // Texture definition
-- (void)setFromExistingHandle:(GLuint)handle width:(GLsizei)w height:(GLsizei)h internalFormat:(GLenum)iformat border:(GLint)border;
-- (void)setFromExistingHandle:(GLuint)handle width:(GLsizei)w height:(GLsizei)h internalFormat:(GLenum)iformat border:(GLint)border owner:(id)owner;
+- (void)setFromExistingHandle:(GLuint)handle width:(GLsizei)w height:(GLsizei)h internalFormat:(GLenum)iformat type:(GLenum)type border:(GLint)border;
+- (void)setFromExistingHandle:(GLuint)handle width:(GLsizei)w height:(GLsizei)h internalFormat:(GLenum)iformat type:(GLenum)type border:(GLint)border owner:(id)owner;
 
 // Create on GPU with no contents
 - (void)allocateStorageWithWidth:(GLsizei)w height:(GLsizei)h format:(GLenum)format type:(GLenum)type internalFormat:(GLenum)iformat target:(GLenum)target;

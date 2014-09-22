@@ -11,7 +11,7 @@
 
 @implementation GLTexture
 
-@synthesize width = mWidth, height = mHeight, internalFormat = mInternalFormat,  border = mBorder; // type = mType,
+@synthesize width = mWidth, height = mHeight, internalFormat = mInternalFormat,  border = mBorder, type = mType;
 
 - (id)init {
     if ((self = [super init])) {
@@ -55,17 +55,18 @@
 	mHandle = 0;
 }
 
-- (void)setFromExistingHandle:(GLuint)handle width:(GLsizei)w height:(GLsizei)h internalFormat:(GLenum)iformat border:(GLint)border
+- (void)setFromExistingHandle:(GLuint)handle width:(GLsizei)w height:(GLsizei)h internalFormat:(GLenum)iformat type:(GLenum)type border:(GLint)border
 {
-	[self setFromExistingHandle:handle width:w height:h internalFormat:iformat border:border owner:nil];
+	[self setFromExistingHandle:handle width:w height:h internalFormat:iformat type:type border:border owner:nil];
 }
-- (void)setFromExistingHandle:(GLuint)handle width:(GLsizei)w height:(GLsizei)h internalFormat:(GLenum)iformat border:(GLint)border owner:(id)owner
+- (void)setFromExistingHandle:(GLuint)handle width:(GLsizei)w height:(GLsizei)h internalFormat:(GLenum)iformat type:(GLenum)type border:(GLint)border owner:(id)owner
 {
 	mHandle = handle;
 	mWidth = w;
 	mHeight = h;
 	mInternalFormat = iformat;
 	mBorder = border;
+	mType = type;
 	
 	self.handleOwner = owner;
 }
@@ -109,7 +110,7 @@
 	mWidth = w;
 	mHeight = h;
 	mInternalFormat = iformat;
-	//mType = type;
+	mType = type;
 	mBorder = border;
 }
 
@@ -145,6 +146,7 @@
 	glCopyTexImage2D(target, level, iformat, x, y, w, h, border);
 	glBindTexture(target, 0);
 	
+	GL_EXCEPT(mType == 0, @"Texture type should be set");
 	mWidth = w;
 	mHeight = h;
 	mInternalFormat = iformat;

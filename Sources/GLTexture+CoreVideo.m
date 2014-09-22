@@ -115,12 +115,12 @@ static GLenum _glTypeForPixelFormat(OSType type, size_t planei)
 	
 }
 
-+ (GLTexture*)_textureFromCVT:(CVOpenGLESTextureRef)inputCVT format:(GLenum)format size:(CGSize)cvtSize  outTarget:(GLenum*)otarget
++ (GLTexture*)_textureFromCVT:(CVOpenGLESTextureRef)inputCVT format:(GLenum)format type:(GLenum)type size:(CGSize)cvtSize  outTarget:(GLenum*)otarget
 {
 	GLTexture *texture = [GLTexture texture];
 	//CGSize cvtSize = CVImageBufferGetDisplaySize(inputCVT);
 	
-	[texture setFromExistingHandle:CVOpenGLESTextureGetName(inputCVT) width:cvtSize.width height:cvtSize.height internalFormat:format border:0 owner:(__bridge id)inputCVT];
+	[texture setFromExistingHandle:CVOpenGLESTextureGetName(inputCVT) width:cvtSize.width height:cvtSize.height internalFormat:format type:type border:0 owner:(__bridge id)inputCVT];
 	
 	GLenum target = CVOpenGLESTextureGetTarget(inputCVT);
 	
@@ -139,9 +139,9 @@ static GLenum _glTypeForPixelFormat(OSType type, size_t planei)
 	GLenum target;
 	CGSize size;
 	OSType pixformat = CVPixelBufferGetPixelFormatType(pixelBuffer);
-		size_t planei = (plane==GLVideoPlaneChroma?1:0);
+	size_t planei = (plane==GLVideoPlaneChroma?1:0);
 	CVOpenGLESTextureRef CVT = [self _createTextureForPixelBuffer:pixelBuffer inTextureCache:textureCache plane:plane outputSize:&size]; GL_ASSERT(CVT);
-	GLTexture *texture = [self _textureFromCVT:CVT format:_glFormatForPixelFormat(pixformat, planei) size:size outTarget:&target];
+	GLTexture *texture = [self _textureFromCVT:CVT format:_glFormatForPixelFormat(pixformat, planei) type:_glTypeForPixelFormat(pixformat, planei) size:size outTarget:&target];
 	
 	// CVT is now owned by texture
 	CFRelease(CVT);
