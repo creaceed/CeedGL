@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import <CeedGL/GLPlatform.h>
+#import "GLPlatform.h"
 
 @class GLBuffer, GLProgram, GLTexture, GLValue;
 
@@ -21,6 +21,8 @@
 	NSMutableDictionary *mTextures;
 	NSMutableDictionary *mUniforms;
 	NSMutableDictionary *mAttributes;
+    NSMutableDictionary *mUniformsDirtyState;
+    NSMutableDictionary *mAttributesDirtyState;
 }
 
 @property (readwrite, nonatomic)			GLint 		firstElement, elementCount;

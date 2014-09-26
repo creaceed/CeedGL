@@ -7,7 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
-#import <CeedGL/GLObject.h>
+#import "GLObject.h"
+#import <QuartzCore/QuartzCore.h>
 
 @interface GLTexture : GLObject {
 	GLsizei 	mWidth, mHeight;

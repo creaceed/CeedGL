@@ -9,6 +9,7 @@
 #import "GLFramebuffer.h"
 #import "GLRenderbuffer.h"
 #import "GLTexture.h"
+#import "GLDebug.h"
 
 
 @implementation GLFramebuffer

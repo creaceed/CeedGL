@@ -7,6 +7,7 @@
 //
 
 #import "GLBuffer.h"
+#import "GLDebug.h"
 
 
 @implementation GLBuffer

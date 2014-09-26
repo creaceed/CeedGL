@@ -1,12 +1,12 @@
 
-#import <CeedGL/GLPlatform.h>
-#import <CeedGL/GLDebug.h>
-#import <CeedGL/GLValue.h>
-#import <CeedGL/GLBuffer.h>
-#import <CeedGL/GLBufferDataSource.h>
-#import <CeedGL/GLTexture.h>
-#import <CeedGL/GLFramebuffer.h>
-#import <CeedGL/GLRenderbuffer.h>
-#import <CeedGL/GLShader.h>
-#import <CeedGL/GLProgram.h>
-#import <CeedGL/GLDrawCommand.h>
+#import "GLPlatform.h"
+#import "GLDebug.h"
+#import "GLValue.h"
+#import "GLBuffer.h"
+#import "GLBufferDataSource.h"
+#import "GLTexture.h"
+#import "GLFramebuffer.h"
+#import "GLRenderbuffer.h"
+#import "GLShader.h"
+#import "GLProgram.h"
+#import "GLDrawCommand.h"
