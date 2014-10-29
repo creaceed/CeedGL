@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import <CeedGL/GLPlatform.h>
+#import "GLPlatform.h"
 
 @class GLBuffer, GLProgram, GLTexture, GLValue;
 

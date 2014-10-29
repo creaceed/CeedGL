@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import <CeedGL/GLObject.h>
+#import "GLObject.h"
 
 #define GL_STRINGIFY(A) [NSString stringWithCString:#A encoding:NSUTF8StringEncoding]
 

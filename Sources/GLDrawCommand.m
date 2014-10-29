@@ -11,6 +11,7 @@
 #import "GLValue.h"
 #import "GLBuffer.h"
 #import "GLTexture.h"
+#import "GLDebug.h"
 
 @implementation GLDrawCommand
 
