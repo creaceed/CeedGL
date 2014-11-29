@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <CoreGraphics/CoreGraphics.h>
 #import <CeedGL/GLObject.h>
 
 @interface GLTexture : GLObject {
