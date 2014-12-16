@@ -635,7 +635,7 @@
 		052BD749127ECB10005A3AE9 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0600;
+				LastUpgradeCheck = 0610;
 				ORGANIZATIONNAME = Creaceed;
 			};
 			buildConfigurationList = 052BD74C127ECB10005A3AE9 /* Build configuration list for PBXProject "CeedGL" */;
