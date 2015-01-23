@@ -6,7 +6,7 @@
 //  Copyright (c) 2014 Creaceed. All rights reserved.
 //
 
-#import "GLTexture+CoreVideo.h"
+#import <CeedGL/GLTexture+CoreVideo.h>
 #import <OpenGLES/ES2/glext.h>
 
 // Linker is issuing warning because there is no symbol in this static lib (just a category)

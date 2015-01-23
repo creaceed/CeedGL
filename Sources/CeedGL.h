@@ -1,6 +1,7 @@
 
 #import <CeedGL/GLPlatform.h>
 #import <CeedGL/GLDebug.h>
+#import <CeedGL/GLAllocator.h>
 #import <CeedGL/GLValue.h>
 #import <CeedGL/GLBuffer.h>
 #import <CeedGL/GLBufferDataSource.h>

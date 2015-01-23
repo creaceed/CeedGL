@@ -6,7 +6,8 @@
 //  Copyright (c) 2010 Creaceed. All rights reserved.
 //
 
-#import "GLObject.h"
+#import <CeedGL/GLObject.h>
+#import "GLObject+Internal.h"
 
 
 @implementation GLObject
@@ -14,7 +15,7 @@
 //@synthesize handleOwner = mHandleOwner;
 
 
-- (id)init {
+- (instancetype)init {
     if ((self = [super init])) {
         // Initialization code here.
     }
@@ -24,7 +25,21 @@
 
 - (void)dealloc {
     // Clean-up code here.
+	if(mHandle && mHandleOwner == nil)
+	{
+		GLLog(@"warning: %@ handle not destroyed (%d)", NSStringFromClass(self.class), (int)mHandle);
+	}
+	
 	self.handleOwner = nil;
+}
+
+- (NSString *)_ownerDescription {
+	if(mHandleOwner && [mHandleOwner isKindOfClass:GLAllocatorReference.class]) {
+		GLAllocator *allocator = ((GLAllocatorReference*)mHandleOwner).allocator;
+		return [allocator description];
+	}
+	
+	return [mHandleOwner description];
 }
 
 - (void)createHandle
@@ -51,5 +66,7 @@
 	// no retain autorelease, don't extend lifetime of owner
 	return mHandleOwner;
 }
+@end
 
+@implementation GLAllocatorReference
 @end

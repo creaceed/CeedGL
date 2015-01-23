@@ -6,8 +6,8 @@
 //  Copyright (c) 2010 Creaceed. All rights reserved.
 //
 
-#import "GLTexture.h"
-
+#import <CeedGL/GLTexture.h>
+#import "GLObject+Internal.h"
 
 @implementation GLTexture
 
@@ -21,20 +21,13 @@
     return self;
 }
 
-- (void)dealloc {
-    // Clean-up code here.
-    if(mHandle && mHandleOwner == nil)
-	{
-		GLLog(@"warning: handle not destroyed");
-	}
-}
-+ (GLTexture*)texture
++ (instancetype)texture
 {
 	return [[self alloc] init];
 }
 
 - (NSString*)description {
-	return [NSString stringWithFormat:@"<GLTexture: 0x%lx, size: %dx%d, handle: %d, format: 0x%x>", (size_t)self, self.width, self.height, self.handle, self.internalFormat];
+	return [NSString stringWithFormat:@"<GLTexture: 0x%lx, size: %dx%d, handle: %d, format: 0x%x, owner: %@>", (size_t)self, self.width, self.height, self.handle, self.internalFormat, [self _ownerDescription]];
 }
 
 - (void)createHandle

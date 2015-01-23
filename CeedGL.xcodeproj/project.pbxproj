@@ -75,6 +75,15 @@
 		052BD76E127ECC3A005A3AE9 /* GLTexture.h in Headers */ = {isa = PBXBuildFile; fileRef = 052BD76D127ECC3A005A3AE9 /* GLTexture.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		052BD770127ECC56005A3AE9 /* GLTexture.m in Sources */ = {isa = PBXBuildFile; fileRef = 052BD76F127ECC56005A3AE9 /* GLTexture.m */; };
 		052BD773127ECEB1005A3AE9 /* GLFramebuffer.h in Headers */ = {isa = PBXBuildFile; fileRef = 052BD772127ECEB1005A3AE9 /* GLFramebuffer.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		053E97D61A7287DD0027D558 /* GLObject+Internal.h in Headers */ = {isa = PBXBuildFile; fileRef = 053E97D41A7287DD0027D558 /* GLObject+Internal.h */; };
+		053E97D71A7287DD0027D558 /* GLObject+Internal.h in Headers */ = {isa = PBXBuildFile; fileRef = 053E97D41A7287DD0027D558 /* GLObject+Internal.h */; };
+		053E97D81A7287DD0027D558 /* GLObject+Internal.h in Headers */ = {isa = PBXBuildFile; fileRef = 053E97D41A7287DD0027D558 /* GLObject+Internal.h */; };
+		058FD1811A716F7600A58654 /* GLAllocator.h in Headers */ = {isa = PBXBuildFile; fileRef = 058FD17F1A716F7600A58654 /* GLAllocator.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		058FD1821A716F7600A58654 /* GLAllocator.h in Headers */ = {isa = PBXBuildFile; fileRef = 058FD17F1A716F7600A58654 /* GLAllocator.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		058FD1831A716F7600A58654 /* GLAllocator.h in Headers */ = {isa = PBXBuildFile; fileRef = 058FD17F1A716F7600A58654 /* GLAllocator.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		058FD1841A716F7600A58654 /* GLAllocator.m in Sources */ = {isa = PBXBuildFile; fileRef = 058FD1801A716F7600A58654 /* GLAllocator.m */; };
+		058FD1851A716F7600A58654 /* GLAllocator.m in Sources */ = {isa = PBXBuildFile; fileRef = 058FD1801A716F7600A58654 /* GLAllocator.m */; };
+		058FD1861A716F7600A58654 /* GLAllocator.m in Sources */ = {isa = PBXBuildFile; fileRef = 058FD1801A716F7600A58654 /* GLAllocator.m */; };
 		0592DB831286AF810030F780 /* GLPlatform.h in Headers */ = {isa = PBXBuildFile; fileRef = 0592DB821286AF810030F780 /* GLPlatform.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		05BE5874128553050054FD91 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05BE5873128553050054FD91 /* Cocoa.framework */; };
 		05BE5879128553050054FD91 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 05BE5877128553050054FD91 /* InfoPlist.strings */; };
@@ -151,6 +160,9 @@
 		052BD76D127ECC3A005A3AE9 /* GLTexture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = GLTexture.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
 		052BD76F127ECC56005A3AE9 /* GLTexture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GLTexture.m; sourceTree = "<group>"; };
 		052BD772127ECEB1005A3AE9 /* GLFramebuffer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = GLFramebuffer.h; sourceTree = "<group>"; };
+		053E97D41A7287DD0027D558 /* GLObject+Internal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "GLObject+Internal.h"; sourceTree = "<group>"; };
+		058FD17F1A716F7600A58654 /* GLAllocator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GLAllocator.h; sourceTree = "<group>"; };
+		058FD1801A716F7600A58654 /* GLAllocator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GLAllocator.m; sourceTree = "<group>"; };
 		0592DB821286AF810030F780 /* GLPlatform.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GLPlatform.h; sourceTree = "<group>"; };
 		0592DBEE1286B2D70030F780 /* CeedGL-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "CeedGL-Info.plist"; path = "Mac/CeedGL-Info.plist"; sourceTree = "<group>"; };
 		05BE5871128553040054FD91 /* CeedGLDemo.mac.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CeedGLDemo.mac.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -333,9 +345,12 @@
 				0592DB821286AF810030F780 /* GLPlatform.h */,
 				05E625B3127EF48200B4A69C /* GLDebug.h */,
 				05E625B4127EF48200B4A69C /* GLDebug.m */,
+				058FD17F1A716F7600A58654 /* GLAllocator.h */,
+				058FD1801A716F7600A58654 /* GLAllocator.m */,
 				05F693E91285691700B5082C /* GLValue.h */,
 				05F693EA1285691700B5082C /* GLValue.m */,
 				05E625B9127F20D700B4A69C /* GLObject.h */,
+				053E97D41A7287DD0027D558 /* GLObject+Internal.h */,
 				05E625BA127F20D700B4A69C /* GLObject.m */,
 				05E625B1127EEF1A00B4A69C /* GLBufferDataSource.h */,
 				052BD768127ECB85005A3AE9 /* GLBuffer.h */,
@@ -465,10 +480,12 @@
 				050DB7F214890AA900812267 /* GLObject.h in Headers */,
 				050DB7F414890AA900812267 /* GLBufferDataSource.h in Headers */,
 				050DB7F514890AA900812267 /* GLBuffer.h in Headers */,
+				053E97D71A7287DD0027D558 /* GLObject+Internal.h in Headers */,
 				050DB7F714890AA900812267 /* GLTexture.h in Headers */,
 				050DB7F914890AA900812267 /* GLFramebuffer.h in Headers */,
 				050DB7FB14890AA900812267 /* GLRenderbuffer.h in Headers */,
 				050DB7FD14890AA900812267 /* GLShader.h in Headers */,
+				058FD1821A716F7600A58654 /* GLAllocator.h in Headers */,
 				050DB7FF14890AA900812267 /* GLProgram.h in Headers */,
 				050DB80114890AA900812267 /* GLDrawCommand.h in Headers */,
 			);
@@ -485,10 +502,12 @@
 				050DB81914890F2F00812267 /* GLObject.h in Headers */,
 				050DB81B14890F2F00812267 /* GLBufferDataSource.h in Headers */,
 				050DB81C14890F2F00812267 /* GLBuffer.h in Headers */,
+				053E97D81A7287DD0027D558 /* GLObject+Internal.h in Headers */,
 				050DB81E14890F2F00812267 /* GLTexture.h in Headers */,
 				050DB82014890F2F00812267 /* GLFramebuffer.h in Headers */,
 				050DB82214890F2F00812267 /* GLRenderbuffer.h in Headers */,
 				050DB82414890F2F00812267 /* GLShader.h in Headers */,
+				058FD1831A716F7600A58654 /* GLAllocator.h in Headers */,
 				050DB82614890F2F00812267 /* GLProgram.h in Headers */,
 				050DB82814890F2F00812267 /* GLDrawCommand.h in Headers */,
 			);
@@ -505,10 +524,12 @@
 				05E625A1127EEC6700B4A69C /* GLDrawCommand.h in Headers */,
 				05E625A5127EEC9100B4A69C /* GLProgram.h in Headers */,
 				05E625A9127EECA000B4A69C /* GLShader.h in Headers */,
+				053E97D61A7287DD0027D558 /* GLObject+Internal.h in Headers */,
 				05E625B2127EEF1A00B4A69C /* GLBufferDataSource.h in Headers */,
 				05E625B5127EF48200B4A69C /* GLDebug.h in Headers */,
 				05E625B8127EFBF000B4A69C /* CeedGL.h in Headers */,
 				05E625BB127F20D700B4A69C /* GLObject.h in Headers */,
+				058FD1811A716F7600A58654 /* GLAllocator.h in Headers */,
 				05F693EB1285691700B5082C /* GLValue.h in Headers */,
 				0592DB831286AF810030F780 /* GLPlatform.h in Headers */,
 			);
@@ -580,9 +601,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 052BD762127ECB10005A3AE9 /* Build configuration list for PBXNativeTarget "CeedGL Mac Framework" */;
 			buildPhases = (
+				052BD754127ECB10005A3AE9 /* Headers */,
 				052BD752127ECB10005A3AE9 /* Sources */,
 				052BD753127ECB10005A3AE9 /* Frameworks */,
-				052BD754127ECB10005A3AE9 /* Headers */,
 				052BD755127ECB10005A3AE9 /* Resources */,
 			);
 			buildRules = (
@@ -698,6 +719,7 @@
 			files = (
 				050DB7EF14890AA900812267 /* GLDebug.m in Sources */,
 				050DB7F114890AA900812267 /* GLValue.m in Sources */,
+				058FD1851A716F7600A58654 /* GLAllocator.m in Sources */,
 				050DB7F314890AA900812267 /* GLObject.m in Sources */,
 				050DB7F614890AA900812267 /* GLBuffer.m in Sources */,
 				050DB7F814890AA900812267 /* GLTexture.m in Sources */,
@@ -715,6 +737,7 @@
 			files = (
 				050DB81614890F2F00812267 /* GLDebug.m in Sources */,
 				050DB81814890F2F00812267 /* GLValue.m in Sources */,
+				058FD1861A716F7600A58654 /* GLAllocator.m in Sources */,
 				050DB81A14890F2F00812267 /* GLObject.m in Sources */,
 				050DB81D14890F2F00812267 /* GLBuffer.m in Sources */,
 				050DB81F14890F2F00812267 /* GLTexture.m in Sources */,
@@ -743,6 +766,7 @@
 			files = (
 				052BD76C127ECBDB005A3AE9 /* GLBuffer.m in Sources */,
 				052BD770127ECC56005A3AE9 /* GLTexture.m in Sources */,
+				058FD1841A716F7600A58654 /* GLAllocator.m in Sources */,
 				05E6259D127EEC3D00B4A69C /* GLRenderbuffer.m in Sources */,
 				05E625A2127EEC6700B4A69C /* GLDrawCommand.m in Sources */,
 				05E625A6127EEC9100B4A69C /* GLProgram.m in Sources */,
@@ -953,6 +977,11 @@
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					"\"$(BUILT_PRODUCTS_DIR)\"",
+					"\"$(OBJROOT)/UninstalledProducts\"",
+					"$(inherited)",
+				);
 				MACOSX_DEPLOYMENT_TARGET = 10.6;
 				SDKROOT = macosx;
 			};
@@ -1072,6 +1101,11 @@
 				GCC_PREPROCESSOR_DEFINITIONS = DEBUG;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					"\"$(BUILT_PRODUCTS_DIR)\"",
+					"\"$(OBJROOT)/UninstalledProducts\"",
+					"$(inherited)",
+				);
 				MACOSX_DEPLOYMENT_TARGET = 10.6;
 				SDKROOT = macosx;
 			};
@@ -1084,6 +1118,11 @@
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					"\"$(BUILT_PRODUCTS_DIR)\"",
+					"\"$(OBJROOT)/UninstalledProducts\"",
+					"$(inherited)",
+				);
 				MACOSX_DEPLOYMENT_TARGET = 10.6;
 				SDKROOT = macosx;
 			};
@@ -1141,6 +1180,11 @@
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					"\"$(BUILT_PRODUCTS_DIR)\"",
+					"\"$(OBJROOT)/UninstalledProducts\"",
+					"$(inherited)",
+				);
 				MACOSX_DEPLOYMENT_TARGET = 10.6;
 				SDKROOT = macosx;
 			};

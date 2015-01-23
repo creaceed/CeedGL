@@ -24,7 +24,7 @@
 
 
 // GLTexture creation
-+ (GLTexture*)texture;
++ (instancetype)texture;
 
 // Texture definition
 - (void)setFromExistingHandle:(GLuint)handle width:(GLsizei)w height:(GLsizei)h internalFormat:(GLenum)iformat type:(GLenum)type border:(GLint)border;

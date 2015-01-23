@@ -6,17 +6,17 @@
 //  Copyright (c) 2010 Creaceed. All rights reserved.
 //
 
-#import "GLProgram.h"
-#import "GLShader.h"
+#import <CeedGL/GLProgram.h>
+#import <CeedGL/GLShader.h>
 
 @implementation GLProgram
 
-+ (GLProgram*)program
++ (instancetype)program
 {
 	return [[self alloc] init];
 }
 
-- (id)init {
+- (instancetype)init {
     if ((self = [super init])) {
 		mAttachedShaders = [NSMutableDictionary new];
 		mUniformLookup = [NSMutableDictionary new];

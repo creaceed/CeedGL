@@ -18,7 +18,7 @@
 @property (readonly, nonatomic) GLenum 		usage;
 @property (readonly, nonatomic) GLsizeiptr 	size;
 
-+ (GLBuffer*)buffer;
++ (instancetype)buffer;
 
 // Loading data 
 - (void)setFromExistingHandle:(GLuint)handle size:(GLsizeiptr)size usage:(GLenum)usage;

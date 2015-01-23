@@ -19,12 +19,12 @@
 @property (readonly, nonatomic) GLenum 		type;
 //@property (readwrite, nonatomic, strong) NSString 	*source;
 
-- (GLShader*)initWithType:(GLenum)type;
-- (GLShader*)initVertexShader;
-- (GLShader*)initFragmentShader;
+- (instancetype)initWithType:(GLenum)type;
+- (instancetype)initVertexShader;
+- (instancetype)initFragmentShader;
 
-+ (GLShader*)vertexShader;
-+ (GLShader*)fragmentShader;
++ (instancetype)vertexShader;
++ (instancetype)fragmentShader;
 
 - (void)setSource:(NSString*)source;
 - (BOOL)compile:(NSError**)error;

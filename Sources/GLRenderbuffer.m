@@ -6,14 +6,18 @@
 //  Copyright (c) 2010 Creaceed. All rights reserved.
 //
 
-#import "GLRenderbuffer.h"
+#import <CeedGL/GLRenderbuffer.h>
 
 
 @implementation GLRenderbuffer
 
 @synthesize internalFormat = mInternalFormat, width = mWidth, height = mHeight;
 
-- (id)init {
++ (instancetype)renderbuffer {
+	return [[self alloc] init]; 
+}
+
+- (instancetype)init {
     if ((self = [super init])) {
         // Initialization code here.
     }

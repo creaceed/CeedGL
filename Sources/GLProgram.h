@@ -18,7 +18,7 @@
 	NSMutableDictionary *mAttribLookup;  // {name: location}
 }
 
-+ (GLProgram*)program;
++ (instancetype)program;
 
 - (void)attachShader:(GLShader*)shader;
 - (void)detachShaderWithType:(GLenum)type;

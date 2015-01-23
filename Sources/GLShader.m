@@ -6,20 +6,20 @@
 //  Copyright (c) 2010 Creaceed. All rights reserved.
 //
 
-#import "GLShader.h"
+#import <CeedGL/GLShader.h>
 
 
 @implementation GLShader
 @synthesize type = mType;
 
-- (id)init {
+- (instancetype)init {
     if ((self = [super init])) {
         // Initialization code here.
     }
     
     return self;
 }
-- (GLShader*)initWithType:(GLenum)type
+- (instancetype)initWithType:(GLenum)type
 {
     if ((self = [super init])) {
         // Initialization code here.
@@ -28,20 +28,20 @@
     
     return self;
 }
-- (GLShader*)initVertexShader
+- (instancetype)initVertexShader
 {
 	return [self initWithType:GL_VERTEX_SHADER];
 }
-- (GLShader*)initFragmentShader
+- (instancetype)initFragmentShader
 {
 	return [self initWithType:GL_FRAGMENT_SHADER];
 }
 
-+ (GLShader*)vertexShader
++ (instancetype)vertexShader
 {
 	return [[self alloc] initVertexShader];
 }
-+ (GLShader*)fragmentShader
++ (instancetype)fragmentShader
 {
 	return [[self alloc] initFragmentShader];
 }

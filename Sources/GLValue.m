@@ -6,7 +6,7 @@
 //  Copyright 2010 Creaceed. All rights reserved.
 //
 
-#import "GLValue.h"
+#import <CeedGL/GLValue.h>
 
 #define mINT_ARRAY ((GLint*)mValues)
 

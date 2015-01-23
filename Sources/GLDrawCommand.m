@@ -6,23 +6,23 @@
 //  Copyright (c) 2010 Creaceed. All rights reserved.
 //
 
-#import "GLDrawCommand.h"
-#import "GLProgram.h"
-#import "GLValue.h"
-#import "GLBuffer.h"
-#import "GLTexture.h"
+#import <CeedGL/GLDrawCommand.h>
+#import <CeedGL/GLProgram.h>
+#import <CeedGL/GLValue.h>
+#import <CeedGL/GLBuffer.h>
+#import <CeedGL/GLTexture.h>
 
 @implementation GLDrawCommand
 
 @synthesize firstElement = mFirstElement, elementCount = mElementCount;
 @synthesize elementIndexes = mElementIndexes, elementIndexType = mElementIndexType, mode = mMode, program = mProgram;
 
-+ (GLDrawCommand*)drawCommand
++ (instancetype)drawCommand
 {
 	return [[self alloc] init];
 }
 
-- (id)init {
+- (instancetype)init {
     if ((self = [super init])) {
         // Initialization code here.
 		

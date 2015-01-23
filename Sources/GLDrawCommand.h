@@ -29,7 +29,7 @@
 @property (readwrite, nonatomic)			GLenum 		mode;
 @property (readwrite, nonatomic, retain)	GLProgram 	*program;
 
-+ (GLDrawCommand*)drawCommand;
++ (instancetype)drawCommand;
 
 // Setting State
 - (void)setElementIndexes:(GLBuffer*)buffer type:(GLenum)type;

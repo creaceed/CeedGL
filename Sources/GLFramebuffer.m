@@ -6,14 +6,14 @@
 //  Copyright (c) 2010 Creaceed. All rights reserved.
 //
 
-#import "GLFramebuffer.h"
-#import "GLRenderbuffer.h"
-#import "GLTexture.h"
+#import <CeedGL/GLFramebuffer.h>
+#import <CeedGL/GLRenderbuffer.h>
+#import <CeedGL/GLTexture.h>
 
 
 @implementation GLFramebuffer
 
-- (id)init {
+- (instancetype)init {
     if ((self = [super init])) {
         // Initialization code here.
 		mAttachments = [NSMutableDictionary new];
@@ -23,7 +23,7 @@
 }
 
 
-+ (GLFramebuffer*)framebuffer
++ (instancetype)framebuffer
 {
 	return [[self alloc] init];
 }

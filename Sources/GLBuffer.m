@@ -6,32 +6,24 @@
 //  Copyright (c) 2010 Creaceed. All rights reserved.
 //
 
-#import "GLBuffer.h"
+#import <CeedGL/GLBuffer.h>
 
 
 @implementation GLBuffer
 
 @synthesize usage = mUsage, size = mSize;
 
-+ (GLBuffer*)buffer
++ (instancetype)buffer
 {
 	return [[self alloc] init];
 }
 
-- (id)init {
+- (instancetype)init {
     if ((self = [super init])) {
         // Initialization code here.
     }
     
     return self;
-}
-
-- (void)dealloc {
-    // Clean-up code here.
-	if(mHandle && mHandleOwner == nil)
-	{
-		GLLog(@"warning: handle not destroyed");
-	}
 }
 
 #pragma mark -

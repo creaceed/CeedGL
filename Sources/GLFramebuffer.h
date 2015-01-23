@@ -16,7 +16,7 @@
 	NSMutableDictionary	*mAttachments;
 }
 
-+ (GLFramebuffer*)framebuffer;
++ (instancetype)framebuffer;
 
 // Attachments
 - (void)attachRenderBuffer:(GLRenderbuffer*)rbuffer toPoint:(GLenum)attachmentPoint;
