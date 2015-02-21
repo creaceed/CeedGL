@@ -85,6 +85,7 @@
 		058FD1851A716F7600A58654 /* GLAllocator.m in Sources */ = {isa = PBXBuildFile; fileRef = 058FD1801A716F7600A58654 /* GLAllocator.m */; };
 		058FD1861A716F7600A58654 /* GLAllocator.m in Sources */ = {isa = PBXBuildFile; fileRef = 058FD1801A716F7600A58654 /* GLAllocator.m */; };
 		0592DB831286AF810030F780 /* GLPlatform.h in Headers */ = {isa = PBXBuildFile; fileRef = 0592DB821286AF810030F780 /* GLPlatform.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		05B1C9301A989E9F000E9317 /* stub.c in Sources */ = {isa = PBXBuildFile; fileRef = 05B1C9101A989E23000E9317 /* stub.c */; };
 		05BE5874128553050054FD91 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05BE5873128553050054FD91 /* Cocoa.framework */; };
 		05BE5879128553050054FD91 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 05BE5877128553050054FD91 /* InfoPlist.strings */; };
 		05BE587B128553050054FD91 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 05BE587A128553050054FD91 /* main.m */; };
@@ -118,6 +119,20 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		05B1C9331A989FA9000E9317 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 052BD749127ECB10005A3AE9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 050DB80614890EE300812267;
+			remoteInfo = CeedGL.ios;
+		};
+		05B1C9351A989FA9000E9317 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 052BD749127ECB10005A3AE9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 05D0FDD719892FFE00BB4812;
+			remoteInfo = CeedGL.CoreVideoExt.ios;
+		};
 		05BE588C1285533D0054FD91 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 052BD749127ECB10005A3AE9 /* Project object */;
@@ -126,6 +141,18 @@
 			remoteInfo = CeedGL;
 		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		05B1C9131A989E82000E9317 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		050DB7DD148909E300812267 /* libCeedGL.mac.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libCeedGL.mac.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -165,6 +192,8 @@
 		058FD1801A716F7600A58654 /* GLAllocator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GLAllocator.m; sourceTree = "<group>"; };
 		0592DB821286AF810030F780 /* GLPlatform.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GLPlatform.h; sourceTree = "<group>"; };
 		0592DBEE1286B2D70030F780 /* CeedGL-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "CeedGL-Info.plist"; path = "Mac/CeedGL-Info.plist"; sourceTree = "<group>"; };
+		05B1C9101A989E23000E9317 /* stub.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = stub.c; sourceTree = "<group>"; };
+		05B1C9151A989E82000E9317 /* libCeedGL-stub.ios.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libCeedGL-stub.ios.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		05BE5871128553040054FD91 /* CeedGLDemo.mac.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CeedGLDemo.mac.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		05BE5873128553050054FD91 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		05BE5875128553050054FD91 /* CeedGLDemo-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CeedGLDemo-Info.plist"; sourceTree = "<group>"; };
@@ -237,6 +266,13 @@
 			files = (
 				05E625AE127EED7B00B4A69C /* Cocoa.framework in Frameworks */,
 				05E625AC127EED5A00B4A69C /* OpenGL.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		05B1C9121A989E82000E9317 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -376,6 +412,7 @@
 		052BD74F127ECB10005A3AE9 /* Other Sources */ = {
 			isa = PBXGroup;
 			children = (
+				05B1C9101A989E23000E9317 /* stub.c */,
 			);
 			name = "Other Sources";
 			sourceTree = "<group>";
@@ -411,6 +448,7 @@
 				050DB80714890EE300812267 /* libCeedGL.ios.a */,
 				050DB82E1489145800812267 /* CeedGLDemo.ios.app */,
 				05D0FDF819892FFE00BB4812 /* libCeedGL.CoreVideoExt.ios.a */,
+				05B1C9151A989E82000E9317 /* libCeedGL-stub.ios.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -615,6 +653,25 @@
 			productReference = 052BD757127ECB10005A3AE9 /* CeedGL.framework */;
 			productType = "com.apple.product-type.framework";
 		};
+		05B1C9141A989E82000E9317 /* CeedGL-stub.ios */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 05B1C9261A989E84000E9317 /* Build configuration list for PBXNativeTarget "CeedGL-stub.ios" */;
+			buildPhases = (
+				05B1C9111A989E82000E9317 /* Sources */,
+				05B1C9121A989E82000E9317 /* Frameworks */,
+				05B1C9131A989E82000E9317 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				05B1C9341A989FA9000E9317 /* PBXTargetDependency */,
+				05B1C9361A989FA9000E9317 /* PBXTargetDependency */,
+			);
+			name = "CeedGL-stub.ios";
+			productName = "CeedGL-stub.ios";
+			productReference = 05B1C9151A989E82000E9317 /* libCeedGL-stub.ios.a */;
+			productType = "com.apple.product-type.library.static";
+		};
 		05BE5870128553040054FD91 /* CeedGLDemo.mac */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 05BE5887128553050054FD91 /* Build configuration list for PBXNativeTarget "CeedGLDemo.mac" */;
@@ -658,6 +715,11 @@
 			attributes = {
 				LastUpgradeCheck = 0610;
 				ORGANIZATIONNAME = Creaceed;
+				TargetAttributes = {
+					05B1C9141A989E82000E9317 = {
+						CreatedOnToolsVersion = 6.1.1;
+					};
+				};
 			};
 			buildConfigurationList = 052BD74C127ECB10005A3AE9 /* Build configuration list for PBXProject "CeedGL" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -677,6 +739,7 @@
 				05D0FDD719892FFE00BB4812 /* CeedGL.CoreVideoExt.ios */,
 				05BE5870128553040054FD91 /* CeedGLDemo.mac */,
 				050DB82D1489145800812267 /* CeedGLDemo.ios */,
+				05B1C9141A989E82000E9317 /* CeedGL-stub.ios */,
 			);
 		};
 /* End PBXProject section */
@@ -778,6 +841,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		05B1C9111A989E82000E9317 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				05B1C9301A989E9F000E9317 /* stub.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		05BE586D128553040054FD91 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -799,6 +870,16 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		05B1C9341A989FA9000E9317 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 050DB80614890EE300812267 /* CeedGL.ios */;
+			targetProxy = 05B1C9331A989FA9000E9317 /* PBXContainerItemProxy */;
+		};
+		05B1C9361A989FA9000E9317 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 05D0FDD719892FFE00BB4812 /* CeedGL.CoreVideoExt.ios */;
+			targetProxy = 05B1C9351A989FA9000E9317 /* PBXContainerItemProxy */;
+		};
 		05BE588D1285533D0054FD91 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 052BD756127ECB10005A3AE9 /* CeedGL Mac Framework */;
@@ -1295,6 +1376,127 @@
 			};
 			name = AdHoc;
 		};
+		05B1C9271A989E84000E9317 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		05B1C9281A989E84000E9317 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		05B1C9291A989E84000E9317 /* Distribution */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Distribution;
+		};
+		05B1C92A1A989E84000E9317 /* AdHoc */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = AdHoc;
+		};
 		05BE5885128553050054FD91 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -1483,6 +1685,16 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		05B1C9261A989E84000E9317 /* Build configuration list for PBXNativeTarget "CeedGL-stub.ios" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				05B1C9271A989E84000E9317 /* Debug */,
+				05B1C9281A989E84000E9317 /* Release */,
+				05B1C9291A989E84000E9317 /* Distribution */,
+				05B1C92A1A989E84000E9317 /* AdHoc */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 		05BE5887128553050054FD91 /* Build configuration list for PBXNativeTarget "CeedGLDemo.mac" */ = {
 			isa = XCConfigurationList;
