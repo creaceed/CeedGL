@@ -33,6 +33,9 @@ static GLenum _glFormatForPixelFormat(OSType type, size_t planei)
 			return planei==0?GL_RED_EXT:GL_RG_EXT;
 	}
 	GL_ASSERT(0);
+	GL_EXCEPT(1, @"Unsupported case");
+	
+	return GL_RGBA;
 }
 
 static GLenum _glTypeForPixelFormat(OSType type, size_t planei)
@@ -57,6 +60,9 @@ static GLenum _glTypeForPixelFormat(OSType type, size_t planei)
 	}
 	
 	GL_ASSERT(0);
+	GL_EXCEPT(1, @"Unsupported case");
+	
+	return GL_UNSIGNED_BYTE;
 }
 
 
