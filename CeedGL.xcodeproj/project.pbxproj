@@ -713,7 +713,7 @@
 		052BD749127ECB10005A3AE9 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0610;
+				LastUpgradeCheck = 0620;
 				ORGANIZATIONNAME = Creaceed;
 				TargetAttributes = {
 					05B1C9141A989E82000E9317 = {
@@ -1695,6 +1695,7 @@
 				05B1C92A1A989E84000E9317 /* AdHoc */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		05BE5887128553050054FD91 /* Build configuration list for PBXNativeTarget "CeedGLDemo.mac" */ = {
 			isa = XCConfigurationList;
