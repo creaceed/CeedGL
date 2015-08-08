@@ -125,7 +125,15 @@
 			if(unamesize > 0)
 			{
 				loc = glGetUniformLocation(mHandle, uname);
-				[mUniformLookup setObject:[NSNumber numberWithInt:loc] forKey:[NSString stringWithCString:uname encoding:NSUTF8StringEncoding]];
+				NSString *uniformName = [NSString stringWithCString:uname encoding:NSUTF8StringEncoding];
+				if([uniformName hasSuffix:@"[0]"]) {
+					uniformName = [uniformName substringToIndex:uniformName.length-3];
+				}
+				
+				if([uniformName containsString:@"[0]"])
+					GL_EXCEPT(YES, @"Uniforms with arrays of arrays are not supported");
+				
+				[mUniformLookup setObject:[NSNumber numberWithInt:loc] forKey:uniformName];
 			}
 		}
 		//GLLog(@"Uniforms in program %d: %@", mHandle, mUniformLookup);
