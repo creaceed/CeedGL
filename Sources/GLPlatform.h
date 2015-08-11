@@ -8,5 +8,7 @@
 #import <OpenGLES/ES3/glext.h>
 #else
 #import <OpenGL/OpenGL.h>
+#import <OpenGL/gl.h>
+#import <OpenGL/glext.h>
 #endif
 
