@@ -11,3 +11,4 @@
 #import <CeedGL/GLShader.h>
 #import <CeedGL/GLProgram.h>
 #import <CeedGL/GLDrawCommand.h>
+#import <CeedGL/GLQueue.h>
