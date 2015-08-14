@@ -70,6 +70,7 @@
 		050DB86314891C5600812267 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 050DB86214891C5600812267 /* QuartzCore.framework */; };
 		050DB8651489204F00812267 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 050DB8641489204F00812267 /* UIKit.framework */; };
 		050DB8671489205700812267 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 050DB8661489205700812267 /* CoreGraphics.framework */; };
+		0514783B1B7E4D41004BCBDA /* GLQueue.h in Headers */ = {isa = PBXBuildFile; fileRef = 05A38B6E1B7A5A1D009D68B1 /* GLQueue.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		052BD769127ECB85005A3AE9 /* GLBuffer.h in Headers */ = {isa = PBXBuildFile; fileRef = 052BD768127ECB85005A3AE9 /* GLBuffer.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		052BD76C127ECBDB005A3AE9 /* GLBuffer.m in Sources */ = {isa = PBXBuildFile; fileRef = 052BD76B127ECBDB005A3AE9 /* GLBuffer.m */; };
 		052BD76E127ECC3A005A3AE9 /* GLTexture.h in Headers */ = {isa = PBXBuildFile; fileRef = 052BD76D127ECC3A005A3AE9 /* GLTexture.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -630,6 +631,7 @@
 				05E625A1127EEC6700B4A69C /* GLDrawCommand.h in Headers */,
 				05E625A5127EEC9100B4A69C /* GLProgram.h in Headers */,
 				05E625A9127EECA000B4A69C /* GLShader.h in Headers */,
+				0514783B1B7E4D41004BCBDA /* GLQueue.h in Headers */,
 				053E97D61A7287DD0027D558 /* GLObject+Internal.h in Headers */,
 				05E625B2127EEF1A00B4A69C /* GLBufferDataSource.h in Headers */,
 				05E625B5127EF48200B4A69C /* GLDebug.h in Headers */,
@@ -1165,6 +1167,7 @@
 				ARCHS = "$(ARCHS_STANDARD)";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
+				ENABLE_BITCODE = NO;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = iOS/CeedGLDemo/CeedGLDemo_Prefix.pch;
@@ -1190,6 +1193,7 @@
 				ARCHS = "$(ARCHS_STANDARD)";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
+				ENABLE_BITCODE = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = iOS/CeedGLDemo/CeedGLDemo_Prefix.pch;
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
@@ -1316,6 +1320,7 @@
 				ARCHS = "$(ARCHS_STANDARD)";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
+				ENABLE_BITCODE = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = iOS/CeedGLDemo/CeedGLDemo_Prefix.pch;
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
@@ -1617,6 +1622,7 @@
 				ARCHS = "$(ARCHS_STANDARD)";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
+				ENABLE_BITCODE = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = iOS/CeedGLDemo/CeedGLDemo_Prefix.pch;
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
