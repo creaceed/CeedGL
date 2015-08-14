@@ -9,6 +9,7 @@
 #import <QuartzCore/QuartzCore.h>
 
 #import "EAGLView.h"
+#import <CeedGL/CeedGL.h>
 
 @interface EAGLView (PrivateMethods)
 - (void)createFramebuffer;

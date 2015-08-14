@@ -121,16 +121,13 @@ static GLenum _glTypeForPixelFormat(OSType type, size_t planei)
 	
 }
 
-+ (GLTexture*)_textureFromCVT:(CVOpenGLESTextureRef)inputCVT format:(GLenum)format type:(GLenum)type size:(CGSize)cvtSize  outTarget:(GLenum*)otarget
++ (GLTexture*)_textureFromCVT:(CVOpenGLESTextureRef)inputCVT format:(GLenum)format type:(GLenum)type size:(CGSize)cvtSize
 {
 	GLTexture *texture = [GLTexture texture];
 	//CGSize cvtSize = CVImageBufferGetDisplaySize(inputCVT);
-	
-	[texture setFromExistingHandle:CVOpenGLESTextureGetName(inputCVT) width:cvtSize.width height:cvtSize.height internalFormat:format type:type border:0 owner:(__bridge id)inputCVT];
-	
 	GLenum target = CVOpenGLESTextureGetTarget(inputCVT);
 	
-	if(otarget) *otarget = target;
+	[texture setFromExistingHandle:CVOpenGLESTextureGetName(inputCVT) width:cvtSize.width height:cvtSize.height internalFormat:format type:type border:0 target:target owner:(__bridge id)inputCVT];
 	
 //	[texture bind:target];
 //	glTexParameteri(target, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
@@ -140,19 +137,16 @@ static GLenum _glTypeForPixelFormat(OSType type, size_t planei)
 	
 	return texture;
 }
-+ (GLTexture*)textureFromPixelBuffer:(CVPixelBufferRef)pixelBuffer inTextureCache:(CVOpenGLESTextureCacheRef)textureCache plane:(GLVideoPlane)plane outTarget:(GLenum*)otarget
++ (GLTexture*)textureFromPixelBuffer:(CVPixelBufferRef)pixelBuffer inTextureCache:(CVOpenGLESTextureCacheRef)textureCache plane:(GLVideoPlane)plane
 {
-	GLenum target;
 	CGSize size;
 	OSType pixformat = CVPixelBufferGetPixelFormatType(pixelBuffer);
 	size_t planei = (plane==GLVideoPlaneChroma?1:0);
 	CVOpenGLESTextureRef CVT = [self _createTextureForPixelBuffer:pixelBuffer inTextureCache:textureCache plane:plane outputSize:&size]; GL_ASSERT(CVT);
-	GLTexture *texture = [self _textureFromCVT:CVT format:_glFormatForPixelFormat(pixformat, planei) type:_glTypeForPixelFormat(pixformat, planei) size:size outTarget:&target];
+	GLTexture *texture = [self _textureFromCVT:CVT format:_glFormatForPixelFormat(pixformat, planei) type:_glTypeForPixelFormat(pixformat, planei) size:size];
 	
 	// CVT is now owned by texture
 	CFRelease(CVT);
-	
-	if(otarget) *otarget = target;
 	
 	return texture;
 }

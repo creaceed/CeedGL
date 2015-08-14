@@ -18,6 +18,8 @@
 @property (readonly, nonatomic) GLenum 		usage;
 @property (readonly, nonatomic) GLsizeiptr 	size;
 
+// note: target isn't stored as part of GLBuffer because a single buffer can be bound to different targets.
+
 + (instancetype)buffer;
 
 // Loading data 

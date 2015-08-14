@@ -48,10 +48,14 @@
 }
 
 #pragma mark Textures
-- (void)setTexture:(GLTexture*)texture target:(GLenum)target unit:(GLenum)unit
+- (void)setTexture:(GLTexture*)texture target:(GLenum)target unit:(GLenum)unit {
+	GL_EXCEPT(texture.target != target, @"Target mismatch");
+	[self setTexture:texture unit:unit];
+}
+- (void)setTexture:(GLTexture*)texture unit:(GLenum)unit
 {
 	GL_EXCEPT(texture == nil, NSInvalidArgumentException);
-	id binder = [NSDictionary dictionaryWithObjectsAndKeys:texture, @"texture", [NSNumber numberWithInt:target],@"target", nil];
+	id binder = [NSDictionary dictionaryWithObjectsAndKeys:texture, @"texture", nil];
 	
 	[mTextures setObject:binder forKey:[NSNumber numberWithInt:unit]];
 }
@@ -186,7 +190,7 @@
 		// should not be passed in modern profile OpenGL. Only for fixed-function pipeline, which we don't handle.
 		//glEnable(GL_TEXTURE_2D);
 		glActiveTexture([key intValue]); // unit
-		[texture bind:[[obj objectForKey:@"target"] intValue]];
+		[texture bind];
 		
 		GLCheckError();
 	}];
@@ -220,7 +224,9 @@
 	if(unbindTextures) {
 		[mTextures enumerateKeysAndObjectsUsingBlock:^(id key, id obj, BOOL *stop) {
 			glActiveTexture([key intValue]); // unit
-			[GLTexture unbind:[[obj objectForKey:@"target"] intValue]];
+			GLTexture *texture = [obj objectForKey:@"texture"];
+			[texture unbind];
+//			[GLTexture unbind:[[obj objectForKey:@"target"] intValue]];
 		}];
 	}
 }

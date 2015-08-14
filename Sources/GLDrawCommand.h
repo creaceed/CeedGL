@@ -34,7 +34,8 @@
 // Setting State
 - (void)setElementIndexes:(GLBuffer*)buffer type:(GLenum)type;
 
-- (void)setTexture:(GLTexture*)texture target:(GLenum)target unit:(GLenum)unit; // GL_TEXTURE0, ...
+- (void)setTexture:(GLTexture*)texture unit:(GLenum)unit; // GL_TEXTURE0, ...
+- (void)setTexture:(GLTexture*)texture target:(GLenum)target unit:(GLenum)unit GL_DEPRECATED_MSG("Target is now part of GLTexture");
 - (GLTexture*)textureForUnit:(GLenum)unit;
 - (void)removeTextureForUnit:(GLenum)unit;
 - (void)removeAllTextures;
@@ -45,6 +46,7 @@
 - (void)removeAllUniforms;
 
 - (void)setAttribute:(GLValue*)value forName:(NSString*)name;
+// TODO: may need a target argument
 - (void)setAttributeBuffer:(GLBuffer*)buffer size:(GLint)size type:(GLenum)type normalized:(GLboolean)norm stride:(GLsizei)stride  offset:(GLsizeiptr)off forName:(NSString*)name;
 - (id)attributeForName:(NSString*)name;
 - (void)removeAttributeForName:(NSString*)name;

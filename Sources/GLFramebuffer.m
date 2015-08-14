@@ -118,10 +118,12 @@
 	GLenum atts[attachments.count];
 	for(int i=0; i<attachments.count; i++) atts[i] = [attachments[i] intValue];
 	
-	if([EAGLContext currentContext].API <= kEAGLRenderingAPIOpenGLES2)
-		glDiscardFramebufferEXT(GL_FRAMEBUFFER, (GLsizei)attachments.count, atts);
-	else
+//	if([EAGLContext currentContext].API <= kEAGLRenderingAPIOpenGLES2)
+#if USE_GLES3
 		glInvalidateFramebuffer(GL_FRAMEBUFFER, (GLsizei)attachments.count, atts);
+#else
+		glDiscardFramebufferEXT(GL_FRAMEBUFFER, (GLsizei)attachments.count, atts);
+#endif
 #endif
 }
 - (GLenum)checkStatus

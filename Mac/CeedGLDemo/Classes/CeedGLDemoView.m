@@ -7,7 +7,6 @@
 //
 
 #import "CeedGLDemoView.h"
-#import <OpenGL/gl.h>
 #import <CeedGL/CeedGL.h>
 
 #define STRINGIFY(A) [NSString stringWithCString:#A encoding:NSUTF8StringEncoding]

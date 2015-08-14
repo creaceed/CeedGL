@@ -48,13 +48,14 @@
 	mHandle = 0;
 }
 
-- (void)setFromExistingHandle:(GLuint)handle width:(GLsizei)w height:(GLsizei)h internalFormat:(GLenum)iformat type:(GLenum)type border:(GLint)border
+- (void)setFromExistingHandle:(GLuint)handle width:(GLsizei)w height:(GLsizei)h internalFormat:(GLenum)iformat type:(GLenum)type border:(GLint)border target:(GLenum)target
 {
-	[self setFromExistingHandle:handle width:w height:h internalFormat:iformat type:type border:border owner:nil];
+	[self setFromExistingHandle:handle width:w height:h internalFormat:iformat type:type border:border target:target owner:nil];
 }
-- (void)setFromExistingHandle:(GLuint)handle width:(GLsizei)w height:(GLsizei)h internalFormat:(GLenum)iformat type:(GLenum)type border:(GLint)border owner:(id)owner
+- (void)setFromExistingHandle:(GLuint)handle width:(GLsizei)w height:(GLsizei)h internalFormat:(GLenum)iformat type:(GLenum)type border:(GLint)border target:(GLenum)target owner:(id)owner
 {
 	mHandle = handle;
+	mTarget = target;
 	mWidth = w;
 	mHeight = h;
 	mInternalFormat = iformat;
@@ -79,6 +80,9 @@
 	if(mHandle == 0) 
 		[self createHandle];
 	
+	GL_EXCEPT(mTarget != 0 && mTarget != target, @"Texture target can't change");
+	
+	mTarget = target;
 	glBindTexture(target, mHandle);
 		
 	if(npot)
@@ -109,35 +113,50 @@
 
 - (void)updateImage:(const GLvoid*)pixels level:(GLint)level xOffset:(GLint)xoff yOffset:(GLint)yoff width:(GLsizei)w height:(GLsizei)h format:(GLenum)format type:(GLenum)type target:(GLenum)target
 {
+	GL_EXCEPT(target != mTarget, @"Target don't match");
+	[self updateImage:pixels level:level xOffset:xoff yOffset:yoff width:w height:h format:format type:type];
+}
+- (void)updateImage:(const GLvoid*)pixels level:(GLint)level xOffset:(GLint)xoff yOffset:(GLint)yoff width:(GLsizei)w height:(GLsizei)h format:(GLenum)format type:(GLenum)type
+{
 	GL_EXCEPT(mHandle == 0, @"Trying to update non-existing buffer");
 	
-	glBindTexture(target, mHandle);
+	glBindTexture(mTarget, mHandle);
 	GLCheckError();
 	
-	glTexSubImage2D(target, level, xoff, yoff, w, h, format, type, pixels);
+	glTexSubImage2D(mTarget, level, xoff, yoff, w, h, format, type, pixels);
 	GLCheckError();
 }
 
 - (void)setMagFilter:(GLenum)magfil minFilter:(GLenum)minfil wrapS:(GLenum)wraps wrapT:(GLenum)wrapt target:(GLenum)target
 {
-	glBindTexture(target, mHandle);
+	GL_EXCEPT(target != mTarget, @"Target don't match");
+	[self setMagFilter:magfil minFilter:minfil wrapS:wraps wrapT:wrapt];
+}
+- (void)setMagFilter:(GLenum)magfil minFilter:(GLenum)minfil wrapS:(GLenum)wraps wrapT:(GLenum)wrapt
+{
+	glBindTexture(mTarget, mHandle);
 	
-	glTexParameteri(target, GL_TEXTURE_WRAP_S, wraps);
-	glTexParameteri(target, GL_TEXTURE_WRAP_T, wrapt);
-	glTexParameteri(target, GL_TEXTURE_MIN_FILTER, minfil);
-	glTexParameteri(target, GL_TEXTURE_MAG_FILTER, magfil);
+	glTexParameteri(mTarget, GL_TEXTURE_WRAP_S, wraps);
+	glTexParameteri(mTarget, GL_TEXTURE_WRAP_T, wrapt);
+	glTexParameteri(mTarget, GL_TEXTURE_MIN_FILTER, minfil);
+	glTexParameteri(mTarget, GL_TEXTURE_MAG_FILTER, magfil);
 
 	GLCheckError();
 }
 
 - (void)copyFramebufferImageToLevel:(GLint)level x:(GLint)x y:(GLint)y width:(GLint)w height:(GLint)h border:(GLint)border internalFormat:(GLenum)iformat target:(GLenum)target
 {
+	GL_EXCEPT(target != mTarget, @"Target don't match");
+	[self copyFramebufferImageToLevel:level x:x y:y width:w height:h border:border internalFormat:iformat];
+}
+- (void)copyFramebufferImageToLevel:(GLint)level x:(GLint)x y:(GLint)y width:(GLint)w height:(GLint)h border:(GLint)border internalFormat:(GLenum)iformat
+{
 	if(mHandle == 0) 
 		[self createHandle];
 	
-	glBindTexture(target, mHandle);
-	glCopyTexImage2D(target, level, iformat, x, y, w, h, border);
-	glBindTexture(target, 0);
+	glBindTexture(mTarget, mHandle);
+	glCopyTexImage2D(mTarget, level, iformat, x, y, w, h, border);
+	glBindTexture(mTarget, 0);
 	
 	GL_EXCEPT(mType == 0, @"Texture type should be set");
 	mWidth = w;
@@ -147,12 +166,21 @@
 }
 - (void)bind:(GLenum)target
 {
+	GL_EXCEPT(target != mTarget, @"Target don't match");
+	[self bind];
+}
+- (void)bind
+{
 	GL_EXCEPT(mHandle == 0, @"Trying to bind non-existing buffer");
-	
+	GL_EXCEPT(mTarget == 0, @"Target not yet determined");
 	// should not be passed in modern profile OpenGL. Only for fixed-function pipeline, which we don't handle.
 	// glEnable(GL_TEXTURE_2D);
-	glBindTexture(target, mHandle);
+	glBindTexture(mTarget, mHandle);
 	GLCheckError();
+}
+- (void)unbind {
+	GL_EXCEPT(mTarget == 0, @"Target not yet determined");
+	glBindTexture(mTarget, 0);
 }
 + (void)unbind:(GLenum)target
 {

@@ -20,8 +20,8 @@
 	GLKTextureInfo *info = [GLKTextureLoader textureWithContentsOfURL:url options:nil error:&error];
 	
 	if(info) {
-		[self setFromExistingHandle:info.name width:info.width height:info.height internalFormat:GL_RGBA type:GL_UNSIGNED_BYTE border:0];
-		[self setMagFilter:GL_LINEAR minFilter:GL_LINEAR wrapS:GL_CLAMP_TO_EDGE wrapT:GL_CLAMP_TO_EDGE target:GL_TEXTURE_2D];
+		[self setFromExistingHandle:info.name width:info.width height:info.height internalFormat:GL_RGBA type:GL_UNSIGNED_BYTE border:0 target:info.target];
+		[self setMagFilter:GL_LINEAR minFilter:GL_LINEAR wrapS:GL_CLAMP_TO_EDGE wrapT:GL_CLAMP_TO_EDGE];
 		res = YES;
 	}
 	else {
