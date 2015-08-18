@@ -11,7 +11,7 @@
 
 @implementation GLTexture
 
-@synthesize width = mWidth, height = mHeight, internalFormat = mInternalFormat,  border = mBorder, type = mType;
+@synthesize width = mWidth, height = mHeight, internalFormat = mInternalFormat,  border = mBorder, type = mType, target = mTarget;
 
 - (id)init {
     if ((self = [super init])) {
