@@ -164,6 +164,21 @@
 	mInternalFormat = iformat;
 	mBorder = border;
 }
+- (void)generateMipmapLevels {
+	GL_EXCEPT(mHandle == 0, @"Trying to generate mipmap on empty texture");
+	
+	glBindTexture(mTarget, mHandle);
+#if USE_CORE_PROFILE_32
+	glGenerateMipmap(mTarget);
+#else
+	glGenerateMipmapEXT(mTarget);
+#endif
+	glBindTexture(mTarget, 0);
+	
+	// this was required on legacy context (Mac) in my testing, not too sure for other cases.
+	glFlush();
+}
+
 - (void)bind:(GLenum)target
 {
 	GL_EXCEPT(target != mTarget, @"Target don't match");
