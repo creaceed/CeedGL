@@ -70,6 +70,12 @@
 		050DB86314891C5600812267 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 050DB86214891C5600812267 /* QuartzCore.framework */; };
 		050DB8651489204F00812267 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 050DB8641489204F00812267 /* UIKit.framework */; };
 		050DB8671489205700812267 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 050DB8661489205700812267 /* CoreGraphics.framework */; };
+		050F48AE1B84AF58009D8E4C /* GLUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = 050F48AC1B84AF58009D8E4C /* GLUtils.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		050F48AF1B84AF58009D8E4C /* GLUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 050F48AD1B84AF58009D8E4C /* GLUtils.m */; };
+		050F48B01B84AFFA009D8E4C /* GLUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = 050F48AC1B84AF58009D8E4C /* GLUtils.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		050F48B11B84AFFA009D8E4C /* GLUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = 050F48AC1B84AF58009D8E4C /* GLUtils.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		050F48B21B84B123009D8E4C /* GLUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 050F48AD1B84AF58009D8E4C /* GLUtils.m */; };
+		050F48B31B84B123009D8E4C /* GLUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 050F48AD1B84AF58009D8E4C /* GLUtils.m */; };
 		0514783B1B7E4D41004BCBDA /* GLQueue.h in Headers */ = {isa = PBXBuildFile; fileRef = 05A38B6E1B7A5A1D009D68B1 /* GLQueue.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		052BD769127ECB85005A3AE9 /* GLBuffer.h in Headers */ = {isa = PBXBuildFile; fileRef = 052BD768127ECB85005A3AE9 /* GLBuffer.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		052BD76C127ECBDB005A3AE9 /* GLBuffer.m in Sources */ = {isa = PBXBuildFile; fileRef = 052BD76B127ECBDB005A3AE9 /* GLBuffer.m */; };
@@ -220,6 +226,8 @@
 		050DB86214891C5600812267 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS5.0.sdk/System/Library/Frameworks/QuartzCore.framework; sourceTree = DEVELOPER_DIR; };
 		050DB8641489204F00812267 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS5.0.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
 		050DB8661489205700812267 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS5.0.sdk/System/Library/Frameworks/CoreGraphics.framework; sourceTree = DEVELOPER_DIR; };
+		050F48AC1B84AF58009D8E4C /* GLUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GLUtils.h; sourceTree = "<group>"; };
+		050F48AD1B84AF58009D8E4C /* GLUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GLUtils.m; sourceTree = "<group>"; };
 		052BD757127ECB10005A3AE9 /* CeedGL.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CeedGL.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		052BD75C127ECB10005A3AE9 /* CeedGL_Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CeedGL_Prefix.pch; sourceTree = "<group>"; };
 		052BD768127ECB85005A3AE9 /* GLBuffer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = GLBuffer.h; sourceTree = "<group>"; };
@@ -442,6 +450,8 @@
 				0592DB821286AF810030F780 /* GLPlatform.h */,
 				05E625B3127EF48200B4A69C /* GLDebug.h */,
 				05E625B4127EF48200B4A69C /* GLDebug.m */,
+				050F48AC1B84AF58009D8E4C /* GLUtils.h */,
+				050F48AD1B84AF58009D8E4C /* GLUtils.m */,
 				058FD17F1A716F7600A58654 /* GLAllocator.h */,
 				058FD1801A716F7600A58654 /* GLAllocator.m */,
 				05F693E91285691700B5082C /* GLValue.h */,
@@ -586,6 +596,7 @@
 				050DB7F414890AA900812267 /* GLBufferDataSource.h in Headers */,
 				050DB7F514890AA900812267 /* GLBuffer.h in Headers */,
 				05A38B721B7A5C9C009D68B1 /* GLQueue.h in Headers */,
+				050F48B01B84AFFA009D8E4C /* GLUtils.h in Headers */,
 				053E97D71A7287DD0027D558 /* GLObject+Internal.h in Headers */,
 				050DB7F714890AA900812267 /* GLTexture.h in Headers */,
 				050DB7F914890AA900812267 /* GLFramebuffer.h in Headers */,
@@ -609,6 +620,7 @@
 				050DB81B14890F2F00812267 /* GLBufferDataSource.h in Headers */,
 				050DB81C14890F2F00812267 /* GLBuffer.h in Headers */,
 				05A38B731B7A5C9C009D68B1 /* GLQueue.h in Headers */,
+				050F48B11B84AFFA009D8E4C /* GLUtils.h in Headers */,
 				053E97D81A7287DD0027D558 /* GLObject+Internal.h in Headers */,
 				050DB81E14890F2F00812267 /* GLTexture.h in Headers */,
 				050DB82014890F2F00812267 /* GLFramebuffer.h in Headers */,
@@ -632,6 +644,7 @@
 				05E625A5127EEC9100B4A69C /* GLProgram.h in Headers */,
 				05E625A9127EECA000B4A69C /* GLShader.h in Headers */,
 				0514783B1B7E4D41004BCBDA /* GLQueue.h in Headers */,
+				050F48AE1B84AF58009D8E4C /* GLUtils.h in Headers */,
 				053E97D61A7287DD0027D558 /* GLObject+Internal.h in Headers */,
 				05E625B2127EEF1A00B4A69C /* GLBufferDataSource.h in Headers */,
 				05E625B5127EF48200B4A69C /* GLDebug.h in Headers */,
@@ -909,6 +922,7 @@
 				050DB7FE14890AA900812267 /* GLShader.m in Sources */,
 				050DB80014890AA900812267 /* GLProgram.m in Sources */,
 				050DB80214890AA900812267 /* GLDrawCommand.m in Sources */,
+				050F48B21B84B123009D8E4C /* GLUtils.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -928,6 +942,7 @@
 				050DB82514890F2F00812267 /* GLShader.m in Sources */,
 				050DB82714890F2F00812267 /* GLProgram.m in Sources */,
 				050DB82914890F2F00812267 /* GLDrawCommand.m in Sources */,
+				050F48B31B84B123009D8E4C /* GLUtils.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -958,6 +973,7 @@
 				05E625B6127EF48200B4A69C /* GLDebug.m in Sources */,
 				05E625BC127F20D700B4A69C /* GLObject.m in Sources */,
 				05F693EC1285691700B5082C /* GLValue.m in Sources */,
+				050F48AF1B84AF58009D8E4C /* GLUtils.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
