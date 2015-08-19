@@ -168,7 +168,7 @@
 	GL_EXCEPT(mHandle == 0, @"Trying to generate mipmap on empty texture");
 	
 	glBindTexture(mTarget, mHandle);
-#if USE_CORE_PROFILE_32
+#if USE_CORE_PROFILE_32 || TARGET_OS_IPHONE
 	glGenerateMipmap(mTarget);
 #else
 	glGenerateMipmapEXT(mTarget);
