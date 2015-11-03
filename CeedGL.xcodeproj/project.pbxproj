@@ -1233,6 +1233,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				HEADER_SEARCH_PATHS = (
 					"\"$(BUILT_PRODUCTS_DIR)\"",
+					"\"$(OBJROOT)/UninstalledProducts/iphoneos\"",
 					"\"$(OBJROOT)/UninstalledProducts\"",
 					"$(inherited)",
 				);
@@ -1363,6 +1364,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				HEADER_SEARCH_PATHS = (
 					"\"$(BUILT_PRODUCTS_DIR)\"",
+					"\"$(OBJROOT)/UninstalledProducts/iphoneos\"",
 					"\"$(OBJROOT)/UninstalledProducts\"",
 					"$(inherited)",
 				);
@@ -1380,6 +1382,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				HEADER_SEARCH_PATHS = (
 					"\"$(BUILT_PRODUCTS_DIR)\"",
+					"\"$(OBJROOT)/UninstalledProducts/iphoneos\"",
 					"\"$(OBJROOT)/UninstalledProducts\"",
 					"$(inherited)",
 				);
@@ -1535,6 +1538,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				HEADER_SEARCH_PATHS = (
 					"\"$(BUILT_PRODUCTS_DIR)\"",
+					"\"$(OBJROOT)/UninstalledProducts/iphoneos\"",
 					"\"$(OBJROOT)/UninstalledProducts\"",
 					"$(inherited)",
 				);
