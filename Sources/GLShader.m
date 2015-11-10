@@ -98,6 +98,7 @@
 		glGetShaderInfoLog(mHandle, l, &l, info);
 		
 		NSString *msg = [NSString stringWithCString:info encoding:NSUTF8StringEncoding];
+		GLLog(@"Source: %@", mSource);
 		GLLog(@"Compiler message: %@", msg);
 		
 		if(error && msg)
