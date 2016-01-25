@@ -10,26 +10,40 @@
 
 @implementation GLTexture (GLKit)
 
-- (BOOL)loadFromFileAtURL:(NSURL*)url options:(NSDictionary*)options error:(NSError **)perror
++ (GLTextureSpecifier)textureSpecifierFromTextureInfo:(GLKTextureInfo*)info {
+	GL_EXCEPT(info == nil, NSInvalidArgumentException);
+	GL_EXCEPT(info.target == 0, NSInvalidArgumentException);
+	GL_EXCEPT(info.width == 0, NSInvalidArgumentException);
+	GL_EXCEPT(info.height == 0, NSInvalidArgumentException);
+	
+	
+	GLTextureSpecifier spec = GLTextureSpecifierMakeTexture2D(info.target, info.width, info.height, GL_RGBA, GL_UNSIGNED_BYTE);
+	
+	return spec;
+}
+
++ (instancetype)textureWithFileAtURL:(NSURL*)url options:(NSDictionary*)options error:(NSError **)perror
 {
-	BOOL res;
-	GL_EXCEPT(self.handle != 0, NSInvalidArgumentException);
+	GLTexture *texture = nil;
 	
 	// possibly
 	NSError *error;
 	GLKTextureInfo *info = [GLKTextureLoader textureWithContentsOfURL:url options:nil error:&error];
 	
 	if(info) {
-		[self setFromExistingHandle:info.name width:info.width height:info.height internalFormat:GL_RGBA type:GL_UNSIGNED_BYTE border:0 target:info.target];
-		[self setMagFilter:GL_LINEAR minFilter:GL_LINEAR wrapS:GL_CLAMP_TO_EDGE wrapT:GL_CLAMP_TO_EDGE];
-		res = YES;
+		GLTextureSpecifier spec = [self textureSpecifierFromTextureInfo:info];
+
+		texture = [GLTexture textureWithSpecifier:spec];
+		[texture setFromExistingHandle:info.name];
+//		[self setFromExistingHandle:info.name width:info.width height:info.height internalFormat:GL_RGBA type:GL_UNSIGNED_BYTE border:0 target:info.target];
+		[texture setMagFilter:GL_LINEAR minFilter:GL_LINEAR];
+		[texture setWrapMode:GL_CLAMP_TO_EDGE];
 	}
 	else {
 		if(perror)
 			*perror = error;
-		res = NO;
 	}
-	return res;
+	return texture;
 }
 
 @end

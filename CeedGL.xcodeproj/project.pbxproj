@@ -85,6 +85,12 @@
 		053E97D61A7287DD0027D558 /* GLObject+Internal.h in Headers */ = {isa = PBXBuildFile; fileRef = 053E97D41A7287DD0027D558 /* GLObject+Internal.h */; };
 		053E97D71A7287DD0027D558 /* GLObject+Internal.h in Headers */ = {isa = PBXBuildFile; fileRef = 053E97D41A7287DD0027D558 /* GLObject+Internal.h */; };
 		053E97D81A7287DD0027D558 /* GLObject+Internal.h in Headers */ = {isa = PBXBuildFile; fileRef = 053E97D41A7287DD0027D558 /* GLObject+Internal.h */; };
+		0540297E1C53E56700FA30E2 /* GLTexture+Deprecated2D.h in Headers */ = {isa = PBXBuildFile; fileRef = 0540297C1C53E56700FA30E2 /* GLTexture+Deprecated2D.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0540297F1C53E56700FA30E2 /* GLTexture+Deprecated2D.h in Headers */ = {isa = PBXBuildFile; fileRef = 0540297C1C53E56700FA30E2 /* GLTexture+Deprecated2D.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		054029801C53E56700FA30E2 /* GLTexture+Deprecated2D.h in Headers */ = {isa = PBXBuildFile; fileRef = 0540297C1C53E56700FA30E2 /* GLTexture+Deprecated2D.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		054029811C53E56700FA30E2 /* GLTexture+Deprecated2D.m in Sources */ = {isa = PBXBuildFile; fileRef = 0540297D1C53E56700FA30E2 /* GLTexture+Deprecated2D.m */; };
+		054029821C53E56700FA30E2 /* GLTexture+Deprecated2D.m in Sources */ = {isa = PBXBuildFile; fileRef = 0540297D1C53E56700FA30E2 /* GLTexture+Deprecated2D.m */; };
+		054029831C53E56700FA30E2 /* GLTexture+Deprecated2D.m in Sources */ = {isa = PBXBuildFile; fileRef = 0540297D1C53E56700FA30E2 /* GLTexture+Deprecated2D.m */; };
 		0558FE7A1B677C60000FBE32 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 050DB80814890EE300812267 /* Foundation.framework */; };
 		0558FE831B677CAE000FBE32 /* GLTexture+GLKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 0558FE811B677CAE000FBE32 /* GLTexture+GLKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0558FE841B677CAE000FBE32 /* GLTexture+GLKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 0558FE821B677CAE000FBE32 /* GLTexture+GLKit.m */; };
@@ -236,6 +242,9 @@
 		052BD76F127ECC56005A3AE9 /* GLTexture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GLTexture.m; sourceTree = "<group>"; };
 		052BD772127ECEB1005A3AE9 /* GLFramebuffer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = GLFramebuffer.h; sourceTree = "<group>"; };
 		053E97D41A7287DD0027D558 /* GLObject+Internal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "GLObject+Internal.h"; sourceTree = "<group>"; };
+		0540297C1C53E56700FA30E2 /* GLTexture+Deprecated2D.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "GLTexture+Deprecated2D.h"; sourceTree = "<group>"; };
+		0540297D1C53E56700FA30E2 /* GLTexture+Deprecated2D.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "GLTexture+Deprecated2D.m"; sourceTree = "<group>"; };
+		054029841C53E63300FA30E2 /* GLTexture+Internal.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GLTexture+Internal.h"; sourceTree = "<group>"; };
 		0558FE801B677C60000FBE32 /* libCeedGL.GLKitExt.ios.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libCeedGL.GLKitExt.ios.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		0558FE811B677CAE000FBE32 /* GLTexture+GLKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "GLTexture+GLKit.h"; sourceTree = "<group>"; };
 		0558FE821B677CAE000FBE32 /* GLTexture+GLKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "GLTexture+GLKit.m"; sourceTree = "<group>"; };
@@ -463,7 +472,10 @@
 				052BD768127ECB85005A3AE9 /* GLBuffer.h */,
 				052BD76B127ECBDB005A3AE9 /* GLBuffer.m */,
 				052BD76D127ECC3A005A3AE9 /* GLTexture.h */,
+				054029841C53E63300FA30E2 /* GLTexture+Internal.h */,
 				052BD76F127ECC56005A3AE9 /* GLTexture.m */,
+				0540297C1C53E56700FA30E2 /* GLTexture+Deprecated2D.h */,
+				0540297D1C53E56700FA30E2 /* GLTexture+Deprecated2D.m */,
 				05D0FDF9198930E100BB4812 /* GLTexture+CoreVideo.h */,
 				05D0FDFA198930E100BB4812 /* GLTexture+CoreVideo.m */,
 				0558FE811B677CAE000FBE32 /* GLTexture+GLKit.h */,
@@ -604,6 +616,7 @@
 				050DB7FD14890AA900812267 /* GLShader.h in Headers */,
 				058FD1821A716F7600A58654 /* GLAllocator.h in Headers */,
 				050DB7FF14890AA900812267 /* GLProgram.h in Headers */,
+				0540297F1C53E56700FA30E2 /* GLTexture+Deprecated2D.h in Headers */,
 				050DB80114890AA900812267 /* GLDrawCommand.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -628,6 +641,7 @@
 				050DB82414890F2F00812267 /* GLShader.h in Headers */,
 				058FD1831A716F7600A58654 /* GLAllocator.h in Headers */,
 				050DB82614890F2F00812267 /* GLProgram.h in Headers */,
+				054029801C53E56700FA30E2 /* GLTexture+Deprecated2D.h in Headers */,
 				050DB82814890F2F00812267 /* GLDrawCommand.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -652,6 +666,7 @@
 				05E625BB127F20D700B4A69C /* GLObject.h in Headers */,
 				058FD1811A716F7600A58654 /* GLAllocator.h in Headers */,
 				05F693EB1285691700B5082C /* GLValue.h in Headers */,
+				0540297E1C53E56700FA30E2 /* GLTexture+Deprecated2D.h in Headers */,
 				0592DB831286AF810030F780 /* GLPlatform.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -911,6 +926,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				05A38B741B7A5CC1009D68B1 /* GLQueue.m in Sources */,
+				054029821C53E56700FA30E2 /* GLTexture+Deprecated2D.m in Sources */,
 				050DB7EF14890AA900812267 /* GLDebug.m in Sources */,
 				050DB7F114890AA900812267 /* GLValue.m in Sources */,
 				058FD1851A716F7600A58654 /* GLAllocator.m in Sources */,
@@ -931,6 +947,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				05A38B751B7A5CC1009D68B1 /* GLQueue.m in Sources */,
+				054029831C53E56700FA30E2 /* GLTexture+Deprecated2D.m in Sources */,
 				050DB81614890F2F00812267 /* GLDebug.m in Sources */,
 				050DB81814890F2F00812267 /* GLValue.m in Sources */,
 				058FD1861A716F7600A58654 /* GLAllocator.m in Sources */,
@@ -962,6 +979,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				05A38B711B7A5A1D009D68B1 /* GLQueue.m in Sources */,
+				054029811C53E56700FA30E2 /* GLTexture+Deprecated2D.m in Sources */,
 				052BD76C127ECBDB005A3AE9 /* GLBuffer.m in Sources */,
 				052BD770127ECC56005A3AE9 /* GLTexture.m in Sources */,
 				058FD1841A716F7600A58654 /* GLAllocator.m in Sources */,

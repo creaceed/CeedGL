@@ -10,6 +10,8 @@
 
 #if TARGET_OS_IPHONE
 	//#define USE_GLES3
+	#define GL_IOS 1
+	#define GL_MAC 0
 
 	#import <OpenGLES/EAGL.h>
 	#if USE_GLES3
@@ -19,8 +21,10 @@
 		#import <OpenGLES/ES2/gl.h>
 		#import <OpenGLES/ES2/glext.h>
 	#endif
-	//
 #else
+	#define GL_IOS 0
+	#define GL_MAC 1
+
 	#import <OpenGL/OpenGL.h>
 	#if USE_CORE_PROFILE_32
 		#import <OpenGL/gl3.h>

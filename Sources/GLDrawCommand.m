@@ -132,7 +132,11 @@
 {
 	GLProgram *prog = mProgram;
 
+	GLCheckError();
+	
 	[prog use];
+	
+	GLCheckError();
 	
 	[mUniforms enumerateKeysAndObjectsUsingBlock:^(id key, id obj, BOOL *stop) {
 		*stop = NO;
@@ -150,6 +154,7 @@
 	
 	
 	//glVertexAttrib4f(0, 1, 0, 0, 1); // color, temp
+	GLCheckError();
 	
 	[mAttributes enumerateKeysAndObjectsUsingBlock:^(id key, id obj, BOOL *stop) {
 		*stop = NO;
@@ -184,21 +189,26 @@
 		}
 	}];
 	
+	GLCheckError();
+	
 	[mTextures enumerateKeysAndObjectsUsingBlock:^(id key, id obj, BOOL *stop) {
 		GLTexture *texture = [obj objectForKey:@"texture"];
 	
-		// should not be passed in modern profile OpenGL. Only for fixed-function pipeline, which we don't handle.
-		//glEnable(GL_TEXTURE_2D);
-		glActiveTexture([key intValue]); // unit
-		[texture bind];
+//		GLCheckError();
 		
-		GLCheckError();
+		// should not be passed in modern profile OpenGL. Only for fixed-function pipeline, which we don't handle.
+//		glEnable(GL_TEXTURE_3D);
+		glActiveTexture([key intValue]); // unit
+//		glBindTexture(GL_TEXTURE_1D, 0);
+//		glBindTexture(GL_TEXTURE_2D, 0);
+//		glBindTexture(GL_TEXTURE_3D, 0);
+		[texture bind];
 	}];
+	
+	GLCheckError();
 	
 	if(mElementCount > 0)
 	{
-		
-		
 //		glValidateProgram(prog.handle);
 //		GLint res = 0;
 //		glGetProgramiv(prog.handle, GL_VALIDATE_STATUS, &res);

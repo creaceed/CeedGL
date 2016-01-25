@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <CeedGL/GLPlatform.h>
 
 #ifdef __cplusplus
 extern "C" {
@@ -49,8 +50,17 @@ exit(1); \
 #endif
 
 #define GLLogWarning NSLog
-#define GLCheckError() {GLenum err; if((err = glGetError()) != GL_NO_ERROR) { GLLogWarning(@"GL error: 0x%x (%s:%d)", err, __FILE__, __LINE__); }}
+
+#define GLCheckError() GLCheckErrorImpl(__FILE__, __LINE__)
+
+static inline void GLCheckErrorImpl(const char *file, int line) {
+	GLenum err;
+	if((err = glGetError()) != GL_NO_ERROR) {
+		// Set breakpoint here to debug.
+		GLLogWarning(@"GL error: 0x%x (%s:%d)", err, file, line);
+	}
+}
 
 // raises an exception if condition is true
 #define GL_EXCEPT(condition, exception) {if((condition)) [NSException raise:exception format:@""];}
-
+#define GL_EXCEPT_NOTIMPLEMENTED() GL_EXCEPT(1, @"Not implemented")

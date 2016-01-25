@@ -123,11 +123,14 @@ static GLenum _glTypeForPixelFormat(OSType type, size_t planei)
 
 + (GLTexture*)_textureFromCVT:(CVOpenGLESTextureRef)inputCVT format:(GLenum)format type:(GLenum)type size:(CGSize)cvtSize
 {
-	GLTexture *texture = [GLTexture texture];
 	//CGSize cvtSize = CVImageBufferGetDisplaySize(inputCVT);
 	GLenum target = CVOpenGLESTextureGetTarget(inputCVT);
+	GLTextureSpecifier spec = GLTextureSpecifierMakeTexture2D(target, cvtSize.width, cvtSize.height, format, type);
+	GLTexture *texture = [GLTexture textureWithSpecifier:spec];
 	
-	[texture setFromExistingHandle:CVOpenGLESTextureGetName(inputCVT) width:cvtSize.width height:cvtSize.height internalFormat:format type:type border:0 target:target owner:(__bridge id)inputCVT];
+	[texture setFromExistingHandle:CVOpenGLESTextureGetName(inputCVT)];
+	[texture setHandleOwner:(__bridge id)inputCVT];
+	//[texture setFromExistingHandle:CVOpenGLESTextureGetName(inputCVT) width:cvtSize.width height:cvtSize.height internalFormat:format type:type border:0 target:target owner:(__bridge id)inputCVT];
 	
 //	[texture bind:target];
 //	glTexParameteri(target, GL_TEXTURE_MIN_FILTER, GL_LINEAR);

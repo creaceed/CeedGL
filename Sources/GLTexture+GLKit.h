@@ -10,6 +10,7 @@
 
 @interface GLTexture (GLKit)
 
-- (BOOL)loadFromFileAtURL:(NSURL*)url options:(NSDictionary*)options error:(NSError **)perror;
++ (GLTextureSpecifier)textureSpecifierFromTextureInfo:(GLKTextureInfo*)info;
++ (instancetype)textureWithFileAtURL:(NSURL*)url options:(NSDictionary*)options error:(NSError **)perror;
 
 @end

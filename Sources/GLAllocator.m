@@ -100,15 +100,13 @@
 	return nil;
 }
 
-- (GLTexture*)newTexture { return [self _addNewObject:[GLTexture texture]]; }
+- (GLTexture*)newTexture:(GLTextureSpecifier)spec { return [self _addNewObject:[GLTexture textureWithSpecifier:spec]]; }
 - (GLBuffer*)newBuffer { return [self _addNewObject:[GLBuffer buffer]]; }
 - (GLShader*)newVertexShader { return [self _addNewObject:[GLShader vertexShader]]; }
 - (GLShader*)newFragmentShader { return [self _addNewObject:[GLShader fragmentShader]]; }
 - (GLProgram*)newProgram { return [self _addNewObject:[GLProgram program]]; }
 - (GLFramebuffer*)newFramebuffer { return [self _addNewObject:[GLFramebuffer framebuffer]]; }
 - (GLRenderbuffer*)newRenderbuffer { return [self _addNewObject:[GLRenderbuffer renderbuffer]]; }
-
-
 
 
 // Add pre-allocated objects, allocator takes over allocation manager (will dealloc it)

@@ -28,7 +28,7 @@
 
 // GL context must be set for most methods.
 // Create (& allocate) new objects
-- (GLTexture*)newTexture;
+- (GLTexture*)newTexture:(GLTextureSpecifier)spec;
 - (GLBuffer*)newBuffer;
 - (GLShader*)newVertexShader;
 - (GLShader*)newFragmentShader;
