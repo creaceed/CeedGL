@@ -8,6 +8,8 @@
 
 #import <CeedGL/GLTexture.h>
 
+@class GLKTextureInfo;
+
 @interface GLTexture (GLKit)
 
 + (GLTextureSpecifier)textureSpecifierFromTextureInfo:(GLKTextureInfo*)info;
