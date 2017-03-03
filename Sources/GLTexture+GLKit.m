@@ -8,6 +8,8 @@
 #import <CeedGL/GLTexture+GLKit.h>
 #import <GLKit/GLKit.h>
 
+int __linkerFixGLTextureGLKit = 0;
+
 @implementation GLTexture (GLKit)
 
 + (GLTextureSpecifier)textureSpecifierFromTextureInfo:(GLKTextureInfo*)info {
