@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		050DB7D41488FBA000812267 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05E625AB127EED5A00B4A69C /* OpenGL.framework */; };
-		050DB7DE148909E300812267 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05E625AD127EED7B00B4A69C /* Cocoa.framework */; };
 		050DB7EC14890AA900812267 /* CeedGL.h in Headers */ = {isa = PBXBuildFile; fileRef = 05E625B7127EFBF000B4A69C /* CeedGL.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		050DB7ED14890AA900812267 /* GLPlatform.h in Headers */ = {isa = PBXBuildFile; fileRef = 0592DB821286AF810030F780 /* GLPlatform.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		050DB7EE14890AA900812267 /* GLDebug.h in Headers */ = {isa = PBXBuildFile; fileRef = 05E625B3127EF48200B4A69C /* GLDebug.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -32,7 +31,6 @@
 		050DB80014890AA900812267 /* GLProgram.m in Sources */ = {isa = PBXBuildFile; fileRef = 05E625A4127EEC9100B4A69C /* GLProgram.m */; };
 		050DB80114890AA900812267 /* GLDrawCommand.h in Headers */ = {isa = PBXBuildFile; fileRef = 05E6259F127EEC6700B4A69C /* GLDrawCommand.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		050DB80214890AA900812267 /* GLDrawCommand.m in Sources */ = {isa = PBXBuildFile; fileRef = 05E625A0127EEC6700B4A69C /* GLDrawCommand.m */; };
-		050DB80914890EE300812267 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 050DB80814890EE300812267 /* Foundation.framework */; };
 		050DB81314890F2F00812267 /* CeedGL.h in Headers */ = {isa = PBXBuildFile; fileRef = 05E625B7127EFBF000B4A69C /* CeedGL.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		050DB81414890F2F00812267 /* GLPlatform.h in Headers */ = {isa = PBXBuildFile; fileRef = 0592DB821286AF810030F780 /* GLPlatform.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		050DB81514890F2F00812267 /* GLDebug.h in Headers */ = {isa = PBXBuildFile; fileRef = 05E625B3127EF48200B4A69C /* GLDebug.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -91,7 +89,6 @@
 		054029811C53E56700FA30E2 /* GLTexture+Deprecated2D.m in Sources */ = {isa = PBXBuildFile; fileRef = 0540297D1C53E56700FA30E2 /* GLTexture+Deprecated2D.m */; };
 		054029821C53E56700FA30E2 /* GLTexture+Deprecated2D.m in Sources */ = {isa = PBXBuildFile; fileRef = 0540297D1C53E56700FA30E2 /* GLTexture+Deprecated2D.m */; };
 		054029831C53E56700FA30E2 /* GLTexture+Deprecated2D.m in Sources */ = {isa = PBXBuildFile; fileRef = 0540297D1C53E56700FA30E2 /* GLTexture+Deprecated2D.m */; };
-		0558FE7A1B677C60000FBE32 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 050DB80814890EE300812267 /* Foundation.framework */; };
 		0558FE831B677CAE000FBE32 /* GLTexture+GLKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 0558FE811B677CAE000FBE32 /* GLTexture+GLKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0558FE841B677CAE000FBE32 /* GLTexture+GLKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 0558FE821B677CAE000FBE32 /* GLTexture+GLKit.m */; };
 		058FD1811A716F7600A58654 /* GLAllocator.h in Headers */ = {isa = PBXBuildFile; fileRef = 058FD17F1A716F7600A58654 /* GLAllocator.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -115,7 +112,6 @@
 		05BE588B128553330054FD91 /* CeedGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 052BD757127ECB10005A3AE9 /* CeedGL.framework */; };
 		05BE5891128556DF0054FD91 /* CeedGLDemoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 05BE588F128555070054FD91 /* CeedGLDemoView.m */; };
 		05BE5892128556E30054FD91 /* CeedGLDemoAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 05BE5883128553050054FD91 /* CeedGLDemoAppDelegate.m */; };
-		05D0FDF219892FFE00BB4812 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 050DB80814890EE300812267 /* Foundation.framework */; };
 		05D0FDFB198930E100BB4812 /* GLTexture+CoreVideo.h in Headers */ = {isa = PBXBuildFile; fileRef = 05D0FDF9198930E100BB4812 /* GLTexture+CoreVideo.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		05D0FDFC198930E100BB4812 /* GLTexture+CoreVideo.m in Sources */ = {isa = PBXBuildFile; fileRef = 05D0FDFA198930E100BB4812 /* GLTexture+CoreVideo.m */; };
 		05E6259C127EEC3D00B4A69C /* GLRenderbuffer.h in Headers */ = {isa = PBXBuildFile; fileRef = 05E6259A127EEC3D00B4A69C /* GLRenderbuffer.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -170,14 +166,11 @@
 		697B63951D898C3000A1B624 /* GLProgram.m in Sources */ = {isa = PBXBuildFile; fileRef = 05E625A4127EEC9100B4A69C /* GLProgram.m */; };
 		697B63961D898C3000A1B624 /* GLDrawCommand.m in Sources */ = {isa = PBXBuildFile; fileRef = 05E625A0127EEC6700B4A69C /* GLDrawCommand.m */; };
 		697B63971D898C3000A1B624 /* GLUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 050F48AD1B84AF58009D8E4C /* GLUtils.m */; };
-		697B63991D898C3000A1B624 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 050DB80814890EE300812267 /* Foundation.framework */; };
 		697B63A61D898C6400A1B624 /* stub.c in Sources */ = {isa = PBXBuildFile; fileRef = 05B1C9101A989E23000E9317 /* stub.c */; };
 		697B63B51D898C9200A1B624 /* GLTexture+CoreVideo.h in Headers */ = {isa = PBXBuildFile; fileRef = 05D0FDF9198930E100BB4812 /* GLTexture+CoreVideo.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		697B63B71D898C9200A1B624 /* GLTexture+CoreVideo.m in Sources */ = {isa = PBXBuildFile; fileRef = 05D0FDFA198930E100BB4812 /* GLTexture+CoreVideo.m */; };
-		697B63B91D898C9200A1B624 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 050DB80814890EE300812267 /* Foundation.framework */; };
 		697B642B1D89971E00A1B624 /* GLTexture+GLKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 0558FE811B677CAE000FBE32 /* GLTexture+GLKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		697B642D1D89971E00A1B624 /* GLTexture+GLKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 0558FE821B677CAE000FBE32 /* GLTexture+GLKit.m */; };
-		697B642F1D89971E00A1B624 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 050DB80814890EE300812267 /* Foundation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -379,7 +372,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				050DB7DE148909E300812267 /* Cocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -387,7 +379,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				050DB80914890EE300812267 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -417,7 +408,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0558FE7A1B677C60000FBE32 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -442,7 +432,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				05D0FDF219892FFE00BB4812 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -457,7 +446,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				697B63991D898C3000A1B624 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -472,7 +460,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				697B63B91D898C9200A1B624 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -480,7 +467,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				697B642F1D89971E00A1B624 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1775,7 +1761,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 5.1.1;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PUBLIC_HEADERS_FOLDER_PATH = CeedGL;
+				PUBLIC_HEADERS_FOLDER_PATH = CeedGL/GLKitExt;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				STRIP_INSTALLED_PRODUCT = NO;
@@ -1795,7 +1781,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 5.1.1;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PUBLIC_HEADERS_FOLDER_PATH = CeedGL;
+				PUBLIC_HEADERS_FOLDER_PATH = CeedGL/GLKitExt;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				STRIP_INSTALLED_PRODUCT = NO;
@@ -1816,7 +1802,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 5.1.1;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PUBLIC_HEADERS_FOLDER_PATH = CeedGL;
+				PUBLIC_HEADERS_FOLDER_PATH = CeedGL/GLKitExt;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				STRIP_INSTALLED_PRODUCT = NO;
@@ -1837,7 +1823,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 5.1.1;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PUBLIC_HEADERS_FOLDER_PATH = CeedGL;
+				PUBLIC_HEADERS_FOLDER_PATH = CeedGL/GLKitExt;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				STRIP_INSTALLED_PRODUCT = NO;
@@ -2163,7 +2149,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 5.1.1;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PUBLIC_HEADERS_FOLDER_PATH = CeedGL;
+				PUBLIC_HEADERS_FOLDER_PATH = CeedGL/CoreVideoExt;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				STRIP_INSTALLED_PRODUCT = NO;
@@ -2183,7 +2169,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 5.1.1;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PUBLIC_HEADERS_FOLDER_PATH = CeedGL;
+				PUBLIC_HEADERS_FOLDER_PATH = CeedGL/CoreVideoExt;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				STRIP_INSTALLED_PRODUCT = NO;
@@ -2204,7 +2190,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 5.1.1;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PUBLIC_HEADERS_FOLDER_PATH = CeedGL;
+				PUBLIC_HEADERS_FOLDER_PATH = CeedGL/CoreVideoExt;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				STRIP_INSTALLED_PRODUCT = NO;
@@ -2225,7 +2211,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 5.1.1;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PUBLIC_HEADERS_FOLDER_PATH = CeedGL;
+				PUBLIC_HEADERS_FOLDER_PATH = CeedGL/CoreVideoExt;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				STRIP_INSTALLED_PRODUCT = NO;

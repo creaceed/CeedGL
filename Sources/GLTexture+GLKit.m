@@ -5,7 +5,7 @@
 //  Created by Raphael Sebbe on 28/07/15.
 //  Copyright © 2015 Creaceed. All rights reserved.
 //
-#import <CeedGL/GLTexture+GLKit.h>
+#import <CeedGL/GLKitExt/GLTexture+GLKit.h>
 #import <GLKit/GLKit.h>
 
 int __linkerFixGLTextureGLKit = 0;
