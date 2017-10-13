@@ -245,6 +245,20 @@
 			remoteGlobalIDString = 697B63751D898C3000A1B624;
 			remoteInfo = CeedGL.tvos;
 		};
+		69DEA6091F8FC38700B1AB7A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 052BD749127ECB10005A3AE9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 697B64271D89971E00A1B624;
+			remoteInfo = CeedGL.GLKitExt.tvos;
+		};
+		69DEA60B1F8FC39400B1AB7A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 052BD749127ECB10005A3AE9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0558FE741B677C60000FBE32;
+			remoteInfo = CeedGL.GLKitExt.ios;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -934,6 +948,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				69DEA60C1F8FC39400B1AB7A /* PBXTargetDependency */,
 				05B1C9341A989FA9000E9317 /* PBXTargetDependency */,
 				05B1C9361A989FA9000E9317 /* PBXTargetDependency */,
 			);
@@ -1024,6 +1039,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				69DEA60A1F8FC38700B1AB7A /* PBXTargetDependency */,
 				697B63C31D898CD600A1B624 /* PBXTargetDependency */,
 				697B63B01D898C8C00A1B624 /* PBXTargetDependency */,
 			);
@@ -1357,6 +1373,16 @@
 			isa = PBXTargetDependency;
 			target = 697B63751D898C3000A1B624 /* CeedGL.tvos */;
 			targetProxy = 697B64361D89973600A1B624 /* PBXContainerItemProxy */;
+		};
+		69DEA60A1F8FC38700B1AB7A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 697B64271D89971E00A1B624 /* CeedGL.GLKitExt.tvos */;
+			targetProxy = 69DEA6091F8FC38700B1AB7A /* PBXContainerItemProxy */;
+		};
+		69DEA60C1F8FC39400B1AB7A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0558FE741B677C60000FBE32 /* CeedGL.GLKitExt.ios */;
+			targetProxy = 69DEA60B1F8FC39400B1AB7A /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -2650,10 +2676,9 @@
 				);
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PUBLIC_HEADERS_FOLDER_PATH = CeedGL;
+				PUBLIC_HEADERS_FOLDER_PATH = CeedGL/CoreVideoExt;
 				SDKROOT = appletvos;
 				SKIP_INSTALL = YES;
 				STRIP_INSTALLED_PRODUCT = NO;
@@ -2670,10 +2695,9 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = iOS/CeedGL_Prefix.pch;
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PUBLIC_HEADERS_FOLDER_PATH = CeedGL;
+				PUBLIC_HEADERS_FOLDER_PATH = CeedGL/CoreVideoExt;
 				SDKROOT = appletvos;
 				SKIP_INSTALL = YES;
 				STRIP_INSTALLED_PRODUCT = NO;
@@ -2691,10 +2715,9 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = iOS/CeedGL_Prefix.pch;
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PUBLIC_HEADERS_FOLDER_PATH = CeedGL;
+				PUBLIC_HEADERS_FOLDER_PATH = CeedGL/CoreVideoExt;
 				SDKROOT = appletvos;
 				SKIP_INSTALL = YES;
 				STRIP_INSTALLED_PRODUCT = NO;
@@ -2712,10 +2735,9 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = iOS/CeedGL_Prefix.pch;
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PUBLIC_HEADERS_FOLDER_PATH = CeedGL;
+				PUBLIC_HEADERS_FOLDER_PATH = CeedGL/CoreVideoExt;
 				SDKROOT = appletvos;
 				SKIP_INSTALL = YES;
 				STRIP_INSTALLED_PRODUCT = NO;
@@ -2739,10 +2761,9 @@
 				);
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PUBLIC_HEADERS_FOLDER_PATH = CeedGL;
+				PUBLIC_HEADERS_FOLDER_PATH = CeedGL/GLKitExt;
 				SDKROOT = appletvos;
 				SKIP_INSTALL = YES;
 				STRIP_INSTALLED_PRODUCT = NO;
@@ -2759,10 +2780,9 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = iOS/CeedGL_Prefix.pch;
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PUBLIC_HEADERS_FOLDER_PATH = CeedGL;
+				PUBLIC_HEADERS_FOLDER_PATH = CeedGL/GLKitExt;
 				SDKROOT = appletvos;
 				SKIP_INSTALL = YES;
 				STRIP_INSTALLED_PRODUCT = NO;
@@ -2780,10 +2800,9 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = iOS/CeedGL_Prefix.pch;
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PUBLIC_HEADERS_FOLDER_PATH = CeedGL;
+				PUBLIC_HEADERS_FOLDER_PATH = CeedGL/GLKitExt;
 				SDKROOT = appletvos;
 				SKIP_INSTALL = YES;
 				STRIP_INSTALLED_PRODUCT = NO;
@@ -2801,10 +2820,9 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = iOS/CeedGL_Prefix.pch;
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PUBLIC_HEADERS_FOLDER_PATH = CeedGL;
+				PUBLIC_HEADERS_FOLDER_PATH = CeedGL/GLKitExt;
 				SDKROOT = appletvos;
 				SKIP_INSTALL = YES;
 				STRIP_INSTALLED_PRODUCT = NO;
