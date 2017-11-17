@@ -1090,7 +1090,7 @@
 		052BD749127ECB10005A3AE9 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0900;
+				LastUpgradeCheck = 0910;
 				ORGANIZATIONNAME = Creaceed;
 				TargetAttributes = {
 					05B1C9141A989E82000E9317 = {
@@ -1611,6 +1611,7 @@
 				GCC_PREPROCESSOR_DEFINITIONS = "GL_DEBUG=0";
 				INFOPLIST_FILE = "Mac/CeedGL-Info.plist";
 				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.creaceed.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = CeedGL;
 				WRAPPER_EXTENSION = framework;
 			};
@@ -1805,6 +1806,7 @@
 				);
 				INFOPLIST_FILE = "Mac/CeedGL-Info.plist";
 				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.creaceed.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = CeedGL;
 				WRAPPER_EXTENSION = framework;
 			};
@@ -1828,6 +1830,7 @@
 				GCC_PREPROCESSOR_DEFINITIONS = "GL_DEBUG=0";
 				INFOPLIST_FILE = "Mac/CeedGL-Info.plist";
 				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.creaceed.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = CeedGL;
 				WRAPPER_EXTENSION = framework;
 			};
@@ -1975,6 +1978,7 @@
 				GCC_PREPROCESSOR_DEFINITIONS = "GL_DEBUG=0";
 				INFOPLIST_FILE = "Mac/CeedGL-Info.plist";
 				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.creaceed.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = CeedGL;
 				WRAPPER_EXTENSION = framework;
 			};
