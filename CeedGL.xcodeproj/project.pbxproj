@@ -1583,6 +1583,7 @@
 				HEADER_SEARCH_PATHS = (
 					"\"$(BUILT_PRODUCTS_DIR)\"",
 					"\"$(OBJROOT)/UninstalledProducts/iphoneos\"",
+					"\"$(OBJROOT)/UninstalledProducts/appletvos\"",
 					"\"$(OBJROOT)/UninstalledProducts\"",
 					"$(inherited)",
 				);
@@ -1733,6 +1734,7 @@
 				HEADER_SEARCH_PATHS = (
 					"\"$(BUILT_PRODUCTS_DIR)\"",
 					"\"$(OBJROOT)/UninstalledProducts/iphoneos\"",
+					"\"$(OBJROOT)/UninstalledProducts/appletvos\"",
 					"\"$(OBJROOT)/UninstalledProducts\"",
 					"$(inherited)",
 				);
@@ -1773,6 +1775,7 @@
 				HEADER_SEARCH_PATHS = (
 					"\"$(BUILT_PRODUCTS_DIR)\"",
 					"\"$(OBJROOT)/UninstalledProducts/iphoneos\"",
+					"\"$(OBJROOT)/UninstalledProducts/appletvos\"",
 					"\"$(OBJROOT)/UninstalledProducts\"",
 					"$(inherited)",
 				);
@@ -1946,6 +1949,7 @@
 				HEADER_SEARCH_PATHS = (
 					"\"$(BUILT_PRODUCTS_DIR)\"",
 					"\"$(OBJROOT)/UninstalledProducts/iphoneos\"",
+					"\"$(OBJROOT)/UninstalledProducts/appletvos\"",
 					"\"$(OBJROOT)/UninstalledProducts\"",
 					"$(inherited)",
 				);
