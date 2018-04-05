@@ -293,9 +293,6 @@
 
 /* Begin PBXFileReference section */
 		050DB7DD148909E300812267 /* libCeedGL.mac.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libCeedGL.mac.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		050DB7E0148909E300812267 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
-		050DB7E1148909E300812267 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
-		050DB7E2148909E300812267 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		050DB80714890EE300812267 /* libCeedGL.ios.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libCeedGL.ios.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		050DB80814890EE300812267 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		050DB82E1489145800812267 /* CeedGLDemo.ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CeedGLDemo.ios.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -489,16 +486,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		050DB7DF148909E300812267 /* Other Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				050DB7E0148909E300812267 /* AppKit.framework */,
-				050DB7E1148909E300812267 /* CoreData.framework */,
-				050DB7E2148909E300812267 /* Foundation.framework */,
-			);
-			name = "Other Frameworks";
-			sourceTree = "<group>";
-		};
 		050DB8441489179C00812267 /* Mac */ = {
 			isa = PBXGroup;
 			children = (
@@ -637,7 +624,6 @@
 				050DB8641489204F00812267 /* UIKit.framework */,
 				050DB86214891C5600812267 /* QuartzCore.framework */,
 				050DB85F14891C1500812267 /* OpenGLES.framework */,
-				050DB7DF148909E300812267 /* Other Frameworks */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
