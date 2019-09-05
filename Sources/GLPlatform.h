@@ -34,3 +34,10 @@
 		#import <OpenGL/glext.h>
 	#endif /* Core Profile 3.2 */
 #endif
+
+// Handling of C++
+#if defined(__cplusplus)
+	#define GL_EXTERN extern "C"
+#else
+	#define GL_EXTERN extern
+#endif

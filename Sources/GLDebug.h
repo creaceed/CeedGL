@@ -9,15 +9,7 @@
 #import <Foundation/Foundation.h>
 #import <CeedGL/GLPlatform.h>
 
-#ifdef __cplusplus
-extern "C" {
-#endif
-	
-extern void ceedgl_debug_terminate(void);
-	
-#ifdef __cplusplus
-}
-#endif
+GL_EXTERN void ceedgl_debug_terminate(void);
 
 #ifdef DEBUG
 #define GL_ASSERT(condition)\

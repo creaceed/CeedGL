@@ -108,27 +108,27 @@ typedef struct {
 } GLTextureParameters;
 
 // GLTextureKind methods
-extern BOOL GLTextureKindIsArray(GLTextureKind kind);
-extern int GLTextureKindGetDimension(GLTextureKind kind);
+GL_EXTERN BOOL GLTextureKindIsArray(GLTextureKind kind);
+GL_EXTERN int GLTextureKindGetDimension(GLTextureKind kind);
 
 // GLTextureSpecifier methods
 // We may need a bunch of additional ones here.
-extern GLTextureSpecifier GLTextureSpecifierMakeEmpty(void);
-extern GLTextureSpecifier GLTextureSpecifierMakeTexture2D(GLenum  target, GLsizei w, GLsizei h, GLenum format, GLenum type);
-extern GLTextureSpecifier GLTextureSpecifierMakeTexture3D(GLenum  target, GLsizei w, GLsizei h, GLsizei d, GLenum format, GLenum type);
+GL_EXTERN GLTextureSpecifier GLTextureSpecifierMakeEmpty(void);
+GL_EXTERN GLTextureSpecifier GLTextureSpecifierMakeTexture2D(GLenum  target, GLsizei w, GLsizei h, GLenum format, GLenum type);
+GL_EXTERN GLTextureSpecifier GLTextureSpecifierMakeTexture3D(GLenum  target, GLsizei w, GLsizei h, GLsizei d, GLenum format, GLenum type);
 
 // GLTextureLoader & GLTextureUpdater methods
-extern GLTextureLoader GLTextureLoaderMakeEmpty(void);
-extern GLTextureLoader GLTextureLoaderMakeNativeData(void *data);	// data source, format and type derived from texture's
+GL_EXTERN GLTextureLoader GLTextureLoaderMakeEmpty(void);
+GL_EXTERN GLTextureLoader GLTextureLoaderMakeNativeData(void *data);	// data source, format and type derived from texture's
 
-extern GLTextureUpdater GLTextureUpdaterMakeEmpty(void);
-extern GLTextureUpdater GLTextureUpdaterMakeData2D(void *data, GLint xoff, GLint yoff, GLsizei width, GLsizei height);
-extern GLTextureUpdater GLTextureUpdaterMakeData3D(void *data, GLint xoff, GLint yoff, GLint zoff, GLsizei width, GLsizei height, GLsizei depth);
+GL_EXTERN GLTextureUpdater GLTextureUpdaterMakeEmpty(void);
+GL_EXTERN GLTextureUpdater GLTextureUpdaterMakeData2D(void *data, GLint xoff, GLint yoff, GLsizei width, GLsizei height);
+GL_EXTERN GLTextureUpdater GLTextureUpdaterMakeData3D(void *data, GLint xoff, GLint yoff, GLint zoff, GLsizei width, GLsizei height, GLsizei depth);
 // GLTextureParameters methods
-extern GLTextureParameters GLTextureParametersMakeEmpty(void);
-extern void GLTextureParametersSetFilter(GLTextureParameters *params, GLenum minFilter, GLenum magFilter);
-extern void GLTextureParametersSetWrapMode2D(GLTextureParameters *params, GLenum s, GLenum t);
-extern void GLTextureParametersSetWrapMode3D(GLTextureParameters *params, GLenum s, GLenum t, GLenum r);
+GL_EXTERN GLTextureParameters GLTextureParametersMakeEmpty(void);
+GL_EXTERN void GLTextureParametersSetFilter(GLTextureParameters *params, GLenum minFilter, GLenum magFilter);
+GL_EXTERN void GLTextureParametersSetWrapMode2D(GLTextureParameters *params, GLenum s, GLenum t);
+GL_EXTERN void GLTextureParametersSetWrapMode3D(GLTextureParameters *params, GLenum s, GLenum t, GLenum r);
 
 
 @interface GLTexture : GLObject {
