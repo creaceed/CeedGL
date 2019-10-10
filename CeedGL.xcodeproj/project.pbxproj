@@ -345,7 +345,6 @@
 		05BE5876128553050054FD91 /* CeedGLDemo_Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CeedGLDemo_Prefix.pch; sourceTree = "<group>"; };
 		05BE5878128553050054FD91 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		05BE587A128553050054FD91 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		05BE587D128553050054FD91 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		05BE5880128553050054FD91 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
 		05BE5882128553050054FD91 /* CeedGLDemoAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CeedGLDemoAppDelegate.h; sourceTree = "<group>"; };
 		05BE5883128553050054FD91 /* CeedGLDemoAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CeedGLDemoAppDelegate.m; sourceTree = "<group>"; };
@@ -374,6 +373,7 @@
 		05F27A5D1B79E5C700E11DCF /* libCeedGL-stub.mac.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libCeedGL-stub.mac.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		05F693E91285691700B5082C /* GLValue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GLValue.h; sourceTree = "<group>"; };
 		05F693EA1285691700B5082C /* GLValue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GLValue.m; sourceTree = "<group>"; };
+		143EE63B234F3A590024CB98 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		697B639F1D898C3000A1B624 /* libCeedGL.tvos.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libCeedGL.tvos.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		697B63AE1D898C6400A1B624 /* libCeedGL-stub.tvos.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libCeedGL-stub.tvos.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		697B63BF1D898C9200A1B624 /* libCeedGL.CoreVideoExt.tvos.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libCeedGL.CoreVideoExt.tvos.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -1086,11 +1086,11 @@
 			};
 			buildConfigurationList = 052BD74C127ECB10005A3AE9 /* Build configuration list for PBXProject "CeedGL" */;
 			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
+			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
-				English,
 				en,
+				Base,
 			);
 			mainGroup = 052BD747127ECB10005A3AE9;
 			productRefGroup = 052BD758127ECB10005A3AE9 /* Products */;
@@ -1385,7 +1385,7 @@
 		05BE587C128553050054FD91 /* MainMenu.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
-				05BE587D128553050054FD91 /* en */,
+				143EE63B234F3A590024CB98 /* Base */,
 			);
 			name = MainMenu.xib;
 			sourceTree = "<group>";
