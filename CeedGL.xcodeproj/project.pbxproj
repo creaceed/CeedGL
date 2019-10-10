@@ -1076,7 +1076,7 @@
 		052BD749127ECB10005A3AE9 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 1000;
+				LastUpgradeCheck = 1110;
 				ORGANIZATIONNAME = Creaceed;
 				TargetAttributes = {
 					05B1C9141A989E82000E9317 = {
@@ -1089,6 +1089,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 			);
 			mainGroup = 052BD747127ECB10005A3AE9;
