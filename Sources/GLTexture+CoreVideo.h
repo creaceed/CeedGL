@@ -15,10 +15,18 @@ typedef NS_ENUM(NSInteger, GLVideoPlane) {
 	GLVideoPlaneChroma		// plane 1
 };
 
+#if TARGET_OS_IPHONE
+#define CeedGLTextureCacheRef CVOpenGLESTextureCacheRef
+#define CeedGLTextureRef CVOpenGLESTextureRef
+
+#else
+ #define CeedGLTextureCacheRef CVOpenGLTextureCacheRef
+ #define CeedGLTextureRef CVOpenGLTextureRef
+#endif
 
 
 @interface GLTexture (CoreVideo)
 
-+ (GLTexture*)textureFromPixelBuffer:(CVPixelBufferRef)pixelBuffer inTextureCache:(CVOpenGLESTextureCacheRef)textureCache plane:(GLVideoPlane)plane;
++ (GLTexture*)textureFromPixelBuffer:(CVPixelBufferRef)pixelBuffer inTextureCache:(CeedGLTextureCacheRef)textureCache plane:(GLVideoPlane)plane;
 
 @end
