@@ -692,7 +692,7 @@
 		052BD749127ECB10005A3AE9 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 1110;
+				LastUpgradeCheck = 1150;
 				ORGANIZATIONNAME = Creaceed;
 				TargetAttributes = {
 					050DB82D1489145800812267 = {
