@@ -6,6 +6,6 @@
 //  Copyright (c) 2015 Creaceed. All rights reserved.
 //
 
-__private_extern__ int __cr_stub() {
+__private_extern__ int __cr_stub(void) {
 	return 0;
 }
