@@ -137,7 +137,7 @@ void GLTextureParametersSetFilter(GLTextureParameters *params, GLenum minFilter,
 void GLTextureParametersSetWrapMode2D(GLTextureParameters *params, GLenum s, GLenum t) {
 	params->wrapMode.s = s;
 	params->wrapMode.t = t;
-	params->wrapMode.mask = GLTextureWrapModeMaskS;
+	params->wrapMode.mask = GLTextureWrapModeMaskS | GLTextureWrapModeMaskT;
 }
 void GLTextureParametersSetWrapMode3D(GLTextureParameters *params, GLenum s, GLenum t, GLenum r) {
 	params->wrapMode.s = s;
@@ -205,7 +205,7 @@ void GLTextureParametersSetWrapMode3D(GLTextureParameters *params, GLenum s, GLe
 	return [NSString stringWithFormat:@"<GLTexture [%@]: 0x%lx, size: %@, handle: %d, format/type: 0x%x/0x%x, owner: %@>", self._typeString, (size_t)self, self._sizeString, self.handle, self.format, self.type, [self _ownerDescription]];
 }
 
-#pragma mark - Overrides -
+#pragma mark - Overrides/Handles -
 
 - (void)createHandle
 {
@@ -223,6 +223,12 @@ void GLTextureParametersSetWrapMode3D(GLTextureParameters *params, GLenum s, GLe
 	
 	glDeleteTextures(1, &mHandle);
 	mHandle = 0;
+}
+
+// ## Set texture handle from pre-created texture
+- (void)setFromExistingHandle:(GLint)handle {
+	[self _checkSpecified];
+	mHandle = handle;
 }
 
 #pragma mark - Texture API -
@@ -267,12 +273,6 @@ void GLTextureParametersSetWrapMode3D(GLTextureParameters *params, GLenum s, GLe
 
 + (instancetype)textureWithSpecifier:(GLTextureSpecifier)s {
 	return [[self alloc] initWithSpecifier:s];
-}
-
-// ## Set texture handle from pre-created texture
-- (void)setFromExistingHandle:(GLint)handle {
-	[self _checkSpecified];
-	mHandle = handle;
 }
 
 - (BOOL)_isPOT {
